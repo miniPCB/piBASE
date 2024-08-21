@@ -33,7 +33,7 @@ def print_intro():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 def print_menu():
-    print("\n--- Select a Test ---")
+    print("\n--- Select an Action ---")
     print("[1] Push System")
     print("[X] Exit")
 
