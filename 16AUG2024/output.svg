@@ -1,0 +1,97 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1000" height="1000">
+  <ns0:defs> 
+  <ns0:g id="q-circle-set1" fill="none" stroke-width="10">
+    <ns0:circle id="q1c1" cx="0" cy="0" r="10" stroke="#9383f946" />
+    <ns0:circle id="q1c2" cx="0" cy="0" r="20" stroke="#89ac9aea" />
+    <ns0:circle id="q1c3" cx="0" cy="0" r="30" stroke="#ed27f841" />
+    <ns0:circle id="q1c4" cx="0" cy="0" r="40" stroke="#bb7452b6" />
+    <ns0:circle id="q1c5" cx="0" cy="0" r="50" stroke="#bf411e03" />
+    <ns0:circle id="q1c6" cx="0" cy="0" r="60" stroke="#1c2fdee9" />
+    <ns0:circle id="q1c7" cx="0" cy="0" r="70" stroke="#c47f26de" />
+    <ns0:circle id="q1c8" cx="0" cy="0" r="80" stroke="#bb4c8f2a" />
+    <ns0:circle id="q1c9" cx="0" cy="0" r="90" stroke="#8e038499" />
+    <ns0:circle id="q1c10" cx="0" cy="0" r="100" stroke="#2f9b2d17" />
+    <ns0:circle id="q1c11" cx="0" cy="0" r="110" stroke="#4590beca" />
+    <ns0:circle id="q1c12" cx="0" cy="0" r="120" stroke="#76886b8c" />
+    <ns0:circle id="q1c13" cx="0" cy="0" r="130" stroke="#ff85c416" />
+    <ns0:circle id="q1c14" cx="0" cy="0" r="140" stroke="#6c631859" />
+    <ns0:circle id="q1c15" cx="0" cy="0" r="150" stroke="#14eb3d1b" />
+    <ns0:circle id="q1c16" cx="0" cy="0" r="160" stroke="#ca69fde8" />
+    <ns0:circle id="q1c17" cx="0" cy="0" r="170" stroke="#ffa8426f" />
+    <ns0:circle id="q1c18" cx="0" cy="0" r="180" stroke="#e0ca4885" />
+    <ns0:circle id="q1c19" cx="0" cy="0" r="190" stroke="#f7afd14c" />
+    <ns0:circle id="q1c20" cx="0" cy="0" r="200" stroke="#22dd0e30" />
+  </ns0:g>
+  <ns0:g id="q-circle-set2" fill="none" stroke-width="10">
+    <ns0:circle id="q2c1" cx="0" cy="0" r="10" stroke="#9383f946" />
+    <ns0:circle id="q2c2" cx="0" cy="0" r="20" stroke="#89ac9aea" />
+    <ns0:circle id="q2c3" cx="0" cy="0" r="30" stroke="#ed27f841" />
+    <ns0:circle id="q2c4" cx="0" cy="0" r="40" stroke="#bb7452b6" />
+    <ns0:circle id="q2c5" cx="0" cy="0" r="50" stroke="#bf411e03" />
+    <ns0:circle id="q2c6" cx="0" cy="0" r="60" stroke="#1c2fdee9" />
+    <ns0:circle id="q2c7" cx="0" cy="0" r="70" stroke="#c47f26de" />
+    <ns0:circle id="q2c8" cx="0" cy="0" r="80" stroke="#bb4c8f2a" />
+    <ns0:circle id="q2c9" cx="0" cy="0" r="90" stroke="#8e038499" />
+    <ns0:circle id="q2c10" cx="0" cy="0" r="100" stroke="#2f9b2d17" />
+    <ns0:circle id="q2c11" cx="0" cy="0" r="110" stroke="#4590beca" />
+    <ns0:circle id="q2c12" cx="0" cy="0" r="120" stroke="#76886b8c" />
+    <ns0:circle id="q2c13" cx="0" cy="0" r="130" stroke="#ff85c416" />
+    <ns0:circle id="q2c14" cx="0" cy="0" r="140" stroke="#6c631859" />
+    <ns0:circle id="q2c15" cx="0" cy="0" r="150" stroke="#14eb3d1b" />
+    <ns0:circle id="q2c16" cx="0" cy="0" r="160" stroke="#ca69fde8" />
+    <ns0:circle id="q2c17" cx="0" cy="0" r="170" stroke="#ffa8426f" />
+    <ns0:circle id="q2c18" cx="0" cy="0" r="180" stroke="#e0ca4885" />
+    <ns0:circle id="q2c19" cx="0" cy="0" r="190" stroke="#f7afd14c" />
+    <ns0:circle id="q2c20" cx="0" cy="0" r="200" stroke="#22dd0e30" />
+  </ns0:g>
+  <ns0:g id="q-circle-set3" fill="none" stroke-width="10">
+    <ns0:circle id="q3c1" cx="0" cy="0" r="10" stroke="#9383f946" />
+    <ns0:circle id="q3c2" cx="0" cy="0" r="20" stroke="#89ac9aea" />
+    <ns0:circle id="q3c3" cx="0" cy="0" r="30" stroke="#ed27f841" />
+    <ns0:circle id="q3c4" cx="0" cy="0" r="40" stroke="#bb7452b6" />
+    <ns0:circle id="q3c5" cx="0" cy="0" r="50" stroke="#bf411e03" />
+    <ns0:circle id="q3c6" cx="0" cy="0" r="60" stroke="#1c2fdee9" />
+    <ns0:circle id="q3c7" cx="0" cy="0" r="70" stroke="#c47f26de" />
+    <ns0:circle id="q3c8" cx="0" cy="0" r="80" stroke="#bb4c8f2a" />
+    <ns0:circle id="q3c9" cx="0" cy="0" r="90" stroke="#8e038499" />
+    <ns0:circle id="q3c10" cx="0" cy="0" r="100" stroke="#2f9b2d17" />
+    <ns0:circle id="q3c11" cx="0" cy="0" r="110" stroke="#4590beca" />
+    <ns0:circle id="q3c12" cx="0" cy="0" r="120" stroke="#76886b8c" />
+    <ns0:circle id="q3c13" cx="0" cy="0" r="130" stroke="#ff85c416" />
+    <ns0:circle id="q3c14" cx="0" cy="0" r="140" stroke="#6c631859" />
+    <ns0:circle id="q3c15" cx="0" cy="0" r="150" stroke="#14eb3d1b" />
+    <ns0:circle id="q3c16" cx="0" cy="0" r="160" stroke="#ca69fde8" />
+    <ns0:circle id="q3c17" cx="0" cy="0" r="170" stroke="#ffa8426f" />
+    <ns0:circle id="q3c18" cx="0" cy="0" r="180" stroke="#e0ca4885" />
+    <ns0:circle id="q3c19" cx="0" cy="0" r="190" stroke="#f7afd14c" />
+    <ns0:circle id="q3c20" cx="0" cy="0" r="200" stroke="#22dd0e30" />
+  </ns0:g>
+  <ns0:g id="q-circle-set4" fill="none" stroke-width="10">
+    <ns0:circle id="q4c1" cx="0" cy="0" r="10" stroke="#9383f946" />
+    <ns0:circle id="q4c2" cx="0" cy="0" r="20" stroke="#89ac9aea" />
+    <ns0:circle id="q4c3" cx="0" cy="0" r="30" stroke="#ed27f841" />
+    <ns0:circle id="q4c4" cx="0" cy="0" r="40" stroke="#bb7452b6" />
+    <ns0:circle id="q4c5" cx="0" cy="0" r="50" stroke="#bf411e03" />
+    <ns0:circle id="q4c6" cx="0" cy="0" r="60" stroke="#1c2fdee9" />
+    <ns0:circle id="q4c7" cx="0" cy="0" r="70" stroke="#c47f26de" />
+    <ns0:circle id="q4c8" cx="0" cy="0" r="80" stroke="#bb4c8f2a" />
+    <ns0:circle id="q4c9" cx="0" cy="0" r="90" stroke="#8e038499" />
+    <ns0:circle id="q4c10" cx="0" cy="0" r="100" stroke="#2f9b2d17" />
+    <ns0:circle id="q4c11" cx="0" cy="0" r="110" stroke="#4590beca" />
+    <ns0:circle id="q4c12" cx="0" cy="0" r="120" stroke="#76886b8c" />
+    <ns0:circle id="q4c13" cx="0" cy="0" r="130" stroke="#ff85c416" />
+    <ns0:circle id="q4c14" cx="0" cy="0" r="140" stroke="#6c631859" />
+    <ns0:circle id="q4c15" cx="0" cy="0" r="150" stroke="#14eb3d1b" />
+    <ns0:circle id="q4c16" cx="0" cy="0" r="160" stroke="#ca69fde8" />
+    <ns0:circle id="q4c17" cx="0" cy="0" r="170" stroke="#ffa8426f" />
+    <ns0:circle id="q4c18" cx="0" cy="0" r="180" stroke="#e0ca4885" />
+    <ns0:circle id="q4c19" cx="0" cy="0" r="190" stroke="#f7afd14c" />
+    <ns0:circle id="q4c20" cx="0" cy="0" r="200" stroke="#22dd0e30" />
+  </ns0:g>
+  </ns0:defs>
+  
+  <ns0:use ns1:href="#q-circle-set1" transform="translate(400,200)" />
+  <ns0:use ns1:href="#q-circle-set2" transform="translate(400,600)" />
+  <ns0:use ns1:href="#q-circle-set3" transform="translate(200,400)" />
+  <ns0:use ns1:href="#q-circle-set1" transform="translate(600,400)" />
+</ns0:svg>

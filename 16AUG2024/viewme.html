@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Refreshing SVG</title>
+    <script>
+        function refreshSVG() {
+            var img = document.getElementById('svgImage');
+            img.src = 'output.svg?' + new Date().getTime();
+        }
+
+        setInterval(refreshSVG, 2000);
+    </script>
+</head>
+<body>
+    <h1>Auto-Refreshing SVG Viewer</h1>
+    <img id="svgImage" src="output.svg" alt="Refreshing SVG" width="1000" height="1000">
+</body>
+</html>
