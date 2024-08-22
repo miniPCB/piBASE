@@ -1,0 +1,1 @@
+2024-08-22 18:53:37 - pi@raspberrypi - No indication of power or performance.
