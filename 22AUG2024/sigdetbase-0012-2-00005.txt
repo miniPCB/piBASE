@@ -1,0 +1,12 @@
+Board Name: sigdetbase
+Board Revision: 0012
+Board Variant: 2
+Board Serial Number: 00005
+Issue Message: This is my message.
+Issue Message: 2024-08-22 17:32:45 - No known issue.
+Issue Message: 2024-08-22 17:37:26 - This board was laying around the offices.
+Issue Message: 2024-08-22 17:40:20 - This board has not been ESD controlled.
+Issue Message: 2024-08-22 17:44:25 - pi@raspberrypi - testing 123
+Issue Message: 2024-08-22 18:12:03 - pi@raspberrypi - I think i finally figured out how this works.
+Issue Message: 2024-08-22 18:12:26 - pi@raspberrypi - Very cool.
+Issue Message: 2024-08-22 18:21:04 - pi@raspberrypi - Enter another issue message.
