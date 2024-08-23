@@ -1,6 +1,5 @@
-2024-08-22 18:52:50 - pi@raspberrypi - Unkown issue.
-2024-08-22 18:59:32 - pi@raspberrypi - Has not been ESD controlled.
-2024-08-22 19:03:48 - pi@raspberrypi - Not displaying existing issues.
-2024-08-22 19:04:01 - pi@raspberrypi - Not displaying existing issues.
-2024-08-22 19:04:12 - pi@raspberrypi - Not displaying existing issues.
-Message: 2024-08-22 19:06:29 - pi@raspberrypi - This will show.
+Board Name: sigdetbase
+Board Revision: 0012
+Board Variant: 2
+Board Serial Number: 00005
+Message: 2024-08-22 19:10:03 - pi@raspberrypi - No known issues.
