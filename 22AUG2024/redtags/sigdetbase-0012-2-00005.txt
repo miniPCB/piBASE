@@ -1,6 +1,0 @@
-Board Name: sigdetbase
-Board Revision: 0012
-Board Variant: 2
-Board Serial Number: 00005
-Message: 2024-08-22 19:10:03 - pi@raspberrypi - No known issues.
-Message: 2024-08-22 19:11:36 - pi@raspberrypi - Probably pulled by engineering for testing.

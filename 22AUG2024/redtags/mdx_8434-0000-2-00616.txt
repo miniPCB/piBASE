@@ -1,5 +1,0 @@
-Board Name: mdx_8434
-Board Revision: 0000
-Board Variant: 2
-Board Serial Number: 00616
-Message: 2024-08-22 19:49:39 - pi@raspberrypi - No known issue. Sample pulled by engineering for testing.
