@@ -72,7 +72,7 @@ def update(frame):
     plt.xlabel('Index')
     plt.ylabel('ADC Reading')
     plt.title('Real-Time Simulated ADC Readings (Last 100 Readings)')
-    plt.legend()
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), ncol=4)  # Fixed legend below the chart
 
 # Create a CSV file and write the header
 with open(csv_filename, mode='w', newline='') as file:
@@ -84,6 +84,9 @@ plt.figure(figsize=(10, 6))
 
 # Use FuncAnimation to update the plot in real-time every 100 ms (10 updates per second)
 ani = FuncAnimation(plt.gcf(), update, interval=100, cache_frame_data=False)  # Update every 100 ms
+
+# Adjust layout to make space for the legend
+plt.subplots_adjust(bottom=0.2)
 
 # Show the plot
 plt.show()
