@@ -2,18 +2,18 @@ import csv
 import random
 
 # Define the file name for the CSV output
-csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'  # Ensure consistent naming
+csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'
 
-# Define the range for ADC values (e.g., 0 to 1023 for a 10-bit ADC)
-ADC_MIN = 0
-ADC_MAX = 1023
+# Define the range for ADC values centered around 2.500 with deviations up to 1.000
+ADC_CENTER = 2.500
+ADC_DEVIATION = 1.000
 
 # Number of simulated readings
 NUM_READINGS = 100
 
-# Function to generate a random ADC value within the range
+# Function to generate a random ADC value centered around 2.500 with deviation up to 1.000
 def generate_random_adc_value():
-    return random.randint(ADC_MIN, ADC_MAX)
+    return round(random.uniform(ADC_CENTER - ADC_DEVIATION, ADC_CENTER + ADC_DEVIATION), 3)
 
 # Create and write to the CSV file
 with open(csv_filename, mode='w', newline='') as file:
