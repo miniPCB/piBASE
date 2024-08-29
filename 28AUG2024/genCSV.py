@@ -15,7 +15,7 @@ ADC_DEVIATION = 1.000
 # Number of simulated readings to display
 NUM_READINGS = 100
 
-# Initialize lists to store data for plotting
+# Initialize lists to store data for plotting (only keep last NUM_READINGS points)
 indexes = []
 q1_values = []
 q2_values = []
@@ -50,7 +50,7 @@ def update(frame):
         csv_writer = csv.writer(file)
         csv_writer.writerow([index, current_datetime, q1, q2, q3, q4])
 
-    # Limit lists to NUM_READINGS
+    # Keep only the last NUM_READINGS points
     if len(indexes) > NUM_READINGS:
         indexes.pop(0)
         q1_values.pop(0)
@@ -70,7 +70,7 @@ def update(frame):
     # Add labels and legend
     plt.xlabel('Index')
     plt.ylabel('ADC Reading')
-    plt.title('Real-Time Simulated ADC Readings')
+    plt.title('Real-Time Simulated ADC Readings (Last 100 Readings)')
     plt.legend()
 
 # Create a CSV file and write the header
