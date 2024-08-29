@@ -79,8 +79,8 @@ with open(csv_filename, mode='w', newline='') as file:
     csv_writer = csv.writer(file)
     csv_writer.writerow(['Index', 'Datetime', 'Q1', 'Q2', 'Q3', 'Q4'])
 
-# Set up the figure and axis for the plot
-plt.figure(figsize=(10, 6))
+# Set up the figure and axis for the plot with increased width
+plt.figure(figsize=(12, 6))  # Increased width from 10 to 12 inches
 
 # Use FuncAnimation to update the plot in real-time every 100 ms (10 updates per second)
 ani = FuncAnimation(plt.gcf(), update, interval=100, cache_frame_data=False)  # Update every 100 ms
