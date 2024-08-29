@@ -22,10 +22,10 @@ with open(csv_filename, mode='w', newline='') as file:
     csv_writer = csv.writer(file)
     
     # Write the header row
-    csv_writer.writerow(['Datetime', 'Q1', 'Q2', 'Q3', 'Q4'])
+    csv_writer.writerow(['Index', 'Datetime', 'Q1', 'Q2', 'Q3', 'Q4'])
     
     # Generate and write simulated ADC readings
-    for _ in range(NUM_READINGS):
+    for index in range(1, NUM_READINGS + 1):
         # Generate current datetime
         current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -36,6 +36,6 @@ with open(csv_filename, mode='w', newline='') as file:
         q4 = generate_random_adc_value()
         
         # Write the row to the CSV file
-        csv_writer.writerow([current_datetime, q1, q2, q3, q4])
+        csv_writer.writerow([index, current_datetime, q1, q2, q3, q4])
 
 print(f"Simulated ADC readings saved to {csv_filename}")
