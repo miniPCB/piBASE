@@ -34,7 +34,7 @@ def update(frame):
         current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         # Generate random ADC readings for each quadrant
-        index = len(indexes) + 1
+        index = len(indexes) + 1 if len(indexes) < NUM_READINGS else indexes[-1] + 1
         q1 = generate_random_adc_value()
         q2 = generate_random_adc_value()
         q3 = generate_random_adc_value()
@@ -54,11 +54,11 @@ def update(frame):
 
         # Keep only the last NUM_READINGS points
         if len(indexes) > NUM_READINGS:
-            indexes.pop(0)
-            q1_values.pop(0)
-            q2_values.pop(0)
-            q3_values.pop(0)
-            q4_values.pop(0)
+            indexes = indexes[-NUM_READINGS:]
+            q1_values = q1_values[-NUM_READINGS:]
+            q2_values = q2_values[-NUM_READINGS:]
+            q3_values = q3_values[-NUM_READINGS:]
+            q4_values = q4_values[-NUM_READINGS:]
 
     # Clear previous plots
     plt.cla()
