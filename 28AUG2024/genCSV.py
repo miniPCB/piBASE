@@ -2,7 +2,7 @@ import csv
 import random
 
 # Define the file name for the CSV output
-csv_file = '/home/pi/Documents/28AUG2024/adc.csv'
+csv_file = '/home/pi/piBASE/28AUG2024/adc.csv'
 
 # Define the range for ADC values (e.g., 0 to 1023 for a 10-bit ADC)
 ADC_MIN = 0
