@@ -28,35 +28,37 @@ def generate_random_adc_value():
 
 # Function to update the plot
 def update(frame):
-    # Generate current datetime
-    current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    # Generate 10 new readings in each update
+    for _ in range(10):
+        # Generate current datetime
+        current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-    # Generate random ADC readings for each quadrant
-    index = len(indexes) + 1
-    q1 = generate_random_adc_value()
-    q2 = generate_random_adc_value()
-    q3 = generate_random_adc_value()
-    q4 = generate_random_adc_value()
+        # Generate random ADC readings for each quadrant
+        index = len(indexes) + 1
+        q1 = generate_random_adc_value()
+        q2 = generate_random_adc_value()
+        q3 = generate_random_adc_value()
+        q4 = generate_random_adc_value()
 
-    # Append new data to lists
-    indexes.append(index)
-    q1_values.append(q1)
-    q2_values.append(q2)
-    q3_values.append(q3)
-    q4_values.append(q4)
+        # Append new data to lists
+        indexes.append(index)
+        q1_values.append(q1)
+        q2_values.append(q2)
+        q3_values.append(q3)
+        q4_values.append(q4)
 
-    # Append data to CSV file
-    with open(csv_filename, mode='a', newline='') as file:
-        csv_writer = csv.writer(file)
-        csv_writer.writerow([index, current_datetime, q1, q2, q3, q4])
+        # Append data to CSV file
+        with open(csv_filename, mode='a', newline='') as file:
+            csv_writer = csv.writer(file)
+            csv_writer.writerow([index, current_datetime, q1, q2, q3, q4])
 
-    # Keep only the last NUM_READINGS points
-    if len(indexes) > NUM_READINGS:
-        indexes.pop(0)
-        q1_values.pop(0)
-        q2_values.pop(0)
-        q3_values.pop(0)
-        q4_values.pop(0)
+        # Keep only the last NUM_READINGS points
+        if len(indexes) > NUM_READINGS:
+            indexes.pop(0)
+            q1_values.pop(0)
+            q2_values.pop(0)
+            q3_values.pop(0)
+            q4_values.pop(0)
 
     # Clear previous plots
     plt.cla()
@@ -81,8 +83,8 @@ with open(csv_filename, mode='w', newline='') as file:
 # Set up the figure and axis for the plot
 plt.figure(figsize=(10, 6))
 
-# Use FuncAnimation to update the plot in real-time
-ani = FuncAnimation(plt.gcf(), update, interval=1000)  # Update every 1000 ms (1 second)
+# Use FuncAnimation to update the plot in real-time every 100 ms (10 updates per second)
+ani = FuncAnimation(plt.gcf(), update, interval=100)  # Update every 100 ms
 
 # Show the plot
 plt.show()
