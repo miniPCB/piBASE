@@ -1,6 +1,8 @@
 import csv
 import random
 from datetime import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
 
 # Define the file name for the CSV output
 csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'
@@ -39,3 +41,22 @@ with open(csv_filename, mode='w', newline='') as file:
         csv_writer.writerow([index, current_datetime, q1, q2, q3, q4])
 
 print(f"Simulated ADC readings saved to {csv_filename}")
+
+# Read the CSV data using pandas
+df = pd.read_csv(csv_filename)
+
+# Plot ADC readings for each quadrant over time
+plt.figure(figsize=(10, 6))
+plt.plot(df['Index'], df['Q1'], label='Q1')
+plt.plot(df['Index'], df['Q2'], label='Q2')
+plt.plot(df['Index'], df['Q3'], label='Q3')
+plt.plot(df['Index'], df['Q4'], label='Q4')
+
+# Add labels and legend
+plt.xlabel('Index')
+plt.ylabel('ADC Reading')
+plt.title('Simulated ADC Readings Over Time')
+plt.legend()
+
+# Show the plot
+plt.show()
