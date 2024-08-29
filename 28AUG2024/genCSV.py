@@ -2,7 +2,7 @@ import csv
 import random
 
 # Define the file name for the CSV output
-csv_file = '/home/pi/piBASE/28AUG2024/adc.csv'
+csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'  # Ensure consistent naming
 
 # Define the range for ADC values (e.g., 0 to 1023 for a 10-bit ADC)
 ADC_MIN = 0
@@ -16,9 +16,9 @@ def generate_random_adc_value():
     return random.randint(ADC_MIN, ADC_MAX)
 
 # Create and write to the CSV file
-with open(csv_filename, mode='w', newline='') as csv_file:
+with open(csv_filename, mode='w', newline='') as file:
     # Create a CSV writer object
-    csv_writer = csv.writer(csv_file)
+    csv_writer = csv.writer(file)
     
     # Write the header row
     csv_writer.writerow(['Q1', 'Q2', 'Q3', 'Q4'])
