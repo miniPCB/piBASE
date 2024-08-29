@@ -3,6 +3,7 @@ import random
 from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 
 # Define the file name for the CSV output
 csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'
@@ -11,52 +12,77 @@ csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'
 ADC_CENTER = 2.500
 ADC_DEVIATION = 1.000
 
-# Number of simulated readings
+# Number of simulated readings to display
 NUM_READINGS = 100
+
+# Initialize lists to store data for plotting
+indexes = []
+q1_values = []
+q2_values = []
+q3_values = []
+q4_values = []
 
 # Function to generate a random ADC value centered around 2.500 with deviation up to 1.000
 def generate_random_adc_value():
     return round(random.uniform(ADC_CENTER - ADC_DEVIATION, ADC_CENTER + ADC_DEVIATION), 3)
 
-# Create and write to the CSV file
-with open(csv_filename, mode='w', newline='') as file:
-    # Create a CSV writer object
-    csv_writer = csv.writer(file)
-    
-    # Write the header row
-    csv_writer.writerow(['Index', 'Datetime', 'Q1', 'Q2', 'Q3', 'Q4'])
-    
-    # Generate and write simulated ADC readings
-    for index in range(1, NUM_READINGS + 1):
-        # Generate current datetime
-        current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+# Function to update the plot
+def update(frame):
+    # Generate current datetime
+    current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-        # Generate random ADC readings for each quadrant
-        q1 = generate_random_adc_value()
-        q2 = generate_random_adc_value()
-        q3 = generate_random_adc_value()
-        q4 = generate_random_adc_value()
-        
-        # Write the row to the CSV file
+    # Generate random ADC readings for each quadrant
+    index = len(indexes) + 1
+    q1 = generate_random_adc_value()
+    q2 = generate_random_adc_value()
+    q3 = generate_random_adc_value()
+    q4 = generate_random_adc_value()
+
+    # Append new data to lists
+    indexes.append(index)
+    q1_values.append(q1)
+    q2_values.append(q2)
+    q3_values.append(q3)
+    q4_values.append(q4)
+
+    # Append data to CSV file
+    with open(csv_filename, mode='a', newline='') as file:
+        csv_writer = csv.writer(file)
         csv_writer.writerow([index, current_datetime, q1, q2, q3, q4])
 
-print(f"Simulated ADC readings saved to {csv_filename}")
+    # Limit lists to NUM_READINGS
+    if len(indexes) > NUM_READINGS:
+        indexes.pop(0)
+        q1_values.pop(0)
+        q2_values.pop(0)
+        q3_values.pop(0)
+        q4_values.pop(0)
 
-# Read the CSV data using pandas
-df = pd.read_csv(csv_filename)
+    # Clear previous plots
+    plt.cla()
 
-# Plot ADC readings for each quadrant over time
+    # Plot the updated data
+    plt.plot(indexes, q1_values, label='Q1')
+    plt.plot(indexes, q2_values, label='Q2')
+    plt.plot(indexes, q3_values, label='Q3')
+    plt.plot(indexes, q4_values, label='Q4')
+
+    # Add labels and legend
+    plt.xlabel('Index')
+    plt.ylabel('ADC Reading')
+    plt.title('Real-Time Simulated ADC Readings')
+    plt.legend()
+
+# Create a CSV file and write the header
+with open(csv_filename, mode='w', newline='') as file:
+    csv_writer = csv.writer(file)
+    csv_writer.writerow(['Index', 'Datetime', 'Q1', 'Q2', 'Q3', 'Q4'])
+
+# Set up the figure and axis for the plot
 plt.figure(figsize=(10, 6))
-plt.plot(df['Index'], df['Q1'], label='Q1')
-plt.plot(df['Index'], df['Q2'], label='Q2')
-plt.plot(df['Index'], df['Q3'], label='Q3')
-plt.plot(df['Index'], df['Q4'], label='Q4')
 
-# Add labels and legend
-plt.xlabel('Index')
-plt.ylabel('ADC Reading')
-plt.title('Simulated ADC Readings Over Time')
-plt.legend()
+# Use FuncAnimation to update the plot in real-time
+ani = FuncAnimation(plt.gcf(), update, interval=1000)  # Update every 1000 ms (1 second)
 
 # Show the plot
 plt.show()
