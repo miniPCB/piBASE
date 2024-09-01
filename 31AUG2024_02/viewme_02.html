@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Report Viewer</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .button-container button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Test Report</h1>
+
+<div class="button-container">
+    <button onclick="runTest()">Run Test</button>
+    <button onclick="pauseTest()">Pause Test</button>
+    <button onclick="stopTest()">Stop Test</button>
+</div>
+
+<table id="testReportTable">
+    <thead>
+        <tr></tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    // Function to load and display the CSV file
+    function loadCSVFile(filePath) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(text => {
+                const lines = text.split('\n');
+
+                if (lines.length > 0) {
+                    const table = document.getElementById('testReportTable');
+                    const header = lines[0].split(',');
+
+                    // Populate table header
+                    const theadRow = table.querySelector('thead tr');
+                    theadRow.innerHTML = '';
+                    header.forEach(headerCell => {
+                        const th = document.createElement('th');
+                        th.textContent = headerCell.trim();
+                        theadRow.appendChild(th);
+                    });
+
+                    // Populate table body
+                    const tbody = table.querySelector('tbody');
+                    tbody.innerHTML = '';
+                    lines.slice(1).forEach(line => {
+                        if (line.trim() !== '') {
+                            const row = document.createElement('tr');
+                            const cells = line.split(',');
+                            cells.forEach(cell => {
+                                const td = document.createElement('td');
+                                td.textContent = cell.trim();
+                                row.appendChild(td);
+                            });
+                            tbody.appendChild(row);
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading CSV file:', error));
+    }
+
+    // Automatically load the test_report.csv file located in the same folder
+    loadCSVFile('test_report.csv');
+
+    // Placeholder functions for Run, Pause, Stop buttons
+    function runTest() {
+        console.log('Run Test button clicked');
+        // Add your logic to start the test here
+    }
+
+    function pauseTest() {
+        console.log('Pause Test button clicked');
+        // Add your logic to pause the test here
+    }
+
+    function stopTest() {
+        console.log('Stop Test button clicked');
+        // Add your logic to stop the test here
+    }
+</script>
+
+</body>
+</html>

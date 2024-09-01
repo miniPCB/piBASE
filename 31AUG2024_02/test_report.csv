@@ -1,0 +1,5 @@
+Test ID,Measurement,Lower Limit,Target Value,Upper Limit,Measured Value,Conclusion
+001,Voltage between TP1 and TP2,4.75,5.0,5.25,4.93,Pass
+002,Current into TP3,9.5,10.0,10.5,9.94,Pass
+003,Resistance between TP4 and TP5,99.0,100.0,101.0,100.02,Pass
+004,Voltage between TP1 and TP2,4.75,5.0,5.25,5.09,Pass

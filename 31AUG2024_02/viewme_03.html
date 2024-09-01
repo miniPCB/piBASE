@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG with Random Quadrangle</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        svg {
+            width: 90%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <button onclick="generateRandomQuadrangle()">Generate Random Quadrangle</button>
+</div>
+
+<svg id="svgCanvas" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Quadrangle will be generated here -->
+</svg>
+
+<script>
+    function generateRandomQuadrangle() {
+        const svg = document.getElementById('svgCanvas');
+        svg.innerHTML = ''; // Clear existing content
+
+        // Generate random points within the viewBox (0 to 100)
+        const points = [
+            { x: Math.random() * 100, y: Math.random() * 100 },
+            { x: Math.random() * 100, y: Math.random() * 100 },
+            { x: Math.random() * 100, y: Math.random() * 100 },
+            { x: Math.random() * 100, y: Math.random() * 100 }
+        ];
+
+        // Create the quadrangle as a polygon
+        const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        polygon.setAttribute('points', points.map(p => `${p.x},${p.y}`).join(' '));
+        polygon.setAttribute('fill', 'lightblue');
+        polygon.setAttribute('stroke', 'black');
+        polygon.setAttribute('stroke-width', '1');
+
+        // Add the quadrangle to the SVG
+        svg.appendChild(polygon);
+    }
+</script>
+
+</body>
+</html>

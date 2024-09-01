@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Report Viewer</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Test Report</h1>
+<input type="file" id="fileInput" />
+<br><br>
+<table id="testReportTable">
+    <thead>
+        <tr></tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const text = e.target.result;
+            const lines = text.split('\n');
+
+            if (lines.length > 0) {
+                const table = document.getElementById('testReportTable');
+                const header = lines[0].split(',');
+
+                // Populate table header
+                const theadRow = table.querySelector('thead tr');
+                theadRow.innerHTML = '';
+                header.forEach(headerCell => {
+                    const th = document.createElement('th');
+                    th.textContent = headerCell.trim();
+                    theadRow.appendChild(th);
+                });
+
+                // Populate table body
+                const tbody = table.querySelector('tbody');
+                tbody.innerHTML = '';
+                lines.slice(1).forEach(line => {
+                    if (line.trim() !== '') {
+                        const row = document.createElement('tr');
+                        const cells = line.split(',');
+                        cells.forEach(cell => {
+                            const td = document.createElement('td');
+                            td.textContent = cell.trim();
+                            row.appendChild(td);
+                        });
+                        tbody.appendChild(row);
+                    }
+                });
+            }
+        };
+
+        reader.readAsText(file);
+    });
+</script>
+
+</body>
+</html>

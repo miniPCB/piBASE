@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG with Varignon Parallelogram and Area Calculation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        svg {
+            width: 90%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        .top-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .top-container button {
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .area-container {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-container">
+    <button onclick="generateRandomQuadrangle()">Generate Random Quadrangle</button>
+    <div class="area-container">
+        Area of Parallelogram x 2: <span id="parallelogramArea">0</span>
+    </div>
+</div>
+
+<svg id="svgCanvas" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Quadrangle and Varignon Parallelogram will be generated here -->
+</svg>
+
+<script>
+    function generateRandomQuadrangle() {
+        const svg = document.getElementById('svgCanvas');
+        svg.innerHTML = ''; // Clear existing content
+
+        // Generate random points within the viewBox (0 to 100)
+        const points = [
+            { x: Math.random() * 100, y: Math.random() * 100 },
+            { x: Math.random() * 100, y: Math.random() * 100 },
+            { x: Math.random() * 100, y: Math.random() * 100 },
+            { x: Math.random() * 100, y: Math.random() * 100 }
+        ];
+
+        // Create the quadrangle as a polygon
+        const quadrangle = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        quadrangle.setAttribute('points', points.map(p => `${p.x},${p.y}`).join(' '));
+        quadrangle.setAttribute('fill', 'lightblue');
+        quadrangle.setAttribute('stroke', 'black');
+        quadrangle.setAttribute('stroke-width', '1');
+        svg.appendChild(quadrangle);
+
+        // Calculate the midpoints of the sides
+        const midpoints = [
+            midpoint(points[0], points[1]),
+            midpoint(points[1], points[2]),
+            midpoint(points[2], points[3]),
+            midpoint(points[3], points[0])
+        ];
+
+        // Create the Varignon parallelogram as a polygon
+        const parallelogram = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        parallelogram.setAttribute('points', midpoints.map(p => `${p.x},${p.y}`).join(' '));
+        parallelogram.setAttribute('fill', 'none');
+        parallelogram.setAttribute('stroke', 'red');
+        parallelogram.setAttribute('stroke-width', '1');
+        svg.appendChild(parallelogram);
+
+        // Calculate the area of the parallelogram
+        const area = calculatePolygonArea(midpoints);
+        document.getElementById('parallelogramArea').textContent = (area * 2).toFixed(2);
+    }
+
+    function midpoint(p1, p2) {
+        return {
+            x: (p1.x + p2.x) / 2,
+            y: (p1.y + p2.y) / 2
+        };
+    }
+
+    function calculatePolygonArea(points) {
+        let area = 0;
+        const numPoints = points.length;
+        for (let i = 0; i < numPoints; i++) {
+            const j = (i + 1) % numPoints;
+            area += points[i].x * points[j].y;
+            area -= points[j].x * points[i].y;
+        }
+        return Math.abs(area / 2);
+    }
+</script>
+
+</body>
+</html>
