@@ -1,6 +1,6 @@
 import os
 import json
-from tkinter import ttk, Frame, Label, Button
+from tkinter import ttk, Frame, Label, Button, Entry, StringVar
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from svgpath2mpl import parse_path
@@ -22,6 +22,9 @@ class setup_tabs:
 
         # Add the Monitors tab
         self.add_monitors_tab()
+
+        # Add the Sensors tab
+        self.add_sensors_tab()
 
     def add_floorplan_tab(self):
         # Create a new frame for the Floorplan tab
@@ -91,3 +94,35 @@ class setup_tabs:
 
         # Add the Monitors tab to the notebook
         self.notebook.add(monitors_frame, text="Monitors")
+
+    def add_sensors_tab(self):
+        # Create the Sensors tab with sub-tabs
+        sensors_frame = Frame(self.notebook)
+        sensors_frame.pack(fill='both', expand=True)
+
+        sensors_notebook = ttk.Notebook(sensors_frame)
+        sensors_notebook.pack(expand=True, fill='both')
+
+        # Create sub-tabs for Sensor 1, Sensor 2, Sensor 3, and Sensor 4
+        for i in range(1, 5):
+            sensor_frame = Frame(sensors_notebook)
+            sensor_frame.pack(fill='both', expand=True)
+
+            # Create a StringVar to hold the tab name
+            tab_name_var = StringVar(value=f"Sensor {i}")
+
+            # Create an entry field and a button to change the tab name
+            entry = Entry(sensor_frame, textvariable=tab_name_var, font=("Helvetica", 12))
+            entry.pack(pady=10, padx=10, side="left")
+
+            def change_tab_name(tab_index=i, var=tab_name_var):
+                sensors_notebook.tab(tab_index-1, text=var.get())
+
+            button = Button(sensor_frame, text="Change Name", command=change_tab_name, font=("Helvetica", 12))
+            button.pack(pady=10, padx=10, side="left")
+
+            # Add the sensor tab to the sensors notebook
+            sensors_notebook.add(sensor_frame, text=f"Sensor {i}")
+
+        # Add the Sensors tab to the main notebook
+        self.notebook.add(sensors_frame, text="Sensors")
