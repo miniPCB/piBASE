@@ -6,6 +6,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from svgpath2mpl import parse_path
+
 
 class setup_tabs:
     def __init__(self, master):
