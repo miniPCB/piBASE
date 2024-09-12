@@ -1,6 +1,0 @@
-Board Name: md1_amis
-Board Revision: 0001
-Board Variant: 1
-Board Serial Number: 00371
-Message: 2024-08-22 20:47:10 - pi@raspberrypi - No known issues.
-Message: 2024-08-22 20:55:03 - pi@raspberrypi - Engineering sample for testing.
