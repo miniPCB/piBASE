@@ -3,6 +3,7 @@ import json
 from tkinter import ttk, Frame, Label, Button, Entry, StringVar
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
+from svgpath2mpl import parse_path  # Ensure this import is included
 import matplotlib.pyplot as plt
 
 class setup_tabs:
