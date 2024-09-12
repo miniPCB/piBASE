@@ -1,10 +1,11 @@
+import os
+import json
 from tkinter import ttk, Frame, Label, Button
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from svgpath2mpl import parse_path
 from matplotlib.patches import PathPatch
 import matplotlib.pyplot as plt
-import json
 
 class setup_tabs:
     def __init__(self, master):
@@ -58,8 +59,12 @@ class setup_tabs:
         monitors_frame = Frame(self.notebook)
         monitors_frame.pack(fill='both', expand=True)
 
+        # Construct the path to the JSON file relative to the script's directory
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        json_file_path = os.path.join(script_dir, "monitors.json")
+
         # Load monitor data from JSON file
-        with open("monitors.json", "r") as file:
+        with open(json_file_path, "r") as file:
             monitors = json.load(file)
 
         # Determine the grid size
