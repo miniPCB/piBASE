@@ -4,12 +4,10 @@ import json
 from tkinter import ttk, Frame, Label, Button, Entry, StringVar
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-from matplotlib.patches import PathPatch  # Import PathPatch here
-from svgpath2mpl import parse_path  # Ensure this import is included
+from matplotlib.patches import PathPatch
+from svgpath2mpl import parse_path
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
-
 
 class setup_tabs:
     def __init__(self, master):
@@ -176,7 +174,7 @@ class setup_tabs:
                     print(f"Error updating chart for Sensor {i}: {e}")
 
             # Animate the plot with data from the CSV file
-            ani = FuncAnimation(fig, update_chart, interval=100)
+            anim = FuncAnimation(fig, update_chart, interval=100, cache_frame_data=False)
 
             # Add the sensor tab to the sensors notebook
             sensors_notebook.add(sensor_frame, text=f"Sensor {i}")
