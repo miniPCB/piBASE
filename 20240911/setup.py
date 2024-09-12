@@ -1,10 +1,8 @@
 import os
 import json
-from tkinter import ttk, Frame, Label, Button, Entry, StringVar, Canvas
+from tkinter import ttk, Frame, Label, Button, Entry, StringVar
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-from svgpath2mpl import parse_path
-from matplotlib.patches import PathPatch
 import matplotlib.pyplot as plt
 
 class setup_tabs:
@@ -111,15 +109,19 @@ class setup_tabs:
             # Create a StringVar to hold the tab name
             tab_name_var = StringVar(value=f"Sensor {i}")
 
+            # Create a frame to hold the form field and button
+            form_frame = Frame(sensor_frame)
+            form_frame.pack(fill='x', pady=10, padx=10, anchor="w")
+
             # Create an entry field and a button to change the tab name
-            entry = Entry(sensor_frame, textvariable=tab_name_var, font=("Helvetica", 12))
-            entry.pack(pady=10, padx=10, anchor="w")
+            entry = Entry(form_frame, textvariable=tab_name_var, font=("Helvetica", 12))
+            entry.pack(side="left", padx=(0, 10))
 
             def change_tab_name(tab_index=i, var=tab_name_var):
                 sensors_notebook.tab(tab_index-1, text=var.get())
 
-            button = Button(sensor_frame, text="Change Name", command=change_tab_name, font=("Helvetica", 12))
-            button.pack(pady=10, padx=10, anchor="w")
+            button = Button(form_frame, text="Change Name", command=change_tab_name, font=("Helvetica", 12))
+            button.pack(side="left")
 
             # Horizontal line separator
             separator = ttk.Separator(sensor_frame, orient='horizontal')
