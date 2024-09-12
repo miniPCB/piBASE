@@ -1,4 +1,4 @@
-from tkinter import ttk, Frame, Canvas
+from tkinter import ttk, Frame, Label
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from svgpath2mpl import parse_path
