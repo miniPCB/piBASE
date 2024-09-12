@@ -1,11 +1,11 @@
 import os
+import csv
 import json
 from tkinter import ttk, Frame, Label, Button, Entry, StringVar
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-from matplotlib.patches import PathPatch  # Add this import
-from svgpath2mpl import parse_path  # Ensure this import is included
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 
 class setup_tabs:
     def __init__(self, master):
@@ -137,19 +137,42 @@ class setup_tabs:
             fig = Figure(figsize=(5, 4), dpi=100)
             ax = fig.add_subplot(111)
 
-            # Example data for the line chart (replace with actual data)
-            times = [0, 1, 2, 3, 4, 5]
-            voltages = [3.3, 3.1, 3.5, 3.6, 3.2, 3.4]
-            ax.plot(times, voltages, label="Voltage")
+            # Initialize the plot lines for four channels
+            lines = [ax.plot([], [], label=f'Channel {j}')[0] for j in range(1, 5)]
 
             ax.set_xlabel("Time (s)")
             ax.set_ylabel("Voltage (V)")
-            ax.set_title("Voltage Over Time")
-            ax.legend()
+            ax.set_title(f"Sensor {i} - Voltage Over Time")
+            ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=4)
 
             # Embed the Matplotlib figure into the Tkinter canvas
             canvas = FigureCanvasTkAgg(fig, master=chart_frame)
             canvas.get_tk_widget().pack(fill='both', expand=True)
+
+            # Function to update the plot with new data
+            def update_chart(frame, lines=lines):
+                try:
+                    # Read the latest data from the CSV file
+                    with open(f"sensor_data_{i}.csv", "r") as csvfile:
+                        reader = csv.reader(csvfile)
+                        times, channels = [], [[] for _ in range(4)]
+                        for row in reader:
+                            times.append(float(row[0]))
+                            for j in range(4):
+                                channels[j].append(float(row[j + 1]))
+
+                    # Update the data for each line
+                    for j, line in enumerate(lines):
+                        line.set_data(times, channels[j])
+
+                    # Rescale the x and y axis to fit the new data
+                    ax.relim()
+                    ax.autoscale_view()
+                except Exception as e:
+                    print(f"Error updating chart for Sensor {i}: {e}")
+
+            # Animate the plot with data from the CSV file
+            ani = FuncAnimation(fig, update_chart, interval=100)
 
             # Add the sensor tab to the sensors notebook
             sensors_notebook.add(sensor_frame, text=f"Sensor {i}")
