@@ -1,3 +1,30 @@
+import os
+import platform
+
+# Determine the platform and set the correct file path
+current_platform = platform.system()
+
+if current_platform == "Windows":
+    csv_filename = r'C:\Repos\piBASE\28AUG2024\adc.csv'
+elif current_platform == "Linux":
+    csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'
+else:
+    raise OSError(f"Unsupported platform: {current_platform}")
+
+# Ensure the directory exists before trying to open the file
+csv_dir = os.path.dirname(csv_filename)
+if not os.path.exists(csv_dir):
+    os.makedirs(csv_dir)
+
+# Now proceed with the file operations
+try:
+    with open(csv_filename, mode='w', newline='') as file:
+        # Your code for writing to the CSV file
+        pass  # Replace with your code to generate the CSV content
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+
 import subprocess
 import sys
 
@@ -34,9 +61,6 @@ from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
-# Define the file name for the CSV output
-csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'
 
 # Define the range for ADC values centered around 2.500 with deviations up to 1.000
 ADC_CENTER = 2.500
