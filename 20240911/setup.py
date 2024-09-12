@@ -1,10 +1,7 @@
 import os
-import csv
-from tkinter import ttk, Frame, Label, Button, Entry, StringVar
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
+from tkinter import ttk, Frame, Canvas
+from cairosvg import svg2png
+from PIL import Image, ImageTk
 
 class setup_tabs:
     def __init__(self, master):
@@ -27,16 +24,20 @@ class setup_tabs:
         floorplan_frame = Frame(self.notebook)
         floorplan_frame.pack(fill='both', expand=True)
 
-        # Create a Matplotlib figure
-        fig = Figure(figsize=(5, 5), dpi=100)
-        ax = fig.add_subplot(111)
+        # Convert SVG to PNG for displaying on the Canvas
+        svg_file = "floorplan.svg"
+        png_file = "floorplan.png"
 
-        # Add a simple plot or SVG if needed
-        ax.plot([0, 1, 2], [0, 1, 0])
+        # Convert SVG to PNG
+        svg2png(url=svg_file, write_to=png_file)
 
-        # Embed the Matplotlib figure into the Tkinter canvas
-        canvas = FigureCanvasTkAgg(fig, master=floorplan_frame)
-        canvas.get_tk_widget().pack(fill='both', expand=True)
+        # Load the PNG image and display it on the Canvas
+        image = Image.open(png_file)
+        photo = ImageTk.PhotoImage(image)
+
+        canvas = Canvas(floorplan_frame, width=image.width, height=image.height)
+        canvas.pack(fill='both', expand=True)
+        canvas.create_image(0, 0, image=photo, anchor='nw')
 
         # Add the Floorplan tab to the notebook
         self.notebook.add(floorplan_frame, text="Floorplan")
@@ -78,47 +79,6 @@ class setup_tabs:
             # Create a frame to hold the chart
             chart_frame = Frame(device_frame)
             chart_frame.pack(fill='both', expand=True)
-
-            # Create a Matplotlib figure for the chart
-            fig = Figure(figsize=(5, 4), dpi=100)
-            ax = fig.add_subplot(111)
-
-            # Initialize the plot lines for four channels
-            lines = [ax.plot([], [], label=f'Channel {j}')[0] for j in range(1, 5)]
-
-            ax.set_xlabel("Time (s)")
-            ax.set_ylabel("Voltage (V)")
-            ax.set_title(f"Device {i} - Voltage Over Time")
-            ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=4)
-
-            # Embed the Matplotlib figure into the Tkinter canvas
-            canvas = FigureCanvasTkAgg(fig, master=chart_frame)
-            canvas.get_tk_widget().pack(fill='both', expand=True)
-
-            # Function to update the plot with new data
-            def update_chart(frame, lines=lines):
-                try:
-                    # Read the latest data from the CSV file
-                    with open(f"device_data_{i}.csv", "r") as csvfile:
-                        reader = csv.reader(csvfile)
-                        times, channels = [], [[] for _ in range(4)]
-                        for row in reader:
-                            times.append(float(row[0]))
-                            for j in range(4):
-                                channels[j].append(float(row[j + 1]))
-
-                    # Update the data for each line
-                    for j, line in enumerate(lines):
-                        line.set_data(times, channels[j])
-
-                    # Rescale the x and y axis to fit the new data
-                    ax.relim()
-                    ax.autoscale_view()
-                except Exception as e:
-                    print(f"Error updating chart for Device {i}: {e}")
-
-            # Animate the plot with data from the CSV file
-            anim = FuncAnimation(fig, update_chart, interval=100, cache_frame_data=False)
 
             # Add the device tab to the devices notebook
             devices_notebook.add(device_frame, text=f"Device {i}")
