@@ -1,6 +1,6 @@
 import os
 import json
-from tkinter import ttk, Frame, Label, Button, Entry, StringVar
+from tkinter import ttk, Frame, Label, Button, Entry, StringVar, Canvas
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from svgpath2mpl import parse_path
@@ -120,6 +120,32 @@ class setup_tabs:
 
             button = Button(sensor_frame, text="Change Name", command=change_tab_name, font=("Helvetica", 12))
             button.pack(pady=10, padx=10, side="left")
+
+            # Horizontal line separator
+            separator = ttk.Separator(sensor_frame, orient='horizontal')
+            separator.pack(fill='x', pady=10)
+
+            # Create a frame to hold the chart
+            chart_frame = Frame(sensor_frame)
+            chart_frame.pack(fill='both', expand=True)
+
+            # Create a Matplotlib figure for the chart
+            fig = Figure(figsize=(5, 4), dpi=100)
+            ax = fig.add_subplot(111)
+
+            # Example data for the line chart (replace with actual data)
+            times = [0, 1, 2, 3, 4, 5]
+            voltages = [3.3, 3.1, 3.5, 3.6, 3.2, 3.4]
+            ax.plot(times, voltages, label="Voltage")
+
+            ax.set_xlabel("Time (s)")
+            ax.set_ylabel("Voltage (V)")
+            ax.set_title("Voltage Over Time")
+            ax.legend()
+
+            # Embed the Matplotlib figure into the Tkinter canvas
+            canvas = FigureCanvasTkAgg(fig, master=chart_frame)
+            canvas.get_tk_widget().pack(fill='both', expand=True)
 
             # Add the sensor tab to the sensors notebook
             sensors_notebook.add(sensor_frame, text=f"Sensor {i}")
