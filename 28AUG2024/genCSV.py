@@ -1,10 +1,3 @@
-import csv
-import random
-from datetime import datetime
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-
 import subprocess
 import sys
 
@@ -23,9 +16,6 @@ except ImportError:
     except ImportError:
         print("Failed to install Pandas.")
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
 try:
     import matplotlib
     print("Matplotlib is already installed.")
@@ -37,6 +27,13 @@ except ImportError:
         print("Matplotlib has been successfully installed.")
     except ImportError:
         print("Failed to install Matplotlib.")
+
+import csv
+import random
+from datetime import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 
 # Define the file name for the CSV output
 csv_filename = '/home/pi/piBASE/28AUG2024/adc.csv'

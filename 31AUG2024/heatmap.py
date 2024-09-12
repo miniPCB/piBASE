@@ -1,3 +1,21 @@
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+try:
+    import matplotlib
+    print("Matplotlib is already installed.")
+except ImportError:
+    print("Matplotlib is not installed. Installing now...")
+    install("matplotlib")
+    try:
+        import matplotlib
+        print("Matplotlib has been successfully installed.")
+    except ImportError:
+        print("Failed to install Matplotlib.")
+        
 import csv
 import random
 from datetime import datetime
