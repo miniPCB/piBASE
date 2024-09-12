@@ -113,13 +113,13 @@ class setup_tabs:
 
             # Create an entry field and a button to change the tab name
             entry = Entry(sensor_frame, textvariable=tab_name_var, font=("Helvetica", 12))
-            entry.pack(pady=10, padx=10, side="left")
+            entry.pack(pady=10, padx=10, anchor="w")
 
             def change_tab_name(tab_index=i, var=tab_name_var):
                 sensors_notebook.tab(tab_index-1, text=var.get())
 
             button = Button(sensor_frame, text="Change Name", command=change_tab_name, font=("Helvetica", 12))
-            button.pack(pady=10, padx=10, side="left")
+            button.pack(pady=10, padx=10, anchor="w")
 
             # Horizontal line separator
             separator = ttk.Separator(sensor_frame, orient='horizontal')
