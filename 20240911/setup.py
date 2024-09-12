@@ -4,6 +4,7 @@ from matplotlib.figure import Figure
 from svgpath2mpl import parse_path
 from matplotlib.patches import PathPatch
 import matplotlib.pyplot as plt
+import json
 
 class setup_tabs:
     def __init__(self, master):
@@ -57,15 +58,11 @@ class setup_tabs:
         monitors_frame = Frame(self.notebook)
         monitors_frame.pack(fill='both', expand=True)
 
-        # Sample data for buttons
-        monitors = [
-            {"Name": "Monitor 1", "SN": "123456", "Status": "Running"},
-            {"Name": "Monitor 2", "SN": "789012", "Status": "Standby"},
-            {"Name": "Monitor 3", "SN": "345678", "Status": "Running"},
-            {"Name": "Monitor 4", "SN": "901234", "Status": "Standby"}
-        ]
+        # Load monitor data from JSON file
+        with open("monitors.json", "r") as file:
+            monitors = json.load(file)
 
-        # Create buttons in a grid
+        # Determine the grid size
         rows = 2
         columns = 2
         for index, monitor in enumerate(monitors):

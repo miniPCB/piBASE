@@ -1,0 +1,6 @@
+[
+    {"Name": "Monitor 1", "SN": "123456", "Status": "Running"},
+    {"Name": "Monitor 2", "SN": "789012", "Status": "Standby"},
+    {"Name": "Monitor 3", "SN": "345678", "Status": "Running"},
+    {"Name": "Monitor 4", "SN": "901234", "Status": "Standby"}
+]
