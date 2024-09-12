@@ -1,4 +1,4 @@
-from tkinter import ttk, Frame, Label
+from tkinter import ttk, Frame, Label, Button
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 from svgpath2mpl import parse_path
@@ -57,9 +57,35 @@ class setup_tabs:
         monitors_frame = Frame(self.notebook)
         monitors_frame.pack(fill='both', expand=True)
 
-        # Add a simple label to the Monitors tab
-        label = Label(monitors_frame, text="Monitors Tab Content")
-        label.pack(pady=10, padx=10, fill='x', expand=True)  # Make label span entire width
+        # Sample data for buttons
+        monitors = [
+            {"Name": "Monitor 1", "SN": "123456", "Status": "Running"},
+            {"Name": "Monitor 2", "SN": "789012", "Status": "Standby"},
+            {"Name": "Monitor 3", "SN": "345678", "Status": "Running"},
+            {"Name": "Monitor 4", "SN": "901234", "Status": "Standby"}
+        ]
+
+        # Create buttons in a grid
+        rows = 2
+        columns = 2
+        for index, monitor in enumerate(monitors):
+            row = index // columns
+            column = index % columns
+
+            status_color = "green" if monitor["Status"] == "Running" else "red"
+            button_text = f"Name: {monitor['Name']}\nSN: {monitor['SN']}\nStatus: {monitor['Status']}"
+
+            button = Button(
+                monitors_frame, text=button_text, bg=status_color, fg="white",
+                font=("Helvetica", 12), width=20, height=5
+            )
+            button.grid(row=row, column=column, padx=10, pady=10, sticky="nsew")
+
+        # Configure grid weights to make buttons expand to fill space
+        for i in range(rows):
+            monitors_frame.grid_rowconfigure(i, weight=1)
+        for j in range(columns):
+            monitors_frame.grid_columnconfigure(j, weight=1)
 
         # Add the Monitors tab to the notebook
         self.notebook.add(monitors_frame, text="Monitors")
