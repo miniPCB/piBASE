@@ -1,0 +1,4 @@
+Test		Measurement					Lower Limit		Target Value		Upper Limit		Measured Value		Conclusion
+001			Voltage between TP2 and TP1.					4.75		5.0		5.25		4.95		Pass
+002			Current through R1					9.5		10.0		10.5		10.1		Pass
+003			Resistance between TP1 and TP2					99.0		100.0		101.0		102.5		Fail
