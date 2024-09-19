@@ -34,7 +34,7 @@ except ModuleNotFoundError:
     import git  # Retry import after installation
 
 # Constants for installation path and GitHub repository
-INSTALL_PATH = '/home/pi/piBASE'
+INSTALL_PATH = r'C:\Repos\piBASE'  # Windows directory path
 DATALOGGER_GITHUB = 'https://github.com/miniPCB/piBASE.git'
 
 # Display program introduction
