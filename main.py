@@ -59,6 +59,12 @@ def print_menu():
     print("[2] Pull System")
     print("[X] Exit")
 
+# Function to stash local changes before pulling
+def stash_local_changes(repo):
+    if repo.is_dirty(untracked_files=True):
+        print("Stashing local changes...")
+        repo.git.stash()
+
 # Function to pull the latest changes from the remote repository
 def pull_from_github(repository, directory):
     try:
@@ -70,8 +76,13 @@ def pull_from_github(repository, directory):
             # Pull the latest changes from the remote repository
             print("Pulling the latest changes from the remote repository...")
             repo = git.Repo(directory)
+
+            # Stash local changes if there are any
+            stash_local_changes(repo)
+
+            # Specify rebase strategy to reconcile divergent branches
             origin = repo.remote(name='origin')
-            origin.pull()
+            repo.git.pull('--rebase')  # Rebase changes on top of the remote branch
 
         print("Pull completed successfully!")
     except git.exc.GitError as e:
@@ -91,9 +102,15 @@ def push_to_github(repository, directory, commit_message):
             git.Repo.clone_from(repository, directory)
         else:
             print("Repository exists, pulling the latest changes...")
+
             repo = git.Repo(directory)
-            origin = repo.remote(name='origin')
-            origin.pull()  # Pull the latest changes before making new commits
+
+            # Stash local changes if necessary
+            stash_local_changes(repo)
+
+            # Pull with rebase strategy to reconcile divergent branches
+            print("Rebasing local changes with remote repository...")
+            repo.git.pull('--rebase')
 
         # Stage all changes
         print("Adding all changes to staging area...")
@@ -105,6 +122,7 @@ def push_to_github(repository, directory, commit_message):
 
         # Push the changes to GitHub
         print("Pushing changes to the remote repository...")
+        origin = repo.remote(name='origin')
         origin.push()
 
         print("Push completed successfully!")
