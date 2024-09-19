@@ -101,35 +101,39 @@ def push_to_github(repository, directory, commit_message):
             print(f"Cloning repository from {repository} to {directory}...")
             git.Repo.clone_from(repository, directory)
         else:
-            print("Repository exists, pulling the latest changes...")
+            print("Repository exists.")
 
             repo = git.Repo(directory)
 
-            # Stash local changes if necessary
-            stash_local_changes(repo)
+            # Debugging: Show the current branch
+            print(f"Current branch: {repo.active_branch}")
 
-            # Pull with rebase strategy to reconcile divergent branches
-            print("Rebasing local changes with remote repository...")
+            # Debugging: Show the remote URL
+            origin = repo.remote(name='origin')
+            print(f"Remote URL: {origin.url}")
+
+            # Debugging: Check the repository status before committing
+            print(repo.git.status())
+
+            # Stage all changes
+            print("Adding all local changes to staging area...")
+            repo.git.add('--all')
+
+            # Commit the changes before pulling
+            print(f"Committing local changes with message: {commit_message}")
+            repo.index.commit(commit_message)
+
+            # Pull the latest changes from the remote repository
+            print("Pulling the latest changes from the remote repository to ensure up-to-date...")
             repo.git.pull('--rebase')
 
-        # Stage all changes
-        print("Adding all changes to staging area...")
-        repo.git.add('--all')
-
-        # Commit the changes
-        print(f"Committing changes with message: {commit_message}")
-        repo.index.commit(commit_message)
-
-        # Push the changes to GitHub
-        print("Pushing changes to the remote repository...")
-        origin = repo.remote(name='origin')
+        # Push the committed changes to GitHub
+        print("Pushing committed changes to the remote repository...")
         origin.push()
 
         print("Push completed successfully!")
     except git.exc.GitError as e:
         print(f"Git error occurred: {e}")
-        if 'invalid path' in str(e):
-            print("It looks like there is an invalid path in the repository for Windows (such as a file with a colon ':'). Please rename the file in the remote repository to avoid this issue.")
     except Exception as e:
         print(f"Unexpected error: {e}")
         sys.exit(1)
