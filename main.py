@@ -33,8 +33,16 @@ except ModuleNotFoundError:
     install_gitpython()
     import git  # Retry import after installation
 
-# Constants for installation path and GitHub repository
-INSTALL_PATH = r'C:\Repos\piBASE'  # Windows directory path
+# Detect OS and set repository path accordingly
+if sys.platform.startswith("linux"):
+    INSTALL_PATH = '/home/pi/piBASE'  # Path for Raspberry Pi
+elif sys.platform == "win32":
+    INSTALL_PATH = r'C:\Repos\piBASE'  # Path for Windows machine
+else:
+    print("Unsupported operating system.")
+    sys.exit(1)
+
+# GitHub repository URL
 DATALOGGER_GITHUB = 'https://github.com/miniPCB/piBASE.git'
 
 # Display program introduction
@@ -68,6 +76,8 @@ def pull_from_github(repository, directory):
         print("Pull completed successfully!")
     except git.exc.GitError as e:
         print(f"Git error occurred while pulling: {e}")
+        if 'invalid path' in str(e):
+            print("It looks like there is an invalid path in the repository for Windows (such as a file with a colon ':'). Please rename the file in the remote repository to avoid this issue.")
     except Exception as e:
         print(f"Unexpected error: {e}")
         sys.exit(1)
@@ -100,6 +110,8 @@ def push_to_github(repository, directory, commit_message):
         print("Push completed successfully!")
     except git.exc.GitError as e:
         print(f"Git error occurred: {e}")
+        if 'invalid path' in str(e):
+            print("It looks like there is an invalid path in the repository for Windows (such as a file with a colon ':'). Please rename the file in the remote repository to avoid this issue.")
     except Exception as e:
         print(f"Unexpected error: {e}")
         sys.exit(1)
