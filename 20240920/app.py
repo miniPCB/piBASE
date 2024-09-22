@@ -8,6 +8,7 @@ import re
 from catalog import CatalogManager
 from form_handler import FormHandler
 from helpers import set_window_icon, load_parts, load_part_catalog, save_parts
+from image_handler import load_and_resize_image
 
 # Define paths for the JSON files
 PARTS_LIST_FILE = "PartsList.json"
@@ -86,6 +87,9 @@ class PartsManagerApp(tk.Tk):
             self.form_fields["revision"].delete(0, tk.END)
             self.form_fields["revision"].insert(0, part['revision'])
 
+            # Display the associated image for the part
+            self.display_part_image(part_number)
+
     def create_form(self):
         """Create the form fields for the Edit Part tab."""
         large_font = tkFont.Font(size=14)
@@ -144,6 +148,18 @@ class PartsManagerApp(tk.Tk):
                 field.delete(0, tk.END)  # Clear text from Entry widgets
             elif isinstance(field, tk.Text):
                 field.delete(1.0, tk.END)  # Clear text from Text widgets
+
+    def display_part_image(self, part_number):
+        """Load and display the part's image in PNG format."""
+        png_file = f"images/{part_number}.png"  # Path to the PNG file
+
+        # Load and display the PNG image
+        photo = load_and_resize_image(png_file, 1000, 400)
+        if photo:
+            self.image_label.config(image=photo)
+            self.image_label.image = photo  # Keep reference to avoid garbage collection
+        else:
+            self.image_label.config(text="No image available")
 
 if __name__ == "__main__":
     try:

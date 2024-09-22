@@ -85,7 +85,7 @@ def create_catalog_widgets(app):
     delete_button.pack(side=tk.LEFT, padx=5)
 
 def create_part_widgets(app):
-    """Create the form for editing parts."""
+    """Create the form for editing parts, including image display."""
     
     # Create the frame for the part form inside the Edit Part tab
     app.form_frame = tk.Frame(app.part_tab)
@@ -94,6 +94,10 @@ def create_part_widgets(app):
     # Create the form fields by calling the create_form() method
     app.create_form()
 
+    # --- Image Display ---
+    app.image_label = tk.Label(app.part_tab, text="No image available")  # Create image label
+    app.image_label.pack(side=tk.TOP, pady=10)  # Position the image label
+    
     # --- Buttons at the Bottom of the Edit Part form ---
     button_frame = tk.Frame(app.part_tab)
     button_frame.pack(side=tk.BOTTOM, pady=10)
