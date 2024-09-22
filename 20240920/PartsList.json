@@ -438,12 +438,6 @@
         "revision": "A1-01"
     },
     {
-        "partnumber": "09F-008",
-        "name": "OPTOISOLATOR",
-        "description": "ISOLATOR THAT PROVIDES ELECTRICAL ISOLATION BETWEEN CIRCUITS.",
-        "revision": "REV 1.0"
-    },
-    {
         "partnumber": "10A-01",
         "name": "DISCRETE LATCH, SET/RESET",
         "description": "",

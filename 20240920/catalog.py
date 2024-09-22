@@ -32,6 +32,19 @@ class CatalogManager:
                 self.app.current_category_and_subcategory = (category_code, subcategory_code)
                 self.update_parts_listbox(category_code, subcategory_code)
 
+                # Populate the Edit Catalog fields with the selected category and subcategory
+                self.app.category_entry.delete(0, tk.END)
+                self.app.category_entry.insert(0, category_code)
+                
+                self.app.category_name_entry.delete(0, tk.END)
+                self.app.category_name_entry.insert(0, self.app.part_catalog[category_code]['name'])
+                
+                self.app.subcategory_entry.delete(0, tk.END)
+                self.app.subcategory_entry.insert(0, subcategory_code)
+                
+                self.app.subcategory_name_entry.delete(0, tk.END)
+                self.app.subcategory_name_entry.insert(0, self.app.part_catalog[category_code]['subcategories'][subcategory_code])
+
     def update_catalog_listbox(self):
         """Update the listbox in the View Catalog tab with categories."""
         
@@ -117,49 +130,33 @@ class CatalogManager:
             self.app.notebook.select(self.app.edit_catalog_tab)
 
     def on_subcategory_double_click(self, event):
-        """Handle double-click on a subcategory to open the Edit Catalog tab with both category and subcategory populated."""
-        selection = event.widget.curselection()
-        if selection:
-            index = selection[0]
-            selected_subcategory = event.widget.get(index)
-            subcategory_code = selected_subcategory.split(":")[0].strip()
+        """Handle double-click event on a subcategory to populate Edit Catalog form."""
+        try:
+            # Get selected subcategory
+            selected_index = self.app.subcategory_listbox.curselection()
+            if not selected_index:
+                messagebox.showerror("Error", "Please select a subcategory.")
+                return
+            subcategory_code = self.app.subcategory_listbox.get(selected_index).split(":")[0].strip()
 
-            # Retrieve the selected category from the internal state
+            # Get the current category from the tuple
             category_code, _ = self.app.current_category_and_subcategory
 
-            if not category_code:
-                print("Error: No category selected.")
-                messagebox.showerror("Error", "Please select a category first.")
-                return
+            # Populate the Edit Catalog fields with the selected category and subcategory
+            self.app.category_entry.delete(0, tk.END)
+            self.app.category_entry.insert(0, category_code)
+            
+            self.app.category_name_entry.delete(0, tk.END)
+            self.app.category_name_entry.insert(0, self.app.part_catalog[category_code]['name'])
+            
+            self.app.subcategory_entry.delete(0, tk.END)
+            self.app.subcategory_entry.insert(0, subcategory_code)
+            
+            self.app.subcategory_name_entry.delete(0, tk.END)
+            self.app.subcategory_name_entry.insert(0, self.app.part_catalog[category_code]['subcategories'][subcategory_code])
 
-            print(f"Updating subcategories for category {category_code}")
-            subcategories = self.app.part_catalog[category_code]['subcategories']
-            print(f"Subcategories: {subcategories}")
+            # Switch to the Edit Catalog tab
+            self.app.notebook.select(self.app.edit_catalog_tab)
 
-            # Populate the Category fields if not already populated (preserve them otherwise)
-            if not self.app.category_entry.get():
-                self.app.category_entry.delete(0, tk.END)
-                self.app.category_entry.insert(0, category_code)
-
-            category_name = self.app.part_catalog[category_code]['name']
-            if not self.app.category_name_entry.get():
-                self.app.category_name_entry.delete(0, tk.END)
-                self.app.category_name_entry.insert(0, category_name)
-
-            # Populate the Subcategory fields
-            if subcategory_code in subcategories:
-                self.app.subcategory_entry.delete(0, tk.END)
-                self.app.subcategory_entry.insert(0, subcategory_code)
-
-                subcategory_name = subcategories[subcategory_code]
-                self.app.subcategory_name_entry.delete(0, tk.END)
-                self.app.subcategory_name_entry.insert(0, subcategory_name)
-
-                # Preserve the current category and subcategory for further interactions
-                self.app.current_category_and_subcategory = (category_code, subcategory_code)
-
-                # Switch to the Edit Catalog tab
-                self.app.notebook.select(self.app.edit_catalog_tab)
-            else:
-                print("Error: Subcategory not found.")
-                messagebox.showerror("Error", "Subcategory not found.")
+        except KeyError as e:
+            messagebox.showerror("Error", f"Failed to load subcategory: {e}")

@@ -1,3 +1,4 @@
+import json
 import tkinter as tk
 from tkinter import messagebox
 from helpers import PART_NUMBER_PATTERN, save_parts
@@ -25,16 +26,21 @@ class FormHandler:
             if subcategory_code and subcategory_name:
                 self.app.part_catalog[category_code]['subcategories'][subcategory_code] = subcategory_name
 
-            # Save the updated catalog to JSON
-            with open(self.app.PART_CATALOG_FILE, "w") as file:
-                json.dump(self.app.part_catalog, file, indent=4)
+            # **Sort the catalog by category and subcategory before saving**
+            sorted_catalog = {cat_code: {'name': cat['name'], 'subcategories': dict(sorted(cat['subcategories'].items()))}
+                              for cat_code, cat in sorted(self.app.part_catalog.items())}
 
-            # Update UI after saving
-            self.app.catalog_manager.update_catalog_listbox()
-            self.app.catalog_manager.update_subcategory_listbox(category_code)
-            self.app.display_full_catalog()
-
-            messagebox.showinfo("Success", "Catalog entry saved successfully.")
+            # **Save the updated catalog to the JSON file**
+            try:
+                with open(self.app.PART_CATALOG_FILE, "w") as file:
+                    json.dump(sorted_catalog, file, indent=4)
+                # Update the internal catalog and UI
+                self.app.part_catalog = sorted_catalog
+                self.app.catalog_manager.update_catalog_listbox()
+                self.app.display_full_catalog()
+                messagebox.showinfo("Success", "Catalog entry saved successfully.")
+            except Exception as e:
+                messagebox.showerror("Error", f"Failed to save catalog: {e}")
         else:
             messagebox.showerror("Error", "Category code and name are required.")
 
@@ -53,13 +59,20 @@ class FormHandler:
                 del self.app.part_catalog[category_code]
                 messagebox.showinfo("Success", "Category deleted successfully.")
 
-            # Save the updated catalog to JSON
-            with open(self.app.PART_CATALOG_FILE, "w") as file:
-                json.dump(self.app.part_catalog, file, indent=4)
+            # **Sort the catalog by category and subcategory before saving**
+            sorted_catalog = {cat_code: {'name': cat['name'], 'subcategories': dict(sorted(cat['subcategories'].items()))}
+                              for cat_code, cat in sorted(self.app.part_catalog.items())}
 
-            # Update UI after deletion
-            self.app.catalog_manager.update_catalog_listbox()
-            self.app.display_full_catalog()
+            # **Save the updated catalog to the JSON file**
+            try:
+                with open(self.app.PART_CATALOG_FILE, "w") as file:
+                    json.dump(sorted_catalog, file, indent=4)
+                # Update the internal catalog and UI
+                self.app.part_catalog = sorted_catalog
+                self.app.catalog_manager.update_catalog_listbox()
+                self.app.display_full_catalog()
+            except Exception as e:
+                messagebox.showerror("Error", f"Failed to save catalog: {e}")
 
             # Clear form fields after deletion
             self.app.category_entry.delete(0, 'end')

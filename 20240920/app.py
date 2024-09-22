@@ -22,6 +22,9 @@ class PartsManagerApp(tk.Tk):
         self.title("Parts Catalog")
         self.geometry("1280x720")
 
+        # Define the catalog file path as a class attribute
+        self.PART_CATALOG_FILE = PART_CATALOG_FILE
+
         # Initialize parts list and catalog
         self.parts = load_parts()
         self.part_catalog = load_part_catalog()
@@ -60,8 +63,8 @@ class PartsManagerApp(tk.Tk):
         create_read_catalog_widgets(self)
 
         # Ensure buttons are created and visible
-        self.create_buttons(self.edit_catalog_tab, self.form_handler.save_catalog_entry, self.form_handler.delete_catalog_entry)
-        self.create_buttons(self.part_tab, self.form_handler.save_part, self.form_handler.delete_part)
+        #self.create_buttons(self.edit_catalog_tab, self.form_handler.save_catalog_entry, self.form_handler.delete_catalog_entry)
+        #self.create_buttons(self.part_tab, self.form_handler.save_part, self.form_handler.delete_part)
 
         # Initial population of the catalog listbox
         self.catalog_manager.update_catalog_listbox()

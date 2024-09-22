@@ -122,8 +122,7 @@
     "15": {
         "name": "WEARABLES",
         "subcategories": {
-            "A": "MICROPHONES",
-            "B": "BIO SENSORS"
+            "A": "MICROPHONES"
         }
     },
     "16": {
