@@ -1,0 +1,506 @@
+[
+    {
+        "partnumber": "00A-001",
+        "name": "PROBE BOARD, TWO WIRE",
+        "description": "MINIPCB, PROBE BOARD, TWO WIRE, KE5000 TEST POINTS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-002",
+        "name": "PROBE BOARD, FOUR WIRE",
+        "description": "MINIPCB, PROBE BOARD, FOUR WIRE, KE5000 TEST POINTS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-003",
+        "name": "PROBE BOARD, SIX WIRE",
+        "description": "MINIPCB, PROBE BOARD, SIX WIRE, KE5000 TEST POINTS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-004",
+        "name": "PROBE BOARD, EIGHT WIRE",
+        "description": "MINIPCB, PROBE BOARD, EIGHT WIRE, KE5000 TEST POINTS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-005",
+        "name": "FUSE POST",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-006",
+        "name": "BLDC MOTOR COMMUTATION",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-010",
+        "name": "TEST POINT DOCK, 5P",
+        "description": "",
+        "revision": "1.0"
+    },
+    {
+        "partnumber": "00A-011",
+        "name": "TEST POINT DOCK, 7P",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-012",
+        "name": "TEST POINT DOCK, 9P",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-020",
+        "name": "PROTOBOARD, FRDM, INDEPENDENT VIAS",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-021",
+        "name": "PROTOBOARD, FRDM, BREADBOARD VIAS",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-022",
+        "name": "PROTOBOARD, FRDM, THREE COLUMNS OF FOUR",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-023",
+        "name": "PROTOBOARD, FRDM, NANOFIT CONNECTORS",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-024",
+        "name": "PROTOBOARD, FRDM, JST CONNECTORS",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-025",
+        "name": "PROTOBOARD, FRDM, MORTON BREAKOUTS",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-026",
+        "name": "PROTOBOARD, FRDM, 100 MM BREAKOUT",
+        "description": "MINIPCB, PROTOBOARD, FREEDOM BOARD",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-030",
+        "name": "PROTOBOARD, ONE PIECE",
+        "description": "MINIPCB, PROTOBOARD, ONE PIECE, 0.1\" PITCH",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-031",
+        "name": "PROTOBOARD, FOUR BOARDS, 1.8\" X 1.8\"",
+        "description": "MINIPCB, PROTOBOARD, FOUR BOARDS, 0.1\" PITCH",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-032",
+        "name": "PROTOBOARD, NINE BOARDS, 1\" X 1\"",
+        "description": "MINIPCB, PROTOBOARD, NINE BOARDS, 0.1\" PITCH",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-033",
+        "name": "PROTOBOARD, TWENTY EIGHT BOARDS, 0.5\" X 0.9\"",
+        "description": "MINIPCB, PROTOBOARD, TWENTY EIGHT BOARDS, 0.1\" PITCH",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-100",
+        "name": "LOAD BOARD, MANUAL",
+        "description": "MINIPCB, SWITCHES, POWER RESISTORS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-110",
+        "name": "POWER LIMITER, MANUAL",
+        "description": "MINIPCB, ROTARY SWITCH, POWER RESISTORS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-120",
+        "name": "MULTIPLEX SWITCH, 0805 COMPONENTS",
+        "description": "MINIPCB, ROTARY SWITCH, 0805 COMPONENTS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-15",
+        "name": "PROBE BOARD, TEST POINTS",
+        "description": "PROBE BOARD FOR SAFELY, SECURELY AND RELIABLY PERFORMING DEVELOPMENTAL TESTS.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-20",
+        "name": "SINGLE-CHANNEL AMPLIFIER DOCK",
+        "description": "ADAPTER BOARD TO INTERFACE SINGLE-CHANNEL AMPLIFIER MINIPCBS WITH DIGILENT'S ANALOG DISCOVERY 1/2/3.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-70",
+        "name": "ANALOG DOCK, ANALOG DISCOVERY, 5 PIN, 1 SLOT",
+        "description": "MINIPCB, ANALOG DOCK, ANALOG DISCOVERY",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-71",
+        "name": "ANALOG DOCK, ANALOG DISCOVERY, 6 PIN, 1 SLOT",
+        "description": "MINIPCB, ANALOG DOCK, ANALOG DISCOVERY",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-72",
+        "name": "ANALOG DOCK, ANALOG DISCOVERY, 7 PIN, 1 SLOT",
+        "description": "MINIPCB, ANALOG DOCK, ANALOG DISCOVERY",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-73",
+        "name": "ANALOG DOCK, ANALOG DISCOVERY, 5 PIN, 2 SLOT",
+        "description": "MINIPCB, ANALOG DOCK, ANALOG DISCOVERY",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-74",
+        "name": "ANALOG DOCK, ANALOG DISCOVERY, 6 PIN, 2 SLOT",
+        "description": "MINIPCB, ANALOG DOCK, ANALOG DISCOVERY",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00A-75",
+        "name": "ANALOG DOCK, ANALOG DISCOVERY, 7 PIN, 2 SLOT",
+        "description": "MINIPCB, ANALOG DOCK, ANALOG DISCOVERY",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "00C-01",
+        "name": "CURRENT SENSE AMPLIFIER, INA181",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "00C-10",
+        "name": "ULTRASOUND PREAMPLIFIER",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "00C-20",
+        "name": "EKG ANALOG FRONT END, AD8232",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-01",
+        "name": "OPAMP, INTEGRATOR, DUAL SUPPLY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-10",
+        "name": "OPAMP, DIFFERENTIATOR, DUAL SUPPLY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-20",
+        "name": "OPAMP, INTEGRATOR, SINGLE SUPPLY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-30",
+        "name": "OPAMP, DIFFERENTIATOR, SINGLE SUPPLY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-50",
+        "name": "COMPARATOR, WITH HYSTERESIS",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-60",
+        "name": "COMPARATOR, WINDOW",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-70",
+        "name": "COMPARATOR, LATCHING WITH RESET",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "01C-80",
+        "name": "COMPARATOR, EXTERNAL POWER TRANSISTOR",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "02B-01",
+        "name": "ELECTROSCOPE AFE",
+        "description": "PROTOTYPE BOARD WITH AN ELECTROSCOPE ANALOG FRONT END CIRCUIT.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04A-05",
+        "name": "INVERTING AMPLIFIER",
+        "description": "AMPLIFIER, OPAMP, INVERTING",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04A-06",
+        "name": "NON-INVERTING AMPLIFIER",
+        "description": "AMPLIFIER, OPAMP, NON-INVERTING",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04A-07",
+        "name": "DIFFERENCE AMPLIFIER",
+        "description": "AMPLIFIER, OPAMP, DIFFERENCE",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04A-08",
+        "name": "INSTRUMENT AMPLIFIER",
+        "description": "AMPLIFIER, OPAMP, INSTRUMENT",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04A-10",
+        "name": "PHOTODIODE SENSOR ANALOG FRONT END, OPA322",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04B-01",
+        "name": "COMMON EMITTER AMPLIFIER",
+        "description": "AMPLIFIER, TRANSISTOR, COMMON EMITTER",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04B-02",
+        "name": "CASCODE AMPLIFIER",
+        "description": "AMPLIFIER, TRANSISTOR, CASCODE",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04B-03",
+        "name": "CASCADE AMPLIFIER",
+        "description": "AMPLIFIER, TRANSISTOR, CASCADE",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "04B-04",
+        "name": "CASCODE CASCADE AMPLIFIER",
+        "description": "AMPLIFIER, TRANSISTOR, CASCODE CASCADE",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "05A-01",
+        "name": "SINGLE LOW-PASS",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "05A-02",
+        "name": "DUAL LOW-PASS",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "05A-03",
+        "name": "DUAL HIGH-PASS",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "06A-01",
+        "name": "COLPITTS",
+        "description": "COLPITTS OSCILLATOR",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "06A-02",
+        "name": "HARTLEY",
+        "description": "HARTLEY OSCILLATOR",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "06B-01",
+        "name": "ONE TRANSISTOR",
+        "description": "RELAXATION OSCILLATOR, OSCILLATOR USED IN NONLINEAR APPLICATIONS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "06B-02",
+        "name": "TWO TRANSISTOR",
+        "description": "RELAXATION OSCILLATOR, OSCILLATOR USED IN NONLINEAR APPLICATIONS",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "08A-00",
+        "name": "DISCRETE ADC, SUCCESSIVE APPROXIMATION REGISTER",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "08A-10",
+        "name": "DISCRETE ADC, DELTA SIGMA",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "08C-01",
+        "name": "VOLTAGE TO CURRENT, DUAL OPAMP, SINGLE SUPPLY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "08D-01",
+        "name": "CURRENT TO VOLTAGE, DUAL OPAMP, SINGLE SUPPLY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "08E-007",
+        "name": "VOLTAGE TO FREQUENCY CONVERTER",
+        "description": "CONVERTER THAT TRANSFORMS VOLTAGE SIGNALS INTO FREQUENCY.",
+        "revision": "REV 1.3"
+    },
+    {
+        "partnumber": "08E-01",
+        "name": "VOLTAGE TO FREQUENCY",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "08H-01",
+        "name": "ADJUSTABLE PULSE GENERATOR, I2C",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "09A-01",
+        "name": "SHUNT VOLTAGE REGULATOR",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "09A-02",
+        "name": "PASS VOLTAGE REGULATOR",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "09B-01",
+        "name": "CURRENT LIMITER",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "09B-02",
+        "name": "CURRENT MIRROR",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "09C-00",
+        "name": "DC ISOLATOR, LT3748",
+        "description": "EVALUATION BOARD FOR TESTING A FLYBACK DC ISOLATION CIRCUIT.\nDESIGNED AROUND THE LT3748 AND 750313457 TRANSFORMER.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "09E-00",
+        "name": "PMOS POWER SWITCH",
+        "description": "EVALUATION BOARD FOR TESTING DISCRETE HIGH-SIDE POWER SWITCH CIRCUITS.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "09E-01",
+        "name": "PMOS POLARITY PROTECTOR",
+        "description": "EVALUATION BOARD FOR TESTING DISCRETE PMOS POLARITY PROTECTION CIRCUITS.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "09F-008",
+        "name": "OPTOISOLATOR",
+        "description": "ISOLATOR THAT PROVIDES ELECTRICAL ISOLATION BETWEEN CIRCUITS.",
+        "revision": "REV 1.0"
+    },
+    {
+        "partnumber": "10A-01",
+        "name": "DISCRETE LATCH, SET/RESET",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "10A-02",
+        "name": "DISCRETE NAND (SERIES)",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "10A-03",
+        "name": "DISCRETE NOR (PARALLEL)",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "10A-04",
+        "name": "DISCRETE XOR",
+        "description": "",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "11A-001",
+        "name": "VIVA BOARD, UTSA",
+        "description": "VIVA BOARD, UTSA, PIC16F1829, ATMEGA328",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "11B-01",
+        "name": "PULSE GENERATOR, ADJUSTABLE",
+        "description": "PIC16F1829",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "12A-01",
+        "name": "RJ45 POWER DISTRIBUTION BOARD",
+        "description": "POWER DISTRIBUTION BOARD FOR A LOW VOLTAGE LED LIGHTING SYSTEM.\nCONNECTIONS INCLUDED FOR A CAN BUS FOR HOME AUTOMATION EXPERIMENTS.\nDESIGNED TO FIT IN EVERSECU BOX.",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "13A-777",
+        "name": "LUCKY NUMBER GENERATOR",
+        "description": "PIC16F1789",
+        "revision": "A1-01"
+    },
+    {
+        "partnumber": "15A-01",
+        "name": "WEARABLE MICROPHONE, NORDIC, N52832",
+        "description": "",
+        "revision": ""
+    },
+    {
+        "partnumber": "16A-00",
+        "name": "FLASH METER",
+        "description": "PIC16F1829",
+        "revision": ""
+    }
+]

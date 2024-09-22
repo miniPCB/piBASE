@@ -1,0 +1,135 @@
+{
+    "00": {
+        "name": "TEST BOARDS",
+        "subcategories": {
+            "A": "PROBE AND PROTOTYPING",
+            "B": "TEST DEVICE AND SETUP BOARDS",
+            "C": "EVALUATION BOARDS"
+        }
+    },
+    "01": {
+        "name": "COMPONENTS",
+        "subcategories": {
+            "A": "DISCRETE COMPONENTS",
+            "B": "INTEGRATED COMPONENTS",
+            "C": "MODULAR COMPONENTS"
+        }
+    },
+    "02": {
+        "name": "SENSORS",
+        "subcategories": {
+            "A": "FUNDAMENTAL",
+            "B": "ADVANCED"
+        }
+    },
+    "03": {
+        "name": "ACTUATORS",
+        "subcategories": {
+            "A": "MECHANICAL",
+            "B": "THERMAL",
+            "C": "PHOTIC"
+        }
+    },
+    "04": {
+        "name": "AMPLIFIERS",
+        "subcategories": {
+            "A": "OPERATIONAL AMPLIFIERS",
+            "B": "TRANSISTOR AMPLIFIERS",
+            "C": "APPLICATION SPECIFIC AMPLIFIERS"
+        }
+    },
+    "05": {
+        "name": "FILTERS",
+        "subcategories": {
+            "A": "PASSIVE",
+            "B": "ACTIVE"
+        }
+    },
+    "06": {
+        "name": "OSCILLATORS",
+        "subcategories": {
+            "A": "HARMONIC (LINEAR)",
+            "B": "RELAXATION (NONLINEAR)"
+        }
+    },
+    "07": {
+        "name": "RADIO",
+        "subcategories": {
+            "A": "TRANSMITTERS",
+            "B": "RECEIVERS",
+            "C": "TRANSCEIVERS"
+        }
+    },
+    "08": {
+        "name": "SIGNAL CONVERTERS",
+        "subcategories": {
+            "A": "ANALOG TO DIGITAL",
+            "B": "DIGITAL TO ANALOG",
+            "C": "VOLTAGE TO CURRENT",
+            "D": "CURRENT TO VOLTAGE",
+            "E": "VOLTAGE TO FREQUENCY",
+            "F": "FREQUENCY TO VOLTAGE",
+            "G": "TIME TO VOLTAGE",
+            "H": "TRIGGER TO WAVEFORM"
+        }
+    },
+    "09": {
+        "name": "POWER",
+        "subcategories": {
+            "A": "VOLTAGE LIMITERS, REFERENCES, REGULATORS",
+            "B": "CURRENT LIMITERS, MIRRORS, REGULATORS",
+            "C": "POWER CONVERTERS, ISOLATORS",
+            "D": "FUSES, RECTIFIERS, FILTERS, TRANSFORMERS",
+            "E": "RESERVED",
+            "F": "OPTOISOLATORS"
+        }
+    },
+    "10": {
+        "name": "DIGITAL",
+        "subcategories": {
+            "A": "LOGIC GATES",
+            "B": "LOGIC DEVICES (CLOCKS, REGISTERS, FLIP-FLOPS, ETC.)",
+            "C": "DIGITAL SYSTEMS"
+        }
+    },
+    "11": {
+        "name": "COMPUTING",
+        "subcategories": {
+            "A": "EDUCATIONAL",
+            "B": "DEVELOPMENTAL",
+            "C": "INDUSTRIAL"
+        }
+    },
+    "12": {
+        "name": "COMMUNICATION",
+        "subcategories": {
+            "A": "WIRED",
+            "B": "WIRELESS"
+        }
+    },
+    "13": {
+        "name": "GAMES",
+        "subcategories": {
+            "A": "LUCK GAMES (I.E. CHANCE)",
+            "B": "COMPUTATION GAMES (I.E. STRATEGY)",
+            "C": "EMPATHY GAMES (I.E. BLUFFING)"
+        }
+    },
+    "14": {
+        "name": "HOME AUTOMATION",
+        "subcategories": {}
+    },
+    "15": {
+        "name": "WEARABLES",
+        "subcategories": {
+            "A": "MICROPHONES",
+            "B": "BIO SENSORS"
+        }
+    },
+    "16": {
+        "name": "INSTRUMENTS",
+        "subcategories": {
+            "A": "METERS"
+        }
+    }
+}
