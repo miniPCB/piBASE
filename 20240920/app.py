@@ -21,7 +21,7 @@ class PartsManagerApp(tk.Tk):
         # Set up window
         set_window_icon(self, 'icon.png')
         self.title("Parts Catalog")
-        self.geometry("1280x720")
+        self.geometry("1800x950")
 
         # Define the catalog file path as a class attribute
         self.PART_CATALOG_FILE = PART_CATALOG_FILE
@@ -62,10 +62,6 @@ class PartsManagerApp(tk.Tk):
         create_catalog_widgets(self)  # Combined category and subcategory widgets
         create_part_widgets(self)
         create_read_catalog_widgets(self)
-
-        # Ensure buttons are created and visible
-        #self.create_buttons(self.edit_catalog_tab, self.form_handler.save_catalog_entry, self.form_handler.delete_catalog_entry)
-        #self.create_buttons(self.part_tab, self.form_handler.save_part, self.form_handler.delete_part)
 
         # Initial population of the catalog listbox
         self.catalog_manager.update_catalog_listbox()
@@ -155,11 +151,21 @@ class PartsManagerApp(tk.Tk):
 
         # Load and display the PNG image
         photo = load_and_resize_image(png_file, 1000, 400)
+        
+        # Check if the image label has been created, if not, create it
+        if not hasattr(self, 'image_label'):
+            self.image_label = tk.Label(self.part_tab)
+            self.image_label.pack(side=tk.TOP, pady=10)
+
+        # Set the image or fallback text
         if photo:
-            self.image_label.config(image=photo)
+            self.image_label.config(image=photo, text="")  # Clear any text if image exists
             self.image_label.image = photo  # Keep reference to avoid garbage collection
         else:
-            self.image_label.config(text="No image available")
+            # Clear the image and set fallback text if no image is found
+            self.image_label.config(image='', text="No image available")
+            self.image_label.image = None  # Clear the stored image reference
+
 
 if __name__ == "__main__":
     try:
