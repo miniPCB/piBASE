@@ -1,3 +1,5 @@
 PARTS_LIST_FILE = "PartsList.json"
 PART_CATALOG_FILE = "PartsCatalog.json"
+APPLICATION_TITLE = "Parts Catalog"
 DEFAULT_WINDOW_SIZE = "1800x950"
+ICON = "icon.png"

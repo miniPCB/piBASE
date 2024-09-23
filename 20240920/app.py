@@ -16,8 +16,8 @@ class PartsManagerApp(tk.Tk):
         super().__init__()
 
         # Set up window
-        set_window_icon(self, 'icon.png')
-        self.title("Parts Catalog")
+        set_window_icon(self, ICON)
+        self.title(APPLICATION_TITLE)
         self.geometry(DEFAULT_WINDOW_SIZE)
 
         # Define the catalog file path as a class attribute
