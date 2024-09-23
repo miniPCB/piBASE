@@ -9,10 +9,7 @@ from catalog import CatalogManager
 from form_handler import FormHandler
 from helpers import set_window_icon, load_parts, load_part_catalog, save_parts
 from image_handler import load_and_resize_image
-
-# Define paths for the JSON files
-PARTS_LIST_FILE = "PartsList.json"
-PART_CATALOG_FILE = "PartsCatalog.json"
+from config import *
 
 class PartsManagerApp(tk.Tk):
     def __init__(self):
@@ -21,7 +18,7 @@ class PartsManagerApp(tk.Tk):
         # Set up window
         set_window_icon(self, 'icon.png')
         self.title("Parts Catalog")
-        self.geometry("1800x950")
+        self.geometry(DEFAULT_WINDOW_SIZE)
 
         # Define the catalog file path as a class attribute
         self.PART_CATALOG_FILE = PART_CATALOG_FILE
@@ -146,26 +143,21 @@ class PartsManagerApp(tk.Tk):
                 field.delete(1.0, tk.END)  # Clear text from Text widgets
 
     def display_part_image(self, part_number):
-        """Load and display the part's image in PNG format."""
-        png_file = f"images/{part_number}.png"  # Path to the PNG file
+        """Load and display the part's image in PNG format or a default image if not available."""
+        png_file = f"images/{part_number}.png"  # Path to the part-specific PNG file
+        default_png_file = "images/No_Image_Available.png"  # Path to the default PNG file
 
-        # Load and display the PNG image
-        photo = load_and_resize_image(png_file, 1000, 400)
-        
+        # Try loading the part-specific image, fall back to the default image if not found
+        photo = load_and_resize_image(png_file, 1000, 400) or load_and_resize_image(default_png_file, 1000, 400)
+
         # Check if the image label has been created, if not, create it
         if not hasattr(self, 'image_label'):
             self.image_label = tk.Label(self.part_tab)
             self.image_label.pack(side=tk.TOP, pady=10)
 
-        # Set the image or fallback text
-        if photo:
-            self.image_label.config(image=photo, text="")  # Clear any text if image exists
-            self.image_label.image = photo  # Keep reference to avoid garbage collection
-        else:
-            # Clear the image and set fallback text if no image is found
-            self.image_label.config(image='', text="No image available")
-            self.image_label.image = None  # Clear the stored image reference
-
+        # Set the image
+        self.image_label.config(image=photo, text="")  # Clear any text if an image exists
+        self.image_label.image = photo  # Keep reference to avoid garbage collection
 
 if __name__ == "__main__":
     try:

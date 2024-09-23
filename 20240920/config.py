@@ -1,2 +1,3 @@
 PARTS_LIST_FILE = "PartsList.json"
 PART_CATALOG_FILE = "PartsCatalog.json"
+DEFAULT_WINDOW_SIZE = "1800x950"
