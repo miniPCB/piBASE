@@ -1,4 +1,4 @@
-###Ideas###
+**IDEAS**
 
 **system_update**
 A piece of software that simplifies pushing and pulling from github.
