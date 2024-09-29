@@ -51,6 +51,7 @@ def print_intro():
     print("miniPCB")
     print("piBASE: System Update")
     print(f"{DATALOGGER_GITHUB}")
+    print(f"{INSTALL_PATH}")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 # Display menu options
