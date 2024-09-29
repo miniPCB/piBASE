@@ -1,0 +1,152 @@
+{
+    "device_id": "main_power_board-03-01-67890",
+    "device_information": {
+        "board_name": "main_power_board",
+        "variant": "03",
+        "pcb_revision": "01",
+        "serial_number": "67890"
+    },
+    "process_labels": [
+        {
+            "label": "Assembly Completed",
+            "date_applied": "2024-09-20",
+            "computer_id": "COMP12345",
+            "user_id": "JDoe"
+        },
+        {
+            "label": "Soldering Completed",
+            "date_applied": "2024-09-21",
+            "computer_id": "COMP23456",
+            "user_id": "ASmith"
+        }
+    ],
+    "red_tag_labels": [
+        {
+            "label": "Rework Required",
+            "date_applied": "2024-09-22",
+            "computer_id": "COMP34567",
+            "user_id": "BJohnson"
+        }
+    ],
+    "test_events": [
+        {
+            "date_time": "2024-09-28 02:04:55.395172",
+            "computer_id": "COMP45678",
+            "user_id": "CWhite",
+            "tester_id": "T1234",
+            "date_tester_calibration_due": "2024-12-01",
+            "test_results": [
+                {
+                    "test_number": 1,
+                    "test_name": "Voltage Test - 3.3V Rail",
+                    "test_description": "Verify the 3.3V rail output.",
+                    "measurement_type": "Voltage",
+                    "target_value": 3.3,
+                    "lower_limit": 3.2,
+                    "upper_limit": 3.4,
+                    "measured_value": 3.3,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 2,
+                    "test_name": "Current Test - 3.3V Rail",
+                    "test_description": "Verify current on the 3.3V rail.",
+                    "measurement_type": "Current",
+                    "target_value": 1.0,
+                    "lower_limit": 0.9,
+                    "upper_limit": 1.1,
+                    "measured_value": 1.04,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 3,
+                    "test_name": "Voltage Test - 5V Rail",
+                    "test_description": "Verify the 5V rail output.",
+                    "measurement_type": "Voltage",
+                    "target_value": 5.0,
+                    "lower_limit": 4.9,
+                    "upper_limit": 5.1,
+                    "measured_value": 5.04,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 4,
+                    "test_name": "Current Test - 5V Rail",
+                    "test_description": "Verify current on the 5V rail.",
+                    "measurement_type": "Current",
+                    "target_value": 2.0,
+                    "lower_limit": 1.9,
+                    "upper_limit": 2.1,
+                    "measured_value": 2.0,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 5,
+                    "test_name": "Voltage Test - 12V Rail",
+                    "test_description": "Verify the 12V rail output.",
+                    "measurement_type": "Voltage",
+                    "target_value": 12.0,
+                    "lower_limit": 11.8,
+                    "upper_limit": 12.2,
+                    "measured_value": 11.92,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 6,
+                    "test_name": "Current Test - 12V Rail",
+                    "test_description": "Verify current on the 12V rail.",
+                    "measurement_type": "Current",
+                    "target_value": 3.0,
+                    "lower_limit": 2.9,
+                    "upper_limit": 3.1,
+                    "measured_value": 2.98,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 7,
+                    "test_name": "Voltage Test - 1.8V Rail",
+                    "test_description": "Verify the 1.8V rail output.",
+                    "measurement_type": "Voltage",
+                    "target_value": 1.8,
+                    "lower_limit": 1.7,
+                    "upper_limit": 1.9,
+                    "measured_value": 1.78,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 8,
+                    "test_name": "Current Test - 1.8V Rail",
+                    "test_description": "Verify current on the 1.8V rail.",
+                    "measurement_type": "Current",
+                    "target_value": 0.5,
+                    "lower_limit": 0.4,
+                    "upper_limit": 0.6,
+                    "measured_value": 0.48,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 9,
+                    "test_name": "Voltage Test - 24V Rail",
+                    "test_description": "Verify the 24V rail output.",
+                    "measurement_type": "Voltage",
+                    "target_value": 24.0,
+                    "lower_limit": 23.8,
+                    "upper_limit": 24.2,
+                    "measured_value": 23.93,
+                    "conclusion": "Pass"
+                },
+                {
+                    "test_number": 10,
+                    "test_name": "Current Test - 24V Rail",
+                    "test_description": "Verify current on the 24V rail.",
+                    "measurement_type": "Current",
+                    "target_value": 4.0,
+                    "lower_limit": 3.9,
+                    "upper_limit": 4.1,
+                    "measured_value": 3.98,
+                    "conclusion": "Pass"
+                }
+            ]
+        }
+    ]
+}
