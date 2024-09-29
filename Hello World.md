@@ -24,3 +24,7 @@ A standard JSON format for device history records.
 
 A data analysis tool that views a repository of device history records.
 
+**pwm_motor_controller**
+
+A simple script to display voltage, current, power and rpm, and a slider for setting pwm output.
+
