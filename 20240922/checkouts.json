@@ -1,0 +1,9 @@
+[
+    {
+        "device_id": "device003",
+        "user_id": "user001",
+        "checkout_date": "2024-09-20",
+        "checkin_date": null,
+        "condition": "good"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id": "device001",
+        "name": "Laptop A",
+        "type": "Laptop",
+        "barcode": "1234567890123",
+        "status": "available"
+    },
+    {
+        "id": "device002",
+        "name": "Projector B",
+        "type": "Projector",
+        "barcode": "9876543210987",
+        "status": "available"
+    },
+    {
+        "id": "device003",
+        "name": "Tablet C",
+        "type": "Tablet",
+        "barcode": "4567891234567",
+        "status": "checked_out"
+    }
+]
