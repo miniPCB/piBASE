@@ -31,6 +31,9 @@ def save_tasks_data(data):
 
 def display_task(stdscr, task):
     """Display task details and allow editing."""
+    menu_items = ['Back', 'Edit']
+    current_menu_item = 0
+
     while True:
         stdscr.clear()
         stdscr.addstr(0, 0, f"Task ID: {task['task_id']}")
@@ -38,15 +41,34 @@ def display_task(stdscr, task):
         stdscr.addstr(2, 0, f"Description: {task['description']}")
         stdscr.addstr(3, 0, f"Originator: {task['originator']}")
         stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
-        stdscr.addstr(6, 0, "Press 'E' to edit this task, 'Q' to go back.")
+
+        # Draw menu bar at the bottom
+        height, width = stdscr.getmaxyx()
+        stdscr.attron(curses.color_pair(2))  # Green background for the menu
+        stdscr.addstr(height - 2, 0, " " * width)
+        stdscr.attroff(curses.color_pair(2))
+
+        for idx, item in enumerate(menu_items):
+            if idx == current_menu_item:
+                stdscr.attron(curses.color_pair(1))  # Highlighted item
+                stdscr.addstr(height - 2, idx * 10, f"[{item}]")
+                stdscr.attroff(curses.color_pair(1))
+            else:
+                stdscr.addstr(height - 2, idx * 10, f"[{item}]")
+
         stdscr.refresh()
 
         key = stdscr.getch()
 
-        if key in [ord('q'), ord('Q')]:
-            break
-        elif key in [ord('e'), ord('E')]:
-            edit_task(stdscr, task)
+        if key == curses.KEY_LEFT and current_menu_item > 0:
+            current_menu_item -= 1
+        elif key == curses.KEY_RIGHT and current_menu_item < len(menu_items) - 1:
+            current_menu_item += 1
+        elif key == curses.KEY_ENTER or key in [10, 13]:
+            if current_menu_item == 0:  # Back
+                break
+            elif current_menu_item == 1:  # Edit
+                edit_task(stdscr, task)
 
 def edit_task(stdscr, task):
     """Edit specific fields of the selected task."""
