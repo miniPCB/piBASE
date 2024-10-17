@@ -79,9 +79,49 @@ def add_duration(assignee, title, duration):
     save_tasker_data(data)
 
 def display_tasker_data():
-    """Display the content of tasker.json."""
+    """Display the content of tasker.json in a readable format."""
     data = load_tasker_data()
-    print(json.dumps(data, indent=4))
+
+    print("\n=== Tasker Data ===\n")
+
+    # Display assignees
+    print("Assignees:")
+    if data['assignees']:
+        for assignee in data['assignees']:
+            print(f" - {assignee}")
+    else:
+        print(" No assignees found.")
+
+    # Display unique titles
+    print("\nUnique Task Titles:")
+    if data['unique_titles']:
+        for title in data['unique_titles']:
+            print(f" - {title}")
+    else:
+        print(" No task titles found.")
+
+    # Display completion counts
+    print("\nCompletion Counts:")
+    if data['completion_counts']:
+        for assignee, tasks in data['completion_counts'].items():
+            print(f"\nAssignee: {assignee}")
+            for task, count in tasks.items():
+                print(f"   {task}: {count} times")
+    else:
+        print(" No completion data available.")
+
+    # Display duration counters
+    print("\nTask Duration (in hours):")
+    if data['duration_counters']:
+        for title, assignees in data['duration_counters'].items():
+            print(f"\nTask: {title}")
+            for assignee, durations in assignees.items():
+                duration_str = ', '.join(f"{d:.1f}" for d in durations)
+                print(f"   {assignee}: {duration_str} hours")
+    else:
+        print(" No duration data available.")
+    
+    print("\n===================\n")
 
 def main_menu():
     """Main menu for managing tasker.json."""
