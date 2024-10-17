@@ -1,0 +1,23 @@
+{
+    "assignees": ["Alice", "Bob", "Charlie"],
+    "unique_titles": ["Fix Bug", "Design Feature", "Write Documentation"],
+    "completion_counts": {
+        "Alice": {"Fix Bug": 3, "Design Feature": 1},
+        "Bob": {"Fix Bug": 2, "Write Documentation": 4},
+        "Charlie": {"Design Feature": 2, "Write Documentation": 1}
+    },
+    "duration_counters": {
+        "Fix Bug": {
+            "Alice": [2.5, 3.0, 1.8],
+            "Bob": [2.2, 1.5]
+        },
+        "Design Feature": {
+            "Alice": [5.0],
+            "Charlie": [6.5, 5.8]
+        },
+        "Write Documentation": {
+            "Bob": [3.0, 2.5, 4.0, 3.2],
+            "Charlie": [2.1]
+        }
+    }
+}

@@ -1,0 +1,24 @@
+[
+    {
+        "task_id": 1,
+        "title": "Fix Bug in Module",
+        "description": "Fix the critical bug in the processing module.",
+        "originator": "John",
+        "assignees": [
+            "& C:/Users/nolan/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Repos/piBASE/20241017/tasker.py"
+        ],
+        "created_date": "2024-10-17 10:30:00",
+        "completed_date": ""
+    },
+    {
+        "task_id": 2,
+        "title": "Design Easier Edit Functionality",
+        "description": "Create design specs for the new feature.",
+        "originator": "Sarah",
+        "assignees": [
+            "Charlie"
+        ],
+        "created_date": "2024-10-17 11:00:00",
+        "completed_date": ""
+    }
+]
