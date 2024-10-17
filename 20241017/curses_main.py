@@ -30,18 +30,64 @@ def save_tasks_data(data):
     save_json_data(tasks_json_file, data)
 
 def display_task(stdscr, task):
-    """Display task details."""
-    stdscr.clear()
-    stdscr.addstr(0, 0, f"Task ID: {task['task_id']}")
-    stdscr.addstr(1, 0, f"Title: {task['title']}")
-    stdscr.addstr(2, 0, f"Description: {task['description']}")
-    stdscr.addstr(3, 0, f"Originator: {task['originator']}")
-    stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
-    stdscr.addstr(5, 0, f"Created Date: {task['created_date']}")
-    stdscr.addstr(6, 0, f"Completed Date: {task['completed_date']}")
-    stdscr.addstr(8, 0, "Press any key to return...")
-    stdscr.refresh()
-    stdscr.getch()
+    """Display task details and allow editing."""
+    while True:
+        stdscr.clear()
+        stdscr.addstr(0, 0, f"Task ID: {task['task_id']}")
+        stdscr.addstr(1, 0, f"Title: {task['title']}")
+        stdscr.addstr(2, 0, f"Description: {task['description']}")
+        stdscr.addstr(3, 0, f"Originator: {task['originator']}")
+        stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
+        stdscr.addstr(6, 0, "Press 'E' to edit this task, 'Q' to go back.")
+        stdscr.refresh()
+
+        key = stdscr.getch()
+
+        if key in [ord('q'), ord('Q')]:
+            break
+        elif key in [ord('e'), ord('E')]:
+            edit_task(stdscr, task)
+
+def edit_task(stdscr, task):
+    """Edit specific fields of the selected task."""
+    curses.echo()
+
+    while True:
+        stdscr.clear()
+        stdscr.addstr(0, 0, "Editing Task Fields:")
+        stdscr.addstr(1, 0, f"[1] Title: {task['title']}")
+        stdscr.addstr(2, 0, f"[2] Description: {task['description']}")
+        stdscr.addstr(3, 0, f"[3] Originator: {task['originator']}")
+        stdscr.addstr(4, 0, f"[4] Assignees: {', '.join(task['assignees'])}")
+        stdscr.addstr(6, 0, "Enter the number of the field to edit (or 'Q' to quit):")
+        stdscr.refresh()
+
+        key = stdscr.getch()
+
+        if key in [ord('q'), ord('Q')]:
+            break
+        elif key == ord('1'):
+            stdscr.addstr(7, 0, "Enter new title: ")
+            task['title'] = stdscr.getstr(7, 17).decode("utf-8").strip()
+        elif key == ord('2'):
+            stdscr.addstr(7, 0, "Enter new description: ")
+            task['description'] = stdscr.getstr(7, 24).decode("utf-8").strip()
+        elif key == ord('3'):
+            stdscr.addstr(7, 0, "Enter new originator: ")
+            task['originator'] = stdscr.getstr(7, 21).decode("utf-8").strip()
+        elif key == ord('4'):
+            stdscr.addstr(7, 0, "Enter new assignees (comma-separated): ")
+            new_assignees = stdscr.getstr(7, 41).decode("utf-8").split(',')
+            task['assignees'] = [assignee.strip() for assignee in new_assignees]
+
+        # Save changes
+        save_tasks_data(load_tasks_data())
+        stdscr.addstr(9, 0, "Task updated successfully! Press any key to continue...")
+        stdscr.refresh()
+        stdscr.getch()
+        break
+
+    curses.noecho()
 
 def view_tasks(stdscr):
     """View all tasks stored in tasks.json."""
