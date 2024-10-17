@@ -1,7 +1,18 @@
-from PyInquirer import prompt, Separator
+import subprocess
+import sys
 import json
 import os
 from datetime import datetime
+
+# Check if PyInquirer is installed, if not, install it
+try:
+    from PyInquirer import prompt, Separator
+except ImportError:
+    print("PyInquirer not found. Installing it...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "PyInquirer"])
+
+    # Retry importing after installation
+    from PyInquirer import prompt, Separator
 
 # Define the path for both task and tasker JSON files
 tasker_json_file = 'tasker.json'
