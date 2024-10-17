@@ -29,6 +29,21 @@ def save_tasks_data(data):
     """Save tasks data to tasks.json."""
     save_json_data(tasks_json_file, data)
 
+def draw_menu_bar(stdscr, menu_items, current_item):
+    """Draw the bottom menu bar."""
+    height, width = stdscr.getmaxyx()
+    stdscr.attron(curses.color_pair(2))  # Green background for the menu
+    stdscr.addstr(height - 2, 0, " " * width)
+    stdscr.attroff(curses.color_pair(2))
+
+    for idx, item in enumerate(menu_items):
+        if idx == current_item:
+            stdscr.attron(curses.color_pair(1))  # Highlighted item
+            stdscr.addstr(height - 2, idx * 10, f"[{item}]")
+            stdscr.attroff(curses.color_pair(1))
+        else:
+            stdscr.addstr(height - 2, idx * 10, f"[{item}]")
+
 def display_task(stdscr, task):
     """Display task details and allow editing."""
     menu_items = ['Back', 'Edit']
@@ -43,19 +58,8 @@ def display_task(stdscr, task):
         stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
 
         # Draw menu bar at the bottom
-        height, width = stdscr.getmaxyx()
-        stdscr.attron(curses.color_pair(2))  # Green background for the menu
-        stdscr.addstr(height - 2, 0, " " * width)
-        stdscr.attroff(curses.color_pair(2))
-
-        for idx, item in enumerate(menu_items):
-            if idx == current_menu_item:
-                stdscr.attron(curses.color_pair(1))  # Highlighted item
-                stdscr.addstr(height - 2, idx * 10, f"[{item}]")
-                stdscr.attroff(curses.color_pair(1))
-            else:
-                stdscr.addstr(height - 2, idx * 10, f"[{item}]")
-
+        draw_menu_bar(stdscr, menu_items, current_menu_item)
+        
         stdscr.refresh()
 
         key = stdscr.getch()
@@ -88,7 +92,11 @@ def edit_task(stdscr, task):
             stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {task[field.lower()]}")
             stdscr.attroff(curses.color_pair(2))
         
+        # Draw instructions
         stdscr.addstr(6, 0, "Use arrow keys to navigate, Enter to edit, Q to quit.")
+        
+        # Redraw menu bar in edit mode to avoid visual inconsistencies
+        draw_menu_bar(stdscr, ['Save', 'Cancel'], 0)
         stdscr.refresh()
 
         key = stdscr.getch()
@@ -146,6 +154,9 @@ def view_tasks(stdscr):
                 stdscr.attroff(curses.color_pair(2))
             else:
                 stdscr.addstr(idx + 2, 0, f"{task['task_id']}: {task['title']}")
+
+        # Draw the bottom menu bar
+        draw_menu_bar(stdscr, ['Back'], 0)
 
         stdscr.refresh()
         key = stdscr.getch()
@@ -219,6 +230,9 @@ def main_menu(stdscr):
                 stdscr.attroff(curses.color_pair(2))
             else:
                 stdscr.addstr(idx + 2, 0, row)
+
+        # Draw the bottom menu bar
+        draw_menu_bar(stdscr, ['Select', 'Exit'], current_row)
 
         stdscr.refresh()
 
