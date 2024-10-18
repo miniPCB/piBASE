@@ -25,9 +25,9 @@ def load_tasks_data():
     """Load tasks.json data."""
     return load_json_data(tasks_json_file, tasks_template)
 
-def save_tasks_data(data):
+def save_tasks_data(tasks):
     """Save tasks data to tasks.json."""
-    save_json_data(tasks_json_file, data)
+    save_json_data(tasks_json_file, tasks)
 
 def draw_menu_bar(stdscr, menu_items, current_item):
     """Draw the bottom menu bar."""
@@ -44,7 +44,7 @@ def draw_menu_bar(stdscr, menu_items, current_item):
         else:
             stdscr.addstr(height - 2, idx * 15, f"[{item}]")
 
-def display_task(stdscr, task):
+def display_task(stdscr, task, tasks, task_idx):
     """Display task details and allow editing."""
     menu_items = ['Back', 'Edit Task', 'Exit']
     current_menu_item = 0
@@ -72,11 +72,11 @@ def display_task(stdscr, task):
             if current_menu_item == 0:  # Back
                 break
             elif current_menu_item == 1:  # Edit Task
-                edit_task(stdscr, task)
+                edit_task(stdscr, task, tasks, task_idx)
             elif current_menu_item == 2:  # Exit
                 return 'exit'  # Exit the program
 
-def edit_task(stdscr, task):
+def edit_task(stdscr, task, tasks, task_idx):
     """Edit specific fields of the selected task."""
     current_field = 0
     fields = ["Title", "Description", "Originator", "Assignees"]
@@ -119,7 +119,9 @@ def edit_task(stdscr, task):
                 current_menu_item += 1
             elif key == curses.KEY_ENTER or key in [10, 13]:
                 if current_menu_item == 0:  # Save
-                    save_tasks_data(load_tasks_data())
+                    # Update the task in the tasks list and save it
+                    tasks[task_idx] = task
+                    save_tasks_data(tasks)
                     stdscr.addstr(7, 0, "Task saved successfully! Press any key to continue...")
                     stdscr.refresh()
                     stdscr.getch()
@@ -187,7 +189,7 @@ def view_tasks(stdscr):
         elif key == curses.KEY_DOWN and current_row < len(tasks) - 1:
             current_row += 1
         elif key == curses.KEY_ENTER or key in [10, 13]:  # Enter key
-            action = display_task(stdscr, tasks[current_row])
+            action = display_task(stdscr, tasks[current_row], tasks, current_row)
             if action == 'exit':
                 return 'exit'  # Exit from the view
         elif key in [ord('q'), ord('Q')]:
