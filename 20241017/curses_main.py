@@ -165,8 +165,8 @@ def view_tasks(stdscr):
             else:
                 stdscr.addstr(idx + 2, 0, f"{task['task_id']}: {task['title']}")
 
-        # Draw the bottom menu bar
-        draw_menu_bar(stdscr, ['View Task', 'Edit Task', 'Exit'], 0)
+        # Draw the bottom menu bar (fields_len is 0 since there are no fields here)
+        draw_menu_bar(stdscr, ['View Task', 'Edit Task', 'Exit'], 0, len(tasks))
 
         stdscr.refresh()
         key = stdscr.getch()
