@@ -101,7 +101,7 @@ def edit_task(stdscr, task):
             stdscr.attroff(curses.color_pair(2))
         
         # Draw instructions
-        stdscr.addstr(6, 0, "Use arrow keys to navigate, Enter to edit, Tab to access menu.")
+        stdscr.addstr(6, 0, "Use arrow keys to navigate, Enter to edit, 'T' to access menu.")
 
         # Draw the bottom menu bar
         draw_menu_bar(stdscr, menu_items, current_menu_item if in_menu else -1)
@@ -109,7 +109,7 @@ def edit_task(stdscr, task):
 
         key = stdscr.getch()
 
-        if key == curses.KEY_TAB:
+        if key == ord('t') or key == ord('T'):  # Use 'T' to toggle between fields and menu
             in_menu = not in_menu  # Toggle between fields and menu
         elif in_menu:
             # Navigation in the Save/Cancel menu
