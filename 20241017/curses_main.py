@@ -55,6 +55,7 @@ def display_task(stdscr, task):
         stdscr.addstr(1, 0, f"Title: {task['title']}")
         stdscr.addstr(2, 0, f"Description: {task['description']}")
         stdscr.addstr(3, 0, f"Originator: {task['originator']}")
+        # Fix: Join the assignees list into a comma-separated string
         stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
 
         # Draw menu bar at the bottom
@@ -89,7 +90,11 @@ def edit_task(stdscr, task):
         for idx, field in enumerate(fields):
             if idx == current_field:
                 stdscr.attron(curses.color_pair(2))  # Green background for selected field
-            stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {task[field.lower()]}")
+            if field == "Assignees":
+                # Fix: Join the assignees list into a comma-separated string
+                stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {', '.join(task['assignees'])}")
+            else:
+                stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {task[field.lower()]}")
             stdscr.attroff(curses.color_pair(2))
         
         # Draw instructions
