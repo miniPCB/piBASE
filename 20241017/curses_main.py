@@ -39,14 +39,14 @@ def draw_menu_bar(stdscr, menu_items, current_item):
     for idx, item in enumerate(menu_items):
         if idx == current_item:
             stdscr.attron(curses.color_pair(1))  # Highlighted item
-            stdscr.addstr(height - 2, idx * 10, f"[{item}]")
+            stdscr.addstr(height - 2, idx * 15, f"[{item}]")
             stdscr.attroff(curses.color_pair(1))
         else:
-            stdscr.addstr(height - 2, idx * 10, f"[{item}]")
+            stdscr.addstr(height - 2, idx * 15, f"[{item}]")
 
 def display_task(stdscr, task):
     """Display task details and allow editing."""
-    menu_items = ['Back', 'Edit']
+    menu_items = ['Back', 'Edit Task', 'Exit']
     current_menu_item = 0
 
     while True:
@@ -72,8 +72,10 @@ def display_task(stdscr, task):
         elif key == curses.KEY_ENTER or key in [10, 13]:
             if current_menu_item == 0:  # Back
                 break
-            elif current_menu_item == 1:  # Edit
+            elif current_menu_item == 1:  # Edit Task
                 edit_task(stdscr, task)
+            elif current_menu_item == 2:  # Exit
+                return 'exit'  # Exit the program
 
 def edit_task(stdscr, task):
     """Edit specific fields of the selected task."""
@@ -161,7 +163,7 @@ def view_tasks(stdscr):
                 stdscr.addstr(idx + 2, 0, f"{task['task_id']}: {task['title']}")
 
         # Draw the bottom menu bar
-        draw_menu_bar(stdscr, ['Back'], 0)
+        draw_menu_bar(stdscr, ['View Task', 'Edit Task', 'Exit'], 0)
 
         stdscr.refresh()
         key = stdscr.getch()
@@ -171,7 +173,9 @@ def view_tasks(stdscr):
         elif key == curses.KEY_DOWN and current_row < len(tasks) - 1:
             current_row += 1
         elif key == curses.KEY_ENTER or key in [10, 13]:  # Enter key
-            display_task(stdscr, tasks[current_row])
+            action = display_task(stdscr, tasks[current_row])
+            if action == 'exit':
+                return 'exit'  # Exit from the view
         elif key in [ord('q'), ord('Q')]:
             break
 
@@ -237,7 +241,7 @@ def main_menu(stdscr):
                 stdscr.addstr(idx + 2, 0, row)
 
         # Draw the bottom menu bar
-        draw_menu_bar(stdscr, ['Select', 'Exit'], current_row)
+        draw_menu_bar(stdscr, ['View Task', 'Edit Task', 'Exit'], current_row)
 
         stdscr.refresh()
 
@@ -249,7 +253,9 @@ def main_menu(stdscr):
             current_row += 1
         elif key == curses.KEY_ENTER or key in [10, 13]:
             if current_row == 0:
-                view_tasks(stdscr)
+                action = view_tasks(stdscr)
+                if action == 'exit':
+                    break  # Exit from the view
             elif current_row == 1:
                 add_task(stdscr)
             elif current_row == 2:
