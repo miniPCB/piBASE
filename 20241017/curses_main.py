@@ -55,7 +55,6 @@ def display_task(stdscr, task):
         stdscr.addstr(1, 0, f"Title: {task['title']}")
         stdscr.addstr(2, 0, f"Description: {task['description']}")
         stdscr.addstr(3, 0, f"Originator: {task['originator']}")
-        # Fix: Join the assignees list into a comma-separated string
         stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
 
         # Draw menu bar at the bottom
@@ -81,6 +80,9 @@ def edit_task(stdscr, task):
     """Edit specific fields of the selected task."""
     current_field = 0
     fields = ["Title", "Description", "Originator", "Assignees"]
+    menu_items = ['Save', 'Cancel']
+    current_menu_item = 0
+    in_menu = False
     
     curses.echo()
 
@@ -90,34 +92,48 @@ def edit_task(stdscr, task):
         
         # Display the fields with proper highlighting
         for idx, field in enumerate(fields):
-            if idx == current_field:
+            if idx == current_field and not in_menu:
                 stdscr.attron(curses.color_pair(2))  # Green background for selected field
             if field == "Assignees":
-                # Fix: Join the assignees list into a comma-separated string
                 stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {', '.join(task['assignees'])}")
             else:
                 stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {task[field.lower()]}")
             stdscr.attroff(curses.color_pair(2))
         
         # Draw instructions
-        stdscr.addstr(6, 0, "Use arrow keys to navigate, Enter to edit, Q to quit.")
-        
-        # Redraw menu bar in edit mode to avoid visual inconsistencies
-        draw_menu_bar(stdscr, ['Save', 'Cancel'], 0)
+        stdscr.addstr(6, 0, "Use arrow keys to navigate, Enter to edit, Tab to access menu.")
+
+        # Draw the bottom menu bar
+        draw_menu_bar(stdscr, menu_items, current_menu_item if in_menu else -1)
         stdscr.refresh()
 
         key = stdscr.getch()
 
-        if key in [ord('q'), ord('Q')]:
-            break
-        elif key == curses.KEY_UP and current_field > 0:
-            current_field -= 1
-        elif key == curses.KEY_DOWN and current_field < len(fields) - 1:
-            current_field += 1
-        elif key == curses.KEY_ENTER or key in [10, 13]:  # Enter key to edit
-            edit_field(stdscr, task, fields[current_field])
-
-        save_tasks_data(load_tasks_data())
+        if key == curses.KEY_TAB:
+            in_menu = not in_menu  # Toggle between fields and menu
+        elif in_menu:
+            # Navigation in the Save/Cancel menu
+            if key == curses.KEY_LEFT and current_menu_item > 0:
+                current_menu_item -= 1
+            elif key == curses.KEY_RIGHT and current_menu_item < len(menu_items) - 1:
+                current_menu_item += 1
+            elif key == curses.KEY_ENTER or key in [10, 13]:
+                if current_menu_item == 0:  # Save
+                    save_tasks_data(load_tasks_data())
+                    stdscr.addstr(7, 0, "Task saved successfully! Press any key to continue...")
+                    stdscr.refresh()
+                    stdscr.getch()
+                    break
+                elif current_menu_item == 1:  # Cancel
+                    break
+        else:
+            # Navigation in the fields
+            if key == curses.KEY_UP and current_field > 0:
+                current_field -= 1
+            elif key == curses.KEY_DOWN and current_field < len(fields) - 1:
+                current_field += 1
+            elif key == curses.KEY_ENTER or key in [10, 13]:  # Enter key to edit
+                edit_field(stdscr, task, fields[current_field])
 
 def edit_field(stdscr, task, field):
     """Edit a specific field of the task."""
@@ -133,8 +149,6 @@ def edit_field(stdscr, task, field):
     new_value = stdscr.getstr(1, len(f"Enter new {field}: ") + 1).decode("utf-8").strip()
 
     task[field.lower()] = new_value if field != "Assignees" else [x.strip() for x in new_value.split(',')]
-    save_tasks_data(load_tasks_data())
-    
     stdscr.addstr(2, 0, f"{field} updated successfully! Press any key to return...")
     stdscr.refresh()
     stdscr.getch()
