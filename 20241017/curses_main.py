@@ -46,42 +46,61 @@ def draw_menu_bar(stdscr, menu_items, current_item):
 
 def display_task(stdscr, task, tasks, task_idx):
     """Display task details and allow editing."""
+    fields = ["Task ID", "Title", "Description", "Originator", "Assignees"]
+    field_data = [task['task_id'], task['title'], task['description'], task['originator'], ', '.join(task['assignees'])]
     menu_items = ['Back', 'Edit Task', 'Exit']
-    current_menu_item = 0
+    current_item = 0
+    in_menu = False
 
     while True:
         stdscr.clear()
-        stdscr.addstr(0, 0, f"Task ID: {task['task_id']}")
-        stdscr.addstr(1, 0, f"Title: {task['title']}")
-        stdscr.addstr(2, 0, f"Description: {task['description']}")
-        stdscr.addstr(3, 0, f"Originator: {task['originator']}")
-        stdscr.addstr(4, 0, f"Assignees: {', '.join(task['assignees'])}")
+        for idx, field in enumerate(fields):
+            if idx == current_item and not in_menu:
+                stdscr.attron(curses.color_pair(2))  # Green background for selected field
+            stdscr.addstr(idx, 0, f"{field}: {field_data[idx]}")
+            stdscr.attroff(curses.color_pair(2))
 
-        # Draw menu bar at the bottom
-        draw_menu_bar(stdscr, menu_items, current_menu_item)
+        # Draw the bottom menu bar
+        draw_menu_bar(stdscr, menu_items, current_item - len(fields) if in_menu else -1)
         
         stdscr.refresh()
 
         key = stdscr.getch()
 
-        if key == curses.KEY_LEFT and current_menu_item > 0:
-            current_menu_item -= 1
-        elif key == curses.KEY_RIGHT and current_menu_item < len(menu_items) - 1:
-            current_menu_item += 1
-        elif key == curses.KEY_ENTER or key in [10, 13]:
-            if current_menu_item == 0:  # Back
-                break
-            elif current_menu_item == 1:  # Edit Task
-                edit_task(stdscr, task, tasks, task_idx)
-            elif current_menu_item == 2:  # Exit
-                return 'exit'  # Exit the program
+        if in_menu:
+            # Navigation in the menu bar
+            if key == curses.KEY_LEFT and current_item > len(fields):
+                current_item -= 1
+            elif key == curses.KEY_RIGHT and current_item < len(fields) + len(menu_items) - 1:
+                current_item += 1
+            elif key == curses.KEY_UP:
+                # Exit menu, return to fields
+                current_item = len(fields) - 1
+                in_menu = False
+            elif key == curses.KEY_ENTER or key in [10, 13]:
+                if current_item == len(fields):  # Back
+                    break
+                elif current_item == len(fields) + 1:  # Edit Task
+                    edit_task(stdscr, task, tasks, task_idx)
+                elif current_item == len(fields) + 2:  # Exit
+                    return 'exit'
+        else:
+            # Navigation in the fields
+            if key == curses.KEY_UP and current_item > 0:
+                current_item -= 1
+            elif key == curses.KEY_DOWN:
+                if current_item < len(fields) - 1:
+                    current_item += 1
+                else:
+                    # Transition to the menu bar
+                    in_menu = True
+                    current_item = len(fields)
 
 def edit_task(stdscr, task, tasks, task_idx):
     """Edit specific fields of the selected task."""
-    current_field = 0
     fields = ["Title", "Description", "Originator", "Assignees"]
     menu_items = ['Save', 'Cancel']
-    current_menu_item = 0
+    current_item = 0
     in_menu = False
     
     curses.echo()
@@ -92,50 +111,50 @@ def edit_task(stdscr, task, tasks, task_idx):
         
         # Display the fields with proper highlighting
         for idx, field in enumerate(fields):
-            if idx == current_field and not in_menu:
+            if idx == current_item and not in_menu:
                 stdscr.attron(curses.color_pair(2))  # Green background for selected field
-            if field == "Assignees":
-                stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {', '.join(task['assignees'])}")
-            else:
-                stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {task[field.lower()]}")
+            stdscr.addstr(idx + 1, 0, f"[{idx + 1}] {field}: {task[field.lower()]}")
             stdscr.attroff(curses.color_pair(2))
         
-        # Draw instructions
-        stdscr.addstr(6, 0, "Use arrow keys to navigate, Enter to edit, 'T' to access menu.")
-
         # Draw the bottom menu bar
-        draw_menu_bar(stdscr, menu_items, current_menu_item if in_menu else -1)
+        draw_menu_bar(stdscr, menu_items, current_item - len(fields) if in_menu else -1)
         stdscr.refresh()
 
         key = stdscr.getch()
 
-        if key == ord('t') or key == ord('T'):  # Use 'T' to toggle between fields and menu
-            in_menu = not in_menu  # Toggle between fields and menu
-        elif in_menu:
+        if in_menu:
             # Navigation in the Save/Cancel menu
-            if key == curses.KEY_LEFT and current_menu_item > 0:
-                current_menu_item -= 1
-            elif key == curses.KEY_RIGHT and current_menu_item < len(menu_items) - 1:
-                current_menu_item += 1
+            if key == curses.KEY_LEFT and current_item > len(fields):
+                current_item -= 1
+            elif key == curses.KEY_RIGHT and current_item < len(fields) + len(menu_items) - 1:
+                current_item += 1
+            elif key == curses.KEY_UP:
+                # Move back to the last field
+                current_item = len(fields) - 1
+                in_menu = False
             elif key == curses.KEY_ENTER or key in [10, 13]:
-                if current_menu_item == 0:  # Save
-                    # Update the task in the tasks list and save it
+                if current_item == len(fields):  # Save
                     tasks[task_idx] = task
                     save_tasks_data(tasks)
                     stdscr.addstr(7, 0, "Task saved successfully! Press any key to continue...")
                     stdscr.refresh()
                     stdscr.getch()
                     break
-                elif current_menu_item == 1:  # Cancel
+                elif current_item == len(fields) + 1:  # Cancel
                     break
         else:
             # Navigation in the fields
-            if key == curses.KEY_UP and current_field > 0:
-                current_field -= 1
-            elif key == curses.KEY_DOWN and current_field < len(fields) - 1:
-                current_field += 1
-            elif key == curses.KEY_ENTER or key in [10, 13]:  # Enter key to edit
-                edit_field(stdscr, task, fields[current_field])
+            if key == curses.KEY_UP and current_item > 0:
+                current_item -= 1
+            elif key == curses.KEY_DOWN:
+                if current_item < len(fields) - 1:
+                    current_item += 1
+                else:
+                    # Move to the menu bar
+                    in_menu = True
+                    current_item = len(fields)
+            elif key == curses.KEY_ENTER or key in [10, 13]:
+                edit_field(stdscr, task, fields[current_item])
 
 def edit_field(stdscr, task, field):
     """Edit a specific field of the task."""
