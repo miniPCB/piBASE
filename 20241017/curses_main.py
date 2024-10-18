@@ -243,8 +243,8 @@ def main_menu(stdscr):
             else:
                 stdscr.addstr(idx + 2, 0, row)
 
-        # Draw the bottom menu bar
-        draw_menu_bar(stdscr, ['View Task', 'Edit Task', 'Exit'], current_row)
+        # Draw the bottom menu bar (fields_len is 0 for the main menu)
+        draw_menu_bar(stdscr, ['View Task', 'Edit Task', 'Exit'], current_row, 0)
 
         stdscr.refresh()
 
