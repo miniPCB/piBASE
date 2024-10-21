@@ -6,10 +6,6 @@ import nmap
 import ipaddress
 import time
 
-# Setup logging
-logging.basicConfig(filename='network_scan_results.log', level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-
 # Function to install packages
 def install_package(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
@@ -28,6 +24,13 @@ except ImportError:
     print("ipaddress module not found, installing...")
     install_package("ipaddress")
     import ipaddress  # Reimport after installation
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    print("tqdm module not found, installing...")
+    install_package("tqdm")
+    from tqdm import tqdm  # Reimport after installation
 
 def scan_ip(ip_address):
     """Scan an individual IP address."""
@@ -61,17 +64,26 @@ def scan_network_parallel(network_range, num_threads=5, delay=0.5):
     ip_blocks = list(network.hosts())
     results = []
 
-    # Use ThreadPoolExecutor to scan in parallel with limited threads
-    with ThreadPoolExecutor(max_workers=num_threads) as executor:
-        futures = []
-        for ip in ip_blocks:
-            futures.append(executor.submit(scan_ip, ip))
-            time.sleep(delay)  # Introduce delay to reduce load on the system
-        
-        for future in as_completed(futures):
-            result = future.result()
-            if result:
-                results.append(result)
+    try:
+        # Initialize progress bar
+        with tqdm(total=len(ip_blocks), desc="Scanning IPs") as pbar:
+            # Use ThreadPoolExecutor to scan in parallel with limited threads
+            with ThreadPoolExecutor(max_workers=num_threads) as executor:
+                futures = []
+                for ip in ip_blocks:
+                    futures.append(executor.submit(scan_ip, ip))
+                    time.sleep(delay)  # Introduce delay to reduce load on the system
+                
+                for future in as_completed(futures):
+                    result = future.result()
+                    if result:
+                        results.append(result)
+                    pbar.update(1)  # Update progress bar after each completed IP scan
+    
+    except KeyboardInterrupt:
+        logging.warning("Scan interrupted by user. Shutting down gracefully...")
+        executor.shutdown(wait=False)  # Ensure the threads stop immediately
+        sys.exit(0)  # Exit the program cleanly
 
     # Log results
     for result in results:
@@ -90,4 +102,7 @@ if __name__ == '__main__':
     network_range = '192.168.1.0/24'
 
     # Run the parallel network scan with optimized settings for Raspberry Pi
-    scan_network_parallel(network_range, num_threads=2, delay=1)  # 2 threads and 1-second delay
+    try:
+        scan_network_parallel(network_range, num_threads=2, delay=1)  # 2 threads and 1-second delay
+    except KeyboardInterrupt:
+        print("Scan interrupted by user.")
