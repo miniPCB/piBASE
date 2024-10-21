@@ -1,4 +1,25 @@
-import nmap
+import subprocess
+import sys
+
+# Function to install packages
+def install_package(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Ensure required packages are installed
+try:
+    import nmap
+except ImportError:
+    print("nmap module not found, installing...")
+    install_package("python-nmap")
+    import nmap  # Reimport after installation
+
+try:
+    import ipaddress
+except ImportError:
+    print("ipaddress module not found, installing...")
+    install_package("ipaddress")
+    import ipaddress  # Reimport after installation
+
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def scan_ip_range(ip_range):
@@ -7,7 +28,7 @@ def scan_ip_range(ip_range):
 
     # Perform a scan with OS detection, service version detection, and port scanning
     print(f"Scanning IP range: {ip_range}")
-    scanner.scan(hosts=ip_range, arguments='-O -sV -p 1-1000')  # OS, service version detection, top 1000 ports
+    scanner.scan(hosts=str(ip_range), arguments='-O -sV -p 1-1000')  # OS, service version detection, top 1000 ports
 
     # Collect scan results
     results = []
@@ -38,13 +59,14 @@ def scan_ip_range(ip_range):
     return results
 
 def scan_network_parallel(network_range, num_threads=10):
-    # Split the network range into smaller blocks for parallel scanning
-    ip_blocks = [f"{network_range[:-4]}{i}" for i in range(0, 256)]  # Adjust based on range
+    # Convert the CIDR range into individual IP addresses
+    network = ipaddress.ip_network(network_range, strict=False)
+    ip_blocks = list(network.hosts())  # List of all valid host IPs
     results = []
 
     # Use ThreadPoolExecutor to scan in parallel
     with ThreadPoolExecutor(max_workers=num_threads) as executor:
-        futures = [executor.submit(scan_ip_range, ip_block) for ip_block in ip_blocks]
+        futures = [executor.submit(scan_ip_range, ip) for ip in ip_blocks]
         for future in as_completed(futures):
             try:
                 results.extend(future.result())
@@ -64,7 +86,7 @@ def scan_network_parallel(network_range, num_threads=10):
         print("\n")
 
 if __name__ == '__main__':
-    # Define your network range (e.g., '192.168.1.')
+    # Define your network range (e.g., '192.168.1.0/24')
     network_range = '192.168.1.0/24'
 
     # Run the parallel network scan
