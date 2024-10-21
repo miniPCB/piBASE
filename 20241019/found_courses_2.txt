@@ -1,0 +1,69 @@
+Website: http://www.dunwoody.edu/
+Course Title: Robotics & Electronics
+Course ID: https://dunwoody.edu/robotics/
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Basic Electronics, C2
+
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet1-325086-en.html
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Biomedical Electronics Specialization, A.A.S.
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet2-325086-en.html
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Computer Engineering Specialization, A.A.S.
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet3-325086-en.html
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Computer Servicing/Networks, C1
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet4-325086-en.html
+
+Website: https://www.umes.edu/home/
+Course Title: Engineering Technology – Electrical/Electronics
+Course ID: /tech/electrical-electronics-engineering-technology/
+
+Website: https://ualr.edu
+Course Title: Electronics and Computer Engineering Technology
+Course ID: https://ualr.edu/engineeringtechnology/
+
+Website: https://www.ecpi.edu
+Course Title: Electronics Engineering Technology
+Course ID: /programs/electronics-engineering-bachelor-degree
+
+Website: https://www.ecpi.edu
+Course Title: Electronics Engineering Technology
+Course ID: /programs/electronics-engineering-aas
+
+Website: https://www.grantham.edu
+Course Title: Electronics
+Course ID: https://www.uagrantham.edu/interest/electronics/
+
+Website: https://www.ncat.edu
+Course Title: Electronics Technology
+Course ID: cost/departments/computer-systems-technology/academic-programs/electronics-technology1/index.php
+
+Website: https://www.nsu.edu
+Course Title: B.S. Electrical and Electronics Engineering
+Course ID: /Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/College-of-Science-Engineering-and-Technology/Departments/Engineering/Programs/B-S-Electrical-Electronics-and-Engineering
+
+Website: https://www.nsu.edu
+Course Title: M.S. Electronics Engineering
+Course ID: /Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/College-of-Science-Engineering-and-Technology/Departments/Engineering/Programs/M-S-Electronics-Engineering
+
+Website: https://www.nsu.edu
+Course Title: B.S. Electronics Engineering Technology
+Course ID: /Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/College-of-Science-Engineering-and-Technology/Departments/Technology/Programs/B-S-Electronics-Engineering-Technology
+
+Website: https://www.nsu.edu
+Course Title: Electrical Electronics Engineering
+Course ID: /Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/College-of-Science-Engineering-and-Technology/Programs/DNIMAS/DNIMAS-Programs/Electronics-Engineering
+
+Website: https://www.octech.edu
+Course Title: Electronics Engineering
+Course ID: https://www.octech.edu/academics/engineering-technology/electronic-instrumentation/
+
+Website: https://www.wright.edu
+Course Title: Power Electronics 
+Course ID: /degrees-and-programs/profile/power-electronics
+

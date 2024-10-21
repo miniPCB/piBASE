@@ -1,0 +1,78 @@
+Website: http://www.cookman.edu
+Course ID: FBCF32
+
+Website: http://www.cookman.edu
+Course ID: CC4100
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course ID: DD214
+
+Website: http://www.kent.edu/
+Course ID: EBAB21
+
+Website: http://www.nnmc.edu/
+Course ID: AD100
+
+Website: http://www.saumag.edu
+Course ID: FFD200
+
+Website: http://www.saumag.edu
+Course ID: SP18
+
+Website: http://www.saumag.edu
+Course ID: SP18
+
+Website: http://www.ucmerced.edu/
+Course ID: DAA900
+
+Website: http://www.ucmerced.edu/
+Course ID: DAA900
+
+Website: https://mvnu.edu/
+Course ID: MVNU1968
+
+Website: https://mvnu.edu/
+Course ID: MVNU1968
+
+Website: https://sbc.edu/stem/engineering/
+Course ID: FY25
+
+Website: https://sbc.edu/stem/engineering/
+Course ID: WE22
+
+Website: https://www.greenville.edu/
+Course ID: WA912
+
+Website: https://www.hanover.edu/
+Course ID: PQH828
+
+Website: https://www.tamuc.edu/
+Course ID: TK20
+
+Website: https://www.bradley.edu
+Course ID: IE10
+
+Website: https://www.bu.edu
+Course ID: WRNV877
+
+Website: https://www.bw.edu
+Course ID: FFCC33
+
+Website: https://www.byu.edu
+Course ID: ES2015
+
+Website: https://www.caltech.edu
+Course ID: IE11
+
+Website: https://www.cscc.edu
+Course ID: AU24
+
+Website: https://www.ctstate.edu
+Course ID: FFC000
+
+Website: https://www.ctstate.edu
+Course ID: FFCC00
+
+Website: https://www.ctstate.edu
+Course ID: FFC000
+

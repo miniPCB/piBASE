@@ -1,0 +1,25 @@
+Website: http://www.dunwoody.edu/
+Course Title: Robotics & Electronics
+Course ID: https://dunwoody.edu/robotics/
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Basic Electronics, C2
+
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet1-325086-en.html
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Biomedical Electronics Specialization, A.A.S.
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet2-325086-en.html
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Computer Engineering Specialization, A.A.S.
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet3-325086-en.html
+
+Website: http://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/
+Course Title: Electronics Engineering Technology - Computer Servicing/Networks, C1
+Course ID: /programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/onet4-325086-en.html
+
+Website: https://www.umes.edu/home/
+Course Title: Engineering Technology – Electrical/Electronics
+Course ID: /tech/electrical-electronics-engineering-technology/
+

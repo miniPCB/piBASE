@@ -1,0 +1,2364 @@
+{
+    "universities": [
+        {
+            "url": "https://bethel.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://bryan.edu",
+            "name": "Bryan College | Dayton, TN"
+        },
+        {
+            "url": "https://captechu.edu",
+            "name": "Capitol Technology University | Washington D.C. | Washington D.C. & Maryland Area | Capitol Technology University"
+        },
+        {
+            "url": "https://engineering.campbell.edu",
+            "name": "Engineering | Campbell University"
+        },
+        {
+            "url": "https://engineering.nyu.edu",
+            "name": "Home | NYU Tandon School of Engineering"
+        },
+        {
+            "url": "https://go.okstate.edu",
+            "name": "Oklahoma State University"
+        },
+        {
+            "url": "https://engineering.uprm.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://tulane.edu",
+            "name": "Home | Tulane University"
+        },
+        {
+            "url": "https://www.acu.edu",
+            "name": "Abilene Christian University"
+        },
+        {
+            "url": "https://www.angelo.edu/",
+            "name": "Angelo State University"
+        },
+        {
+            "url": "https://www.bgsu.edu",
+            "name": "Bowling Green State University: #1 Student Experience in Ohio"
+        },
+        {
+            "url": "https://www.chattanoogastate.edu/",
+            "name": "Chattanooga State Community College"
+        },
+        {
+            "url": "https://www.cookman.edu",
+            "name": "Homepage"
+        },
+        {
+            "url": "https://www.daytonastate.edu/",
+            "name": "Daytona State College"
+        },
+        {
+            "url": "https://www.dunwoody.edu/",
+            "name": "Home - Dunwoody College a private, nonprofit technical education in Minneapolis"
+        },
+        {
+            "url": "https://www.duq.edu/",
+            "name": "Duquesne University"
+        },
+        {
+            "url": "https://www.ecsu.edu",
+            "name": "Home"
+        },
+        {
+            "url": "https://www.friends.edu/",
+            "name": "Friends University | Liberal Arts Education | Christian Based Tradition | Wichita | Topeka | Kansas City Area | Online"
+        },
+        {
+            "url": "https://www.hccs.edu/programs/areas-of-study/science-technology-engineering--math/electronics-engineering-technology/",
+            "name": "Electronics Engineering Technology | Houston Community College (HCC) | We are Houston's Community College"
+        },
+        {
+            "url": "https://www.kent.edu/",
+            "name": "Kent Campus | Kent State University Kent State, one of Ohio\u2019s leading public universities"
+        },
+        {
+            "url": "https://www.lewisu.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.mountunion.edu",
+            "name": "Home | University of Mount Union"
+        },
+        {
+            "url": "https://www.msudenver.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.newhaven.edu/8/",
+            "name": "Tagliatela College of Engineering - University of New Haven"
+        },
+        {
+            "url": "https://www.nnmc.edu/",
+            "name": "Home"
+        },
+        {
+            "url": "https://www.nova.edu/",
+            "name": "Nova Southeastern University | NSU Florida - Private University"
+        },
+        {
+            "url": "https://www.nu.edu",
+            "name": "National University"
+        },
+        {
+            "url": "https://www.pacific.edu/",
+            "name": "University of the Pacific - Experience-driven Education"
+        },
+        {
+            "url": "https://www.saumag.edu",
+            "name": "Southern Arkansas University | SAU | Affordable, Quality Degree Programs"
+        },
+        {
+            "url": "https://www.tamiu.edu",
+            "name": "TAMIU Home"
+        },
+        {
+            "url": "https://www.tamut.edu",
+            "name": "Texas A&M Texarkana | Texas A&M Texarkana"
+        },
+        {
+            "url": "https://www.uci.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.ucmerced.edu/",
+            "name": "University of California, Merced"
+        },
+        {
+            "url": "https://www.uhd.edu/",
+            "name": "Welcome to the University of Houston-Downtown | University of Houston-Downtown"
+        },
+        {
+            "url": "https://www.uprb.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uvawise.edu",
+            "name": "Home | UVA Wise"
+        },
+        {
+            "url": "https://www.uvm.edu/~cems/",
+            "name": "College of Engineering and Mathematical Sciences | The University of Vermont"
+        },
+        {
+            "url": "https://www.uwa.edu/",
+            "name": "University of West Alabama | There's Something About This Place"
+        },
+        {
+            "url": "https://psbehrend.psu.edu",
+            "name": "Penn State Behrend | College in Erie, Pa."
+        },
+        {
+            "url": "https://berks.psu.edu/",
+            "name": "Penn State Berks | Colleges in Reading, Pa."
+        },
+        {
+            "url": "https://chas.uni.edu/aetm",
+            "name": "Applied Engineering & Technical Management | College of Humanities Arts and Sciences"
+        },
+        {
+            "url": "https://cps.unh.edu/",
+            "name": "College of Professional Studies | University of New Hampshire"
+        },
+        {
+            "url": "https://emu.edu",
+            "name": "EMU | A private liberal arts university in Harrisonburg, VA"
+        },
+        {
+            "url": "https://engineering.csuohio.edu",
+            "name": "Washkewicz College of Engineering | Cleveland State University"
+        },
+        {
+            "url": "https://floridapoly.edu/",
+            "name": "Undergraduate & Graduate STEM Degrees | Florida Polytechnic University"
+        },
+        {
+            "url": "https://gurabo.uagm.edu/",
+            "name": "Recinto de Gurabo | Universidad Ana G. M\u00e9ndez"
+        },
+        {
+            "url": "https://interbayamon3.azurewebsites.net/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://mvnu.edu/",
+            "name": "MVNU: Christian University in Ohio"
+        },
+        {
+            "url": "https://sbc.edu/stem/engineering/",
+            "name": "Engineering \u2022 Sweet Briar College"
+        },
+        {
+            "url": "https://uagm.edu/es/ingenieria-diseno-y-arquitectura/ingenieria/carolina",
+            "name": "Associate Degree Programs | Universidad Ana G. M\u00e9ndez"
+        },
+        {
+            "url": "https://uscga.edu",
+            "name": "USCGA - United States Coast Guard Academy"
+        },
+        {
+            "url": "https://worldwide.erau.edu/",
+            "name": "Worldwide | Embry-Riddle Aeronautical University"
+        },
+        {
+            "url": "https://www.elon.edu/",
+            "name": "Elon University - America\u2019s Top-Ranked Teaching University"
+        },
+        {
+            "url": "https://www.endicott.edu/",
+            "name": "Home | Private College in Beverly, MA | Endicott College"
+        },
+        {
+            "url": "https://www.fmarion.edu/",
+            "name": "Francis Marion University"
+        },
+        {
+            "url": "https://www.greenville.edu/",
+            "name": "Greenville University | Accredited Liberal Arts Christian College in Illinois"
+        },
+        {
+            "url": "https://www.hanover.edu/",
+            "name": "Indiana's First Private College | Hanover College"
+        },
+        {
+            "url": "https://www.ivytech.edu/",
+            "name": "Home - Ivy Tech Community College"
+        },
+        {
+            "url": "https://www.milligan.edu",
+            "name": "Homepage - Milligan University"
+        },
+        {
+            "url": "https://www.otterbein.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.tamuc.edu/",
+            "name": "Texas A&M University-Commerce | Transforming East Texas through Research, Education and Service  - Texas A&M University-Commerce"
+        },
+        {
+            "url": "https://www.umes.edu/home/",
+            "name": "University of Maryland Eastern Shore | The Eastern Shore's Doctoral Research Institution"
+        },
+        {
+            "url": "https://www.usca.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.viterbo.edu/",
+            "name": "Homepage | Viterbo University"
+        },
+        {
+            "url": "https://ivytech.edu/columbus",
+            "name": "Columbus - Ivy Tech Community College"
+        },
+        {
+            "url": "https://prescott.erau.edu",
+            "name": "Prescott | Embry-Riddle Aeronautical University"
+        },
+        {
+            "url": "https://slu.edu/science-and-engineering/index.php",
+            "name": "School of Science and Engineering SLU"
+        },
+        {
+            "url": "https://stvincent.edu",
+            "name": "This is Saint Vincent | Latrobe, PA | Saint Vincent College"
+        },
+        {
+            "url": "https://tesu.edu",
+            "name": "Thomas Edison State University | College for Adult Learners"
+        },
+        {
+            "url": "https://twin-cities.umn.edu",
+            "name": "University of Minnesota Twin Cities"
+        },
+        {
+            "url": "https://ualr.edu",
+            "name": "University of Arkansas at Little Rock"
+        },
+        {
+            "url": "https://ucsc.edu",
+            "name": "UC Santa Cruz \u2013 A world-class public research institution comprised of ten residential college communities nestled in the redwood forests and meadows overlooking central California's Monterey Bay."
+        },
+        {
+            "url": "https://uj.edu",
+            "name": "University of Jamestown"
+        },
+        {
+            "url": "https://valenciacollege.edu",
+            "name": "Valencia College"
+        },
+        {
+            "url": "https://vermontstate.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.aamu.edu",
+            "name": "Alabama A&M University - Alabama A&M University"
+        },
+        {
+            "url": "https://www.afit.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.albany.edu",
+            "name": "University at Albany - State University of New York"
+        },
+        {
+            "url": "https://www.alfred.edu",
+            "name": "Outside of Ordinary | Alfred University"
+        },
+        {
+            "url": "https://www.alfredstate.edu",
+            "name": "Alfred State Pioneers are PROS! | Alfred State"
+        },
+        {
+            "url": "https://www.altoona.psu.edu",
+            "name": "Penn State Altoona"
+        },
+        {
+            "url": "https://www.andrews.edu",
+            "name": "Andrews University :: A Southwest Michigan Christian University"
+        },
+        {
+            "url": "https://www.apsu.edu",
+            "name": "Austin Peay State University"
+        },
+        {
+            "url": "https://www.apu.edu",
+            "name": "A Top Christian College in Southern California - Azusa Pacific University"
+        },
+        {
+            "url": "https://www.arizona.edu",
+            "name": "University of Arizona in Tucson, AZ"
+        },
+        {
+            "url": "https://www.astate.edu",
+            "name": "A-State"
+        },
+        {
+            "url": "https://www.asu.edu",
+            "name": "ASU Homepage | Arizona State University"
+        },
+        {
+            "url": "https://www.atu.edu",
+            "name": "Arkansas Tech"
+        },
+        {
+            "url": "https://www.auburn.edu",
+            "name": "Auburn University Homepage"
+        },
+        {
+            "url": "https://www.augustatech.edu",
+            "name": "Augusta Technical College Homepage"
+        },
+        {
+            "url": "https://www.baylor.edu",
+            "name": "Baylor University | A Nationally Ranked Christian University, Undergraduate & Graduate Research Colleges Universities Schools in Texas"
+        },
+        {
+            "url": "https://www.bcc.cuny.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.benedict.edu",
+            "name": "Benedict College | Columbia, South Carolina"
+        },
+        {
+            "url": "https://www.berkeley.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.bfit.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.binghamton.edu",
+            "name": "Binghamton University"
+        },
+        {
+            "url": "https://www.bju.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.bloomu.edu",
+            "name": "Bloomsburg | Campus Life | Commonwealth University of PA"
+        },
+        {
+            "url": "https://www.bluefieldstate.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.boisestate.edu",
+            "name": "Boise State University"
+        },
+        {
+            "url": "https://www.bradley.edu",
+            "name": "Home | Bradley University"
+        },
+        {
+            "url": "https://www.bridgeport.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.bridgevalley.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.brown.edu",
+            "name": "Brown University"
+        },
+        {
+            "url": "https://www.bu.edu",
+            "name": "Homepage | Boston University"
+        },
+        {
+            "url": "https://www.bucknell.edu",
+            "name": "Bucknell University | Liberal Arts, Engineering, & Management Colleges"
+        },
+        {
+            "url": "https://www.buffalo.edu",
+            "name": "Welcome to the University at Buffalo - University at Buffalo"
+        },
+        {
+            "url": "https://www.buffalostate.edu",
+            "name": "SUNY Buffalo State University"
+        },
+        {
+            "url": "https://www.bw.edu",
+            "name": "Baldwin Wallace University"
+        },
+        {
+            "url": "https://www.byu.edu",
+            "name": "Home - BYU"
+        },
+        {
+            "url": "https://www.byui.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.calpoly.edu",
+            "name": "Cal Poly | Learn by Doing"
+        },
+        {
+            "url": "https://www.calstatela.edu",
+            "name": "Home | Cal State LA"
+        },
+        {
+            "url": "https://www.caltech.edu",
+            "name": "Home\n  \n\n     - \n    \n    www.caltech.edu"
+        },
+        {
+            "url": "https://www.calvin.edu",
+            "name": "Calvin University | Grand Rapids, Michigan"
+        },
+        {
+            "url": "https://www.canton.edu",
+            "name": "SUNY Canton"
+        },
+        {
+            "url": "https://www.caribbean.edu",
+            "name": "Caribbean University"
+        },
+        {
+            "url": "https://www.carroll.edu",
+            "name": "Carroll College - A Catholic Liberal Arts College in Helena, MT"
+        },
+        {
+            "url": "https://www.case.edu",
+            "name": "Case Western Reserve University: One of the nation's best"
+        },
+        {
+            "url": "https://www.cathlolic.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.cbu.edu",
+            "name": "Christian Brothers University, a Lasallian Institution of higher education"
+        },
+        {
+            "url": "https://www.ccm.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.ccny.cuny.edu",
+            "name": "The City College of New York"
+        },
+        {
+            "url": "https://www.ccsu.edu",
+            "name": "Home | Central Connecticut State University"
+        },
+        {
+            "url": "https://www.cedarville.edu",
+            "name": "Cedarville University Home"
+        },
+        {
+            "url": "https://www.central.edu",
+            "name": "Home | Central College"
+        },
+        {
+            "url": "https://www.centralstate.edu/",
+            "name": "Central State University | HBCU | Wilberforce, Ohio"
+        },
+        {
+            "url": "https://www.citadel.edu",
+            "name": "The Citadel - The Military College of South Carolina"
+        },
+        {
+            "url": "https://www.citytech.cuny.edu",
+            "name": "City Tech - New York City College of Technology"
+        },
+        {
+            "url": "https://www.clarkson.edu",
+            "name": "Home | Clarkson University"
+        },
+        {
+            "url": "https://www.clemson.edu",
+            "name": "Clemson University, South Carolina"
+        },
+        {
+            "url": "https://www.cmich.edu",
+            "name": "CMU Chippewas | Mount Pleasant, MI | Central Michigan University"
+        },
+        {
+            "url": "https://www.cmu.edu",
+            "name": "Homepage -     CMU - Carnegie Mellon University"
+        },
+        {
+            "url": "https://www.cnu.edu",
+            "name": "Christopher Newport University"
+        },
+        {
+            "url": "https://www.coastal.edu",
+            "name": "Coastal Carolina University - Conway, SC | Coastal Carolina"
+        },
+        {
+            "url": "https://www.cofo.edu",
+            "name": "College of the Ozarks | Hard Work U."
+        },
+        {
+            "url": "https://www.colorado.edu",
+            "name": "Home | University of Colorado Boulder"
+        },
+        {
+            "url": "https://www.coloradomesa.edu",
+            "name": "Welcome to Colorado Mesa University"
+        },
+        {
+            "url": "https://www.coloradotech.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.colostate.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.columbia.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.cooper.edu",
+            "name": "The Cooper Union for the Advancement of Science and Art"
+        },
+        {
+            "url": "https://www.cornell.edu",
+            "name": "Cornell University"
+        },
+        {
+            "url": "https://www.cornellcollege.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.cotc.edu",
+            "name": "Welcome to Central Ohio Technical College - COTC"
+        },
+        {
+            "url": "https://www.cpcc.edu",
+            "name": "Home | Central Piedmont"
+        },
+        {
+            "url": "https://www.cpp.edu",
+            "name": "Cal Poly Pomona"
+        },
+        {
+            "url": "https://www.cscc.edu",
+            "name": "Columbus State Community College"
+        },
+        {
+            "url": "https://www.csi.cuny.edu",
+            "name": "College of Staten Island (CSI) CUNY"
+        },
+        {
+            "url": "https://www.csn.edu",
+            "name": "Homepage | College of Southern Nevada"
+        },
+        {
+            "url": "https://www.csub.edu",
+            "name": "Home | California State University, Bakersfield"
+        },
+        {
+            "url": "https://www.csuchico.edu",
+            "name": "Chico State"
+        },
+        {
+            "url": "https://www.csueastbay.edu",
+            "name": "California State University, East Bay"
+        },
+        {
+            "url": "https://www.csufresno.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.csulb.edu",
+            "name": "California State University, Long Beach"
+        },
+        {
+            "url": "https://www.csum.edu",
+            "name": "Cal Maritime Home"
+        },
+        {
+            "url": "https://www.csun.edu",
+            "name": "California State University, Northridge"
+        },
+        {
+            "url": "https://www.csupueblo.edu",
+            "name": "Colorado State University Pueblo |  | CSU Pueblo"
+        },
+        {
+            "url": "https://www.csus.edu",
+            "name": "California State University, Sacramento | Sacramento State"
+        },
+        {
+            "url": "https://www.csusb.edu",
+            "name": "California State University, San Bernardino | CSUSB"
+        },
+        {
+            "url": "https://www.ctstate.edu",
+            "name": "Home - CT State"
+        },
+        {
+            "url": "https://www.cwu.edu",
+            "name": "Central Washington University"
+        },
+        {
+            "url": "https://www.d.umn.edu",
+            "name": "University of Minnesota Duluth"
+        },
+        {
+            "url": "https://www.dartmouth.edu",
+            "name": "Dartmouth"
+        },
+        {
+            "url": "https://www.db.erau.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.dcc.edu",
+            "name": "Step Closer to Unstoppable | Registration now OPEN"
+        },
+        {
+            "url": "https://www.denmarktech.edu",
+            "name": "Denmark Technical College"
+        },
+        {
+            "url": "https://www.devry.edu",
+            "name": "Online College Classes & Degree Programs | DeVry University"
+        },
+        {
+            "url": "https://www.digipen.edu",
+            "name": "DigiPen | A College for Interactive Media and Video Game Development"
+        },
+        {
+            "url": "https://www.doane.edu",
+            "name": "Enroll at the Premier Nebraska University | Doane University"
+        },
+        {
+            "url": "https://www.dordt.edu",
+            "name": "Dordt University: A Top-Ranked Christian\u2026 | Dordt University"
+        },
+        {
+            "url": "https://www.drexel.edu",
+            "name": "Drexel Home"
+        },
+        {
+            "url": "https://www.dtcc.edu",
+            "name": "Home | Delaware Technical Community College"
+        },
+        {
+            "url": "https://www.du.edu",
+            "name": "University of Denver | University of Denver"
+        },
+        {
+            "url": "https://www.duke.edu",
+            "name": "Duke University"
+        },
+        {
+            "url": "https://www.ecc.edu",
+            "name": "SUNY Erie (ECC) State University of New York"
+        },
+        {
+            "url": "https://www.ecpi.edu",
+            "name": "ECPI University - Accredited | Offering Online & On-Campus Degrees"
+        },
+        {
+            "url": "https://www.ecu.edu",
+            "name": "Home - East Carolina University"
+        },
+        {
+            "url": "https://www.eku.edu",
+            "name": "Eastern Kentucky University"
+        },
+        {
+            "url": "https://www.emich.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.eng.famu.fsu.edu",
+            "name": "FAMU-FSU"
+        },
+        {
+            "url": "https://www.engr.washington.edu",
+            "name": "University of Washington College of Engineering | UW College of Engineering"
+        },
+        {
+            "url": "https://www.esf.edu",
+            "name": "Welcome to ESF"
+        },
+        {
+            "url": "https://www.essex.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.etown.edu",
+            "name": "Elizabethtown College | Be a Force for Good"
+        },
+        {
+            "url": "https://www.etsu.edu",
+            "name": "East Tennessee State University"
+        },
+        {
+            "url": "https://www.evansville.edu",
+            "name": "University of Evansville"
+        },
+        {
+            "url": "https://www.ewu.edu",
+            "name": "Eastern Washington University - The Region's Polytechnic"
+        },
+        {
+            "url": "https://www.excelsior.edu",
+            "name": "Excelsior University | Online Degree Programs | Online College Courses"
+        },
+        {
+            "url": "https://www.fairfield.edu",
+            "name": "Fairfield University"
+        },
+        {
+            "url": "https://www.fairmontstate.edu",
+            "name": "Fairmont State University"
+        },
+        {
+            "url": "https://www.famu.edu",
+            "name": "Florida A&M University - FAMU"
+        },
+        {
+            "url": "https://www.farmingdale.edu",
+            "name": "Farmingdale State College"
+        },
+        {
+            "url": "https://www.fau.edu",
+            "name": "Florida Atlantic University | Florida Atlantic University"
+        },
+        {
+            "url": "https://www.fdu.edu",
+            "name": "Homepage | Fairleigh Dickinson University"
+        },
+        {
+            "url": "https://www.ferris.edu",
+            "name": "Ferris State University | Bulldogs | Big Rapids MI and Grand Rapids MI"
+        },
+        {
+            "url": "https://www.fgcu.edu",
+            "name": "Florida Gulf Coast University | Turning Ideas Into Impact"
+        },
+        {
+            "url": "https://www.fit.edu",
+            "name": "www.fit.edu | Florida Tech"
+        },
+        {
+            "url": "https://www.fiu.edu",
+            "name": "Florida International University in Miami, FL"
+        },
+        {
+            "url": "https://www.fortlewis.edu",
+            "name": "Fort Lewis College in Durango, Colorado"
+        },
+        {
+            "url": "https://www.francis.edu",
+            "name": "Saint Francis University | Saint Francis University"
+        },
+        {
+            "url": "https://www.frostburg.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.fullerton.edu",
+            "name": "Achieve Greatness: California State University, Fullerton"
+        },
+        {
+            "url": "https://www.fvsu.edu",
+            "name": "Home - Fort Valley State University"
+        },
+        {
+            "url": "https://www.gannon.edu",
+            "name": "Home | Gannon University"
+        },
+        {
+            "url": "https://www.gaston.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.gatech.edu",
+            "name": "Georgia Institute of Technology"
+        },
+        {
+            "url": "https://www.gcc.edu",
+            "name": "Grove City College | A Conservative Christian College in PA"
+        },
+        {
+            "url": "https://www.gcu.edu",
+            "name": "Grand Canyon University: Private Christian University Phoenix AZ"
+        },
+        {
+            "url": "https://www.geneva.edu",
+            "name": "Geneva College | A Christian College in Pennsylvania"
+        },
+        {
+            "url": "https://www.georgefox.edu",
+            "name": "George Fox University | Christian College in Oregon"
+        },
+        {
+            "url": "https://www.georgiasouthern.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.gmu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.gonzaga.edu",
+            "name": "Gonzaga University, Spokane Washington | Gonzaga University"
+        },
+        {
+            "url": "https://www.gptc.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.grace.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.gram.edu",
+            "name": "Grambling State University - Grambling State University"
+        },
+        {
+            "url": "https://www.grantham.edu",
+            "name": "Get Your Online Degree At University of Arkansas Grantham"
+        },
+        {
+            "url": "https://www.gvltec.edu/",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.gvsu.edu",
+            "name": "Grand Valley State University"
+        },
+        {
+            "url": "https://www.gwu.edu",
+            "name": "The George Washington University"
+        },
+        {
+            "url": "https://www.hamptonu.edu",
+            "name": "Home - Hampton University Home"
+        },
+        {
+            "url": "https://www.harding.edu",
+            "name": "Harding University | A Christian Liberal Arts University"
+        },
+        {
+            "url": "https://www.harrisburg.psu.edu",
+            "name": "Penn State Harrisburg"
+        },
+        {
+            "url": "https://www.hartford.edu",
+            "name": "Welcome to UHart\n      - University of Hartford"
+        },
+        {
+            "url": "https://www.harvard.edu",
+            "name": "Harvard University"
+        },
+        {
+            "url": "https://www.hmc.edu",
+            "name": "Home | Harvey Mudd College"
+        },
+        {
+            "url": "https://www.hofstra.edu",
+            "name": "Hofstra University | Long Island, New York"
+        },
+        {
+            "url": "https://www.hope.edu",
+            "name": "Hope College"
+        },
+        {
+            "url": "https://www.howard.edu",
+            "name": "Howard University Home | Excellence in Truth and Service"
+        },
+        {
+            "url": "https://www.hsu.edu",
+            "name": "Henderson State University | Henderson State University"
+        },
+        {
+            "url": "https://www.humboldt.edu",
+            "name": "Cal Poly Humboldt | California State Polytechnic University, Humboldt"
+        },
+        {
+            "url": "https://www.hvcc.edu",
+            "name": "Hudson Valley Community College | HVCC"
+        },
+        {
+            "url": "https://www.iastate.edu",
+            "name": "Iowa State University"
+        },
+        {
+            "url": "https://www.iit.edu",
+            "name": "Illinois Tech | Illinois Institute of Technology"
+        },
+        {
+            "url": "https://www.illinois.edu",
+            "name": "Home | University of Illinois Urbana-Champaign"
+        },
+        {
+            "url": "https://www.indianatech.edu",
+            "name": "Indiana Tech"
+        },
+        {
+            "url": "https://www.indstate.edu",
+            "name": "Indiana State University Homepage | Indiana State University"
+        },
+        {
+            "url": "https://www.isu.edu",
+            "name": "Home | Idaho State University"
+        },
+        {
+            "url": "https://www.iupui.edu",
+            "name": "IU Indianapolis - Your First Step to Your Ideal Future - Bring On Tomorrow"
+        },
+        {
+            "url": "https://www.jbu.edu",
+            "name": "John Brown University: A\u00a0Christian College in Northwest Arkansas"
+        },
+        {
+            "url": "https://www.jefferson.edu",
+            "name": "Thomas Jefferson University"
+        },
+        {
+            "url": "https://www.jewell.edu",
+            "name": "William Jewell College | Home"
+        },
+        {
+            "url": "https://www.jhu.edu",
+            "name": "Home | Johns Hopkins University"
+        },
+        {
+            "url": "https://www.jmu.edu",
+            "name": "James Madison University - JMU"
+        },
+        {
+            "url": "https://www.jsums.edu",
+            "name": "Jackson State University"
+        },
+        {
+            "url": "https://www.ju.edu",
+            "name": "Home | Jacksonville University in Jacksonville, Fla."
+        },
+        {
+            "url": "https://www.k-state.edu",
+            "name": "Kansas State University"
+        },
+        {
+            "url": "https://www.kennesaw.edu",
+            "name": "Kennesaw State University in Georgia"
+        },
+        {
+            "url": "https://www.kettering.edu",
+            "name": "Kettering University | Kettering University"
+        },
+        {
+            "url": "https://www.kings.edu",
+            "name": "King's College | Courage Can't Wait"
+        },
+        {
+            "url": "https://www.ksu.edu",
+            "name": "Kansas State University"
+        },
+        {
+            "url": "https://www.ku.edu",
+            "name": "Explore the home of the Jayhawks | The University of Kansas"
+        },
+        {
+            "url": "https://www.lafayette.edu",
+            "name": "Lafayette College"
+        },
+        {
+            "url": "https://www.lamar.edu",
+            "name": "Lamar University is a Nationally-Ranked College in Texas  - Lamar University"
+        },
+        {
+            "url": "https://www.latech.edu",
+            "name": "Louisiana Tech University"
+        },
+        {
+            "url": "https://www.lehigh.edu",
+            "name": "Home | Lehigh University"
+        },
+        {
+            "url": "https://www.letu.edu",
+            "name": "LeTourneau University, Longview, Texas  USA"
+        },
+        {
+            "url": "https://www.liberty.edu",
+            "name": "Liberty University: A Christian University in Virginia and Online"
+        },
+        {
+            "url": "https://www.lipscomb.edu",
+            "name": "Lipscomb University | A Private Christian College in Nashville Tenn."
+        },
+        {
+            "url": "https://www.lmu.edu",
+            "name": "Loyola Marymount University"
+        },
+        {
+            "url": "https://www.lorainccc.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.loras.edu",
+            "name": "Loras College | Catholic Liberal Arts College | Dubuque, Iowa | Catholic, Liberal Arts | Dubuque, IA"
+        },
+        {
+            "url": "https://www.louisiana.edu",
+            "name": "University of Louisiana at Lafayette"
+        },
+        {
+            "url": "https://www.louisville.edu",
+            "name": "Home | UofL"
+        },
+        {
+            "url": "https://www.loyola.edu",
+            "name": "Loyola University Maryland"
+        },
+        {
+            "url": "https://www.lssu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.lsu.edu",
+            "name": "Welcome to LSU, a top research university | Baton Rouge, La."
+        },
+        {
+            "url": "https://www.ltu.edu",
+            "name": "Lawrence Technological University | Be curious. Make magic."
+        },
+        {
+            "url": "https://www.luc.edu",
+            "name": "Loyola University Chicago"
+        },
+        {
+            "url": "https://www.mainemaritime.edu",
+            "name": "Maine Maritime Academy - ENGINEERING, MANAGEMENT, SCIENCE, TRANSPORTATION"
+        },
+        {
+            "url": "https://www.manhattan.edu",
+            "name": "Manhattan University | Riverdale, NY"
+        },
+        {
+            "url": "https://www.manoa.hawaii.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.marietta.edu",
+            "name": "Marietta College | Earn Your Degree from a Top-Ranked College in Ohio"
+        },
+        {
+            "url": "https://www.marshall.edu",
+            "name": "Marshall University | Live Your Marshall Moment"
+        },
+        {
+            "url": "https://www.mc.edu",
+            "name": "Mississippi College | A Christian University"
+        },
+        {
+            "url": "https://www.mcneese.edu",
+            "name": "McNeese State University in Lake Charles, Louisiana"
+        },
+        {
+            "url": "https://www.memphis.edu",
+            "name": "The University of Memphis - The University of Memphis"
+        },
+        {
+            "url": "https://www.mercer.edu",
+            "name": "Mercer University | A Best Value Among National Universities"
+        },
+        {
+            "url": "https://www.merrimack.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.messiah.edu/hub.htm",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.methodist.edu",
+            "name": "Methodist University | Fayetteville, NC | Engage. Enrich. Empower."
+        },
+        {
+            "url": "https://www.miami.edu",
+            "name": "University of Miami"
+        },
+        {
+            "url": "https://www.miamiOH.edu",
+            "name": "No. 3 Public for Undergrad Teaching | Miami University"
+        },
+        {
+            "url": "https://www.middlesexcc.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.midlandstech.edu",
+            "name": "Midlands Technical College"
+        },
+        {
+            "url": "https://www.mines.edu",
+            "name": "Colorado School of Mines | A Premier Engineering University"
+        },
+        {
+            "url": "https://www.missouri.edu",
+            "name": "Mizzou - University of Missouri | University of Missouri"
+        },
+        {
+            "url": "https://www.missouristate.edu",
+            "name": "Missouri State University - Missouri State"
+        },
+        {
+            "url": "https://www.missouriwestern.edu",
+            "name": "Missouri Western State University"
+        },
+        {
+            "url": "https://www.mit.edu",
+            "name": "MIT - Massachusetts Institute of Technology"
+        },
+        {
+            "url": "https://www.mnsu.edu",
+            "name": "Minnesota State University, Mankato"
+        },
+        {
+            "url": "https://www.monmouth.edu",
+            "name": "Monmouth University"
+        },
+        {
+            "url": "https://www.monroecc.edu",
+            "name": "Home | Monroe Community College | Rochester, NY"
+        },
+        {
+            "url": "https://www.montana.edu",
+            "name": "Montana State University | Top Tier Research University | Montana State University"
+        },
+        {
+            "url": "https://www.morgan.edu",
+            "name": "Morgan State University - Maryland's Preeminent Urban Public Research University"
+        },
+        {
+            "url": "https://www.morrisontech.edu",
+            "name": "Morrison Tech - Morrison Tech"
+        },
+        {
+            "url": "https://www.msoe.edu",
+            "name": "Milwaukee School of Engineering"
+        },
+        {
+            "url": "https://www.msstate.edu",
+            "name": "Mississippi State University"
+        },
+        {
+            "url": "https://www.mssu.edu",
+            "name": "Home | Missouri Southern State University"
+        },
+        {
+            "url": "https://www.mst.edu",
+            "name": "www.mst.edu \u2013 Missouri University of Science\u00a0and\u00a0Technology |\n Missouri S&T"
+        },
+        {
+            "url": "https://www.msu.edu",
+            "name": "Michigan State University"
+        },
+        {
+            "url": "https://www.msun.edu",
+            "name": "MSU Northern - MSU Northern | MSU Northern"
+        },
+        {
+            "url": "https://www.msutexas.edu",
+            "name": "MSU Texas"
+        },
+        {
+            "url": "https://www.mtech.edu",
+            "name": "Montana Tech - Montana's Premier STEM University"
+        },
+        {
+            "url": "https://www.mtsu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.mtu.edu",
+            "name": "Michigan Technological University"
+        },
+        {
+            "url": "https://www.mu.edu",
+            "name": "Marquette University // Be The Difference"
+        },
+        {
+            "url": "https://www.murraystate.edu",
+            "name": "Murray State University | Top Universities in Kentucky"
+        },
+        {
+            "url": "https://www.muskingum.edu",
+            "name": "Muskingum University"
+        },
+        {
+            "url": "https://www.mvcc.edu",
+            "name": "Mohawk Valley Community College Home"
+        },
+        {
+            "url": "https://www.nashuacc.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.nau.edu",
+            "name": "Northern Arizona University | Online, Bachelor\u2019s, Graduate | NAU"
+        },
+        {
+            "url": "https://www.ncat.edu",
+            "name": "Welcome to North Carolina Agricultural and Technical State University"
+        },
+        {
+            "url": "https://www.ncc.edu",
+            "name": "Nassau Community College Located on Long Island, New York | NCC"
+        },
+        {
+            "url": "https://www.ncsu.edu",
+            "name": "NC State University"
+        },
+        {
+            "url": "https://www.nd.edu",
+            "name": "University of Notre Dame"
+        },
+        {
+            "url": "https://www.ndsu.edu",
+            "name": "NDSU - North Dakota State University"
+        },
+        {
+            "url": "https://www.neit.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.newpaltz.edu",
+            "name": "SUNY New Paltz | The State University of New York at New Paltz"
+        },
+        {
+            "url": "https://www.nhti.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.niu.edu",
+            "name": "Northern Illinois University | Your Future. Our Focus."
+        },
+        {
+            "url": "https://www.njit.edu",
+            "name": "New Jersey Institute of Technology |"
+        },
+        {
+            "url": "https://www.nku.edu",
+            "name": "NKU Home Page: Northern Kentucky University, Greater Cincinnati Region"
+        },
+        {
+            "url": "https://www.nmsu.edu",
+            "name": "New Mexico State University | BE BOLD. Shape the Future."
+        },
+        {
+            "url": "https://www.nmt.edu",
+            "name": "Science | Engineering | Research Institution: New Mexico Tech"
+        },
+        {
+            "url": "https://www.nmu.edu",
+            "name": "Public University in Michigan | Northern Michigan University"
+        },
+        {
+            "url": "https://www.nnu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.northeastern.edu",
+            "name": "Home - Northeastern University"
+        },
+        {
+            "url": "https://www.northwestern.edu",
+            "name": "Northwestern University"
+        },
+        {
+            "url": "https://www.norwich.edu",
+            "name": "Welcome to Norwich University"
+        },
+        {
+            "url": "https://www.nps.edu",
+            "name": "Naval Postgraduate School - Naval Postgraduate School"
+        },
+        {
+            "url": "https://www.nsu.edu",
+            "name": "Norfolk State University - Norfolk State University"
+        },
+        {
+            "url": "https://www.nsula.edu",
+            "name": "Northwestern State University of Louisiana - Northwestern State University"
+        },
+        {
+            "url": "https://www.nwtc.edu",
+            "name": "Soar Higher - Northeast Wisconsin Technical College"
+        },
+        {
+            "url": "https://www.nyit.edu",
+            "name": "New York Institute of Technology | New York Tech"
+        },
+        {
+            "url": "https://www.oakland.edu",
+            "name": "Oakland University"
+        },
+        {
+            "url": "https://www.oc.edu",
+            "name": "Oklahoma Christian University | Your Story. God's Purpose."
+        },
+        {
+            "url": "https://www.octech.edu",
+            "name": "Orangeburg-Calhoun Technical College - Orangeburg-Calhoun Technical College"
+        },
+        {
+            "url": "https://www.odu.edu",
+            "name": "ODU - Old Dominion University"
+        },
+        {
+            "url": "https://www.ohiou.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.oit.edu",
+            "name": "Oregon Institute of Technology"
+        },
+        {
+            "url": "https://www.olemiss.edu",
+            "name": "University of  Mississippi | Ole Miss"
+        },
+        {
+            "url": "https://www.olin.edu",
+            "name": "Home | Olin College of Engineering"
+        },
+        {
+            "url": "https://www.olivet.edu",
+            "name": "Leading Christian College Near Chicago | ONU"
+        },
+        {
+            "url": "https://www.onu.edu",
+            "name": "Ohio Northern University | Ohio Northern University"
+        },
+        {
+            "url": "https://www.oregonstate.edu",
+            "name": "Oregon State University"
+        },
+        {
+            "url": "https://www.oru.edu",
+            "name": "Oral Roberts University | Spirit-Empowered Christian Education"
+        },
+        {
+            "url": "https://www.osu.edu",
+            "name": "Home | The Ohio State University"
+        },
+        {
+            "url": "https://www.osuit.edu",
+            "name": "Be True to You | Be the One They Call | OSUIT"
+        },
+        {
+            "url": "https://www.ou.edu",
+            "name": "The University of Oklahoma"
+        },
+        {
+            "url": "https://www.pct.edu",
+            "name": "Future Made By Hand | Pennsylvania College of Technology"
+        },
+        {
+            "url": "https://www.pdx.edu",
+            "name": "Homepage | Portland State University"
+        },
+        {
+            "url": "https://www.pennwest.edu",
+            "name": "Pennsylvania Western University"
+        },
+        {
+            "url": "https://www.pfw.edu",
+            "name": "Purdue University Fort Wayne"
+        },
+        {
+            "url": "https://www.pitt.edu",
+            "name": "Home | University of Pittsburgh"
+        },
+        {
+            "url": "https://www.pittstate.edu",
+            "name": "Pittsburg State University"
+        },
+        {
+            "url": "https://www.pnw.edu",
+            "name": "Homepage - Purdue University Northwest"
+        },
+        {
+            "url": "https://www.pointpark.edu",
+            "name": "Point Park University"
+        },
+        {
+            "url": "https://www.princeton.edu",
+            "name": "Home | Princeton University"
+        },
+        {
+            "url": "https://www.psu.edu",
+            "name": "The Pennsylvania State University | Penn State"
+        },
+        {
+            "url": "https://www.ptc.edu",
+            "name": "Homepage | Piedmont Technical College"
+        },
+        {
+            "url": "https://www.pupr.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.purdue.edu",
+            "name": "Purdue University"
+        },
+        {
+            "url": "https://www.pvamu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.qcc.cuny.edu",
+            "name": "Website for Queensborough Community College"
+        },
+        {
+            "url": "https://www.quinnipiac.edu",
+            "name": "Home | Quinnipiac University"
+        },
+        {
+            "url": "https://www.rcbc.edu",
+            "name": "Homepage | Rowan College"
+        },
+        {
+            "url": "https://www.rhodesstate.edu",
+            "name": "Rhodes State College | Rhodes State College"
+        },
+        {
+            "url": "https://www.rice.edu",
+            "name": "Rice University"
+        },
+        {
+            "url": "https://www.rit.edu",
+            "name": "Rochester Institute of Technology | RIT"
+        },
+        {
+            "url": "https://www.rmu.edu",
+            "name": "Robert Morris University | Pittsburgh, PA"
+        },
+        {
+            "url": "https://www.rochester.edu",
+            "name": "University of Rochester"
+        },
+        {
+            "url": "https://www.rose-hulman.edu",
+            "name": "Rose-Hulman Institute of Technology"
+        },
+        {
+            "url": "https://www.rowan.edu",
+            "name": "Home | Rowan | Rowan University"
+        },
+        {
+            "url": "https://www.rpi.edu",
+            "name": "Rensselaer Polytechnic Institute (RPI) :: Architecture, Business, Engineering, Humanities, IT & Web Science, Science"
+        },
+        {
+            "url": "https://www.rutgers.edu",
+            "name": "Rutgers University"
+        },
+        {
+            "url": "https://www.rwu.edu",
+            "name": "Roger Williams University"
+        },
+        {
+            "url": "https://www.sandiego.edu",
+            "name": "University of San Diego"
+        },
+        {
+            "url": "https://www.sau.edu",
+            "name": "Degrees from an accredited university | St. Ambrose University"
+        },
+        {
+            "url": "https://www.savannahstate.edu",
+            "name": ""
+        },
+        {
+            "url": "https://www.savannahtech.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.sc.edu",
+            "name": "University of South Carolina | University of South Carolina"
+        },
+        {
+            "url": "https://www.sccsc.edu",
+            "name": "Home"
+        },
+        {
+            "url": "https://www.scranton.edu",
+            "name": "University of Scranton | Home"
+        },
+        {
+            "url": "https://www.scsu.edu",
+            "name": "Home"
+        },
+        {
+            "url": "https://www.scu.edu",
+            "name": "Home - Santa Clara University"
+        },
+        {
+            "url": "https://www.sdsmt.edu",
+            "name": "Home"
+        },
+        {
+            "url": "https://www.sdsu.edu",
+            "name": "Home | San Diego State University"
+        },
+        {
+            "url": "https://www.seas.yale.edu",
+            "name": "Yale School of Engineering & Applied Science"
+        },
+        {
+            "url": "https://www.seattleu.edu",
+            "name": "Seattle University"
+        },
+        {
+            "url": "https://www.semo.edu",
+            "name": "Southeast Missouri State University | SEMO"
+        },
+        {
+            "url": "https://www.sfasu.edu",
+            "name": "Stephen F. Austin State University | University in Texas"
+        },
+        {
+            "url": "https://www.sfsu.edu",
+            "name": "San Francisco State University"
+        },
+        {
+            "url": "https://www.ship.edu",
+            "name": "Shippensburg University - Home"
+        },
+        {
+            "url": "https://www.sinclair.edu",
+            "name": "Sinclair Community College"
+        },
+        {
+            "url": "https://www.siu.edu",
+            "name": "Southern Illinois University"
+        },
+        {
+            "url": "https://www.siue.edu",
+            "name": "Southern Illinois University Edwardsville | SIUE"
+        },
+        {
+            "url": "https://www.sjsu.edu",
+            "name": "San Jos\u00e9 State University"
+        },
+        {
+            "url": "https://www.smith.edu",
+            "name": "Home: Smith College | Smith College"
+        },
+        {
+            "url": "https://www.smu.edu",
+            "name": "SMU | World Changers Shaped Here"
+        },
+        {
+            "url": "https://www.snow.edu",
+            "name": "Home of the Badgers\n\t\t\t\t\t\t\t\t\t\t\t\t| Snow College"
+        },
+        {
+            "url": "https://www.southalabama.edu",
+            "name": "University of South Alabama | Flagship of the Gulf Coast"
+        },
+        {
+            "url": "https://www.southwest.tn.edu",
+            "name": "Home"
+        },
+        {
+            "url": "https://www.spu.edu",
+            "name": "Seattle Pacific University"
+        },
+        {
+            "url": "https://www.sru.edu",
+            "name": "SRU | Slippery Rock University"
+        },
+        {
+            "url": "https://www.stanford.edu",
+            "name": "Stanford University"
+        },
+        {
+            "url": "https://www.starkstate.edu",
+            "name": "Stark State College | community college in North Canton, Ohio"
+        },
+        {
+            "url": "https://www.stcloudstate.edu",
+            "name": "St. Cloud State University"
+        },
+        {
+            "url": "https://www.stevens.edu",
+            "name": "Stevens Institute of Technology"
+        },
+        {
+            "url": "https://www.stmartin.edu",
+            "name": "Saint Martin's University | Lacey, Washington"
+        },
+        {
+            "url": "https://www.stmarytx.edu",
+            "name": "Home | St. Mary's University | San Antonio, Texas"
+        },
+        {
+            "url": "https://www.stonybrook.edu",
+            "name": "Stony Brook University, New York"
+        },
+        {
+            "url": "https://www.stthomas.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.subr.edu",
+            "name": "Southern University and A&M College"
+        },
+        {
+            "url": "https://www.sunybroome.edu",
+            "name": "Home - SUNY Broome"
+        },
+        {
+            "url": "https://www.sunymaritime.edu",
+            "name": "Home | SUNY Maritime College"
+        },
+        {
+            "url": "https://www.sunypoly.edu",
+            "name": "SUNY Polytechnic Institute"
+        },
+        {
+            "url": "https://www.suu.edu",
+            "name": "Southern Utah University | Cedar City, UT | SUU"
+        },
+        {
+            "url": "https://www.svsu.edu",
+            "name": "Saginaw Valley State University"
+        },
+        {
+            "url": "https://www.swarthmore.edu",
+            "name": "Swarthmore Home :: Swarthmore College"
+        },
+        {
+            "url": "https://www.swosu.edu",
+            "name": "Southwestern Oklahoma State University | SWOSU"
+        },
+        {
+            "url": "https://www.syr.edu",
+            "name": "Syracuse University - Syracuse University"
+        },
+        {
+            "url": "https://www.tacoma.washington.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.tamu.edu",
+            "name": "Texas A&M University | Texas A&M University"
+        },
+        {
+            "url": "https://www.tamucc.edu",
+            "name": "Welcome Home | Texas A&M University-Corpus Christi"
+        },
+        {
+            "url": "https://www.tamug.edu",
+            "name": "Texas A&M University at Galveston - Texas A&M Galveston, TX"
+        },
+        {
+            "url": "https://www.tamuk.edu",
+            "name": "Texas A&M University Kingsville"
+        },
+        {
+            "url": "https://www.tarleton.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.taylor.edu",
+            "name": "Taylor University | A Christian Liberal Arts University | Taylor University Upland, IN"
+        },
+        {
+            "url": "https://www.tcnj.edu",
+            "name": "TCNJ | The College of New Jersey"
+        },
+        {
+            "url": "https://www.tcu.edu",
+            "name": "Texas Christian University"
+        },
+        {
+            "url": "https://www.temple.edu",
+            "name": "Temple University"
+        },
+        {
+            "url": "https://www.texastech.edu",
+            "name": "Texas Tech University System | Texas Tech University System"
+        },
+        {
+            "url": "https://www.tnstate.edu",
+            "name": "Tennessee State University"
+        },
+        {
+            "url": "https://www.tntech.edu",
+            "name": "Tennessee Tech University"
+        },
+        {
+            "url": "https://www.tri-c.edu",
+            "name": "Tri-C Cuyahoga Community College: Cleveland, Ohio"
+        },
+        {
+            "url": "https://www.tricity.wsu.edu",
+            "name": "WSU Tri-Cities - apply now to earn your degree"
+        },
+        {
+            "url": "https://www.trincoll.edu/homepage.html",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.trine.edu",
+            "name": "Trine University | Home"
+        },
+        {
+            "url": "https://www.trinity.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.tsu.edu",
+            "name": "Texas Southern University"
+        },
+        {
+            "url": "https://www.tufts.edu",
+            "name": "Tufts University"
+        },
+        {
+            "url": "https://www.tusc.kent.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.tuskegee.edu",
+            "name": "Home | Tuskegee University"
+        },
+        {
+            "url": "https://www.txstate.edu",
+            "name": "Texas State University"
+        },
+        {
+            "url": "https://www.ua.edu",
+            "name": "The University of Alabama"
+        },
+        {
+            "url": "https://www.uaa.alaska.edu",
+            "name": "University of Alaska Anchorage | University of Alaska Anchorage"
+        },
+        {
+            "url": "https://www.uab.edu",
+            "name": "Home - The University of Alabama at Birmingham"
+        },
+        {
+            "url": "https://www.uaf.edu/cem/",
+            "name": "College of Engineering and Mines | College of Engineering and Mines"
+        },
+        {
+            "url": "https://www.uah.edu",
+            "name": "UAH | The University of Alabama in Huntsville"
+        },
+        {
+            "url": "https://www.uakron.edu",
+            "name": "The University of Akron : YOU BELONG HERE! : The University of Akron, Ohio"
+        },
+        {
+            "url": "https://www.uark.edu",
+            "name": "University of Arkansas"
+        },
+        {
+            "url": "https://www.uc.edu",
+            "name": "Home | University of Cincinnati"
+        },
+        {
+            "url": "https://www.uca.edu",
+            "name": "University of Central Arkansas \u2014 UCA"
+        },
+        {
+            "url": "https://www.uccs.edu",
+            "name": "Home | UCCS"
+        },
+        {
+            "url": "https://www.ucdavis.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.ucdenver.edu",
+            "name": "University of Colorado Denver | CU Denver"
+        },
+        {
+            "url": "https://www.ucf.edu",
+            "name": "University of Central Florida | A University for the Future"
+        },
+        {
+            "url": "https://www.ucla.edu",
+            "name": "A World Leader in Education and Research Excellence | UCLA"
+        },
+        {
+            "url": "https://www.ucmo.edu",
+            "name": "University of Central Missouri UCM Among Missouri's Best Universities"
+        },
+        {
+            "url": "https://www.uco.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uconn.edu",
+            "name": "University of Connecticut"
+        },
+        {
+            "url": "https://www.ucr.edu",
+            "name": "UC Riverside / University of California, Riverside"
+        },
+        {
+            "url": "https://www.ucsb.edu",
+            "name": "Home | UC Santa Barbara"
+        },
+        {
+            "url": "https://www.ucsd.edu",
+            "name": "University of California San Diego"
+        },
+        {
+            "url": "https://www.udayton.edu",
+            "name": "University of Dayton : University of Dayton, Ohio"
+        },
+        {
+            "url": "https://www.udc.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.udel.edu",
+            "name": "University of Delaware"
+        },
+        {
+            "url": "https://www.udmercy.edu",
+            "name": "University of Detroit Mercy | Detroit, Michigan | University of Detroit Mercy"
+        },
+        {
+            "url": "https://www.ufl.edu",
+            "name": "Home | University of Florida"
+        },
+        {
+            "url": "https://www.uga.edu",
+            "name": "UGA"
+        },
+        {
+            "url": "https://www.uh.edu",
+            "name": "University of Houston"
+        },
+        {
+            "url": "https://www.uhcl.edu",
+            "name": "University of Houston-Clear Lake"
+        },
+        {
+            "url": "https://www.uic.edu",
+            "name": "University of Illinois Chicago"
+        },
+        {
+            "url": "https://www.uidaho.edu",
+            "name": "University of Idaho - Offering top-ranked programs in the Northwest"
+        },
+        {
+            "url": "https://www.uindy.edu",
+            "name": "University of Indianapolis"
+        },
+        {
+            "url": "https://www.uiowa.edu",
+            "name": "The University of Iowa"
+        },
+        {
+            "url": "https://www.uky.edu",
+            "name": "Home | University of Kentucky"
+        },
+        {
+            "url": "https://www.umaine.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.umary.edu",
+            "name": "Home | University of Mary in Bismarck, ND"
+        },
+        {
+            "url": "https://www.umass.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.umassd.edu",
+            "name": "UMass Dartmouth"
+        },
+        {
+            "url": "https://www.umb.edu",
+            "name": "Home - UMass Boston"
+        },
+        {
+            "url": "https://www.umbc.edu",
+            "name": "Welcome To UMBC - UMBC: University Of Maryland, Baltimore County"
+        },
+        {
+            "url": "https://www.umd.edu",
+            "name": "The University of Maryland | A Preeminent Public Research University"
+        },
+        {
+            "url": "https://www.umdearborn.edu",
+            "name": "University of Michigan-Dearborn"
+        },
+        {
+            "url": "https://www.umhb.edu",
+            "name": "Christian University in Texas | UMHB"
+        },
+        {
+            "url": "https://www.umich.edu",
+            "name": "University of Michigan"
+        },
+        {
+            "url": "https://www.umkc.edu",
+            "name": "Home | University of Missouri - Kansas City"
+        },
+        {
+            "url": "https://www.uml.edu",
+            "name": "UMass Lowell | UMass Lowell"
+        },
+        {
+            "url": "https://www.umsl.edu",
+            "name": "University of Missouri\u2013St. Louis"
+        },
+        {
+            "url": "https://www.una.edu",
+            "name": "University of North Alabama"
+        },
+        {
+            "url": "https://www.unc.edu",
+            "name": "The University of North Carolina at Chapel Hill"
+        },
+        {
+            "url": "https://www.uncc.edu",
+            "name": "The University of North Carolina at Charlotte | UNC Charlotte"
+        },
+        {
+            "url": "https://www.und.edu",
+            "name": "UND | Grand Forks, ND | University of North Dakota"
+        },
+        {
+            "url": "https://www.unf.edu",
+            "name": "University of North Florida"
+        },
+        {
+            "url": "https://www.union.edu",
+            "name": "Union College"
+        },
+        {
+            "url": "https://www.unl.edu",
+            "name": "University of Nebraska\u2013Lincoln"
+        },
+        {
+            "url": "https://www.unlv.edu",
+            "name": "UNLV | University of Nevada, Las Vegas"
+        },
+        {
+            "url": "https://www.unm.edu",
+            "name": "New Mexico's Flagship University | The University of New Mexico"
+        },
+        {
+            "url": "https://www.uno.edu",
+            "name": "University of New Orleans | The University of New Orleans"
+        },
+        {
+            "url": "https://www.unr.edu",
+            "name": "University of Nevada, Reno | University of Nevada, Reno"
+        },
+        {
+            "url": "https://www.unt.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.unwsp.edu",
+            "name": "University of Northwestern, St. Paul | Top Rated Christian Education"
+        },
+        {
+            "url": "https://www.up.edu",
+            "name": "University of Portland"
+        },
+        {
+            "url": "https://www.upenn.edu",
+            "name": "University of Pennsylvania"
+        },
+        {
+            "url": "https://www.upj.pitt.edu",
+            "name": "University of Pittsburgh Johnstown | University of Pittsburgh"
+        },
+        {
+            "url": "https://www.upra.edu",
+            "name": "Universidad de Puerto Rico en Arecibo"
+        },
+        {
+            "url": "https://www.uprh.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uprp.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uri.edu",
+            "name": "The University of Rhode Island"
+        },
+        {
+            "url": "https://www.usafa.af.mil",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.usc.edu",
+            "name": "University of Southern California"
+        },
+        {
+            "url": "https://www.uscupstate.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.usf.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.usi.edu",
+            "name": "University of Southern Indiana | USI | Bachelor, Master and Doctoral Degrees -  University of Southern Indiana"
+        },
+        {
+            "url": "https://www.usm.edu",
+            "name": "The University of Southern Mississippi"
+        },
+        {
+            "url": "https://www.usm.maine.edu",
+            "name": "University of Southern Maine"
+        },
+        {
+            "url": "https://www.usma.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.usmma.edu",
+            "name": "United States Merchant Marine Academy"
+        },
+        {
+            "url": "https://www.usna.edu",
+            "name": "USNA :: United States Naval Academy"
+        },
+        {
+            "url": "https://www.usu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uta.edu",
+            "name": "UT Arlington \u2013 UTA - The University of Texas at Arlington"
+        },
+        {
+            "url": "https://www.utah.edu",
+            "name": "The University of Utah"
+        },
+        {
+            "url": "https://www.utc.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.utdallas.edu",
+            "name": "The University of Texas at Dallas"
+        },
+        {
+            "url": "https://www.utep.edu",
+            "name": "The University of Texas at El Paso - UTEP"
+        },
+        {
+            "url": "https://www.utexas.edu",
+            "name": "The University of Texas at Austin"
+        },
+        {
+            "url": "https://www.utk.edu",
+            "name": "University of Tennessee, Knoxville"
+        },
+        {
+            "url": "https://www.utm.edu",
+            "name": "The University of Tennessee at Martin"
+        },
+        {
+            "url": "https://www.utoledo.edu",
+            "name": "University of Toledo"
+        },
+        {
+            "url": "https://www.utpb.edu",
+            "name": "The University of Texas Permian Basin | UTPB Home"
+        },
+        {
+            "url": "https://www.utsa.edu",
+            "name": "Welcome to The University of Texas at San Antonio | UTSA"
+        },
+        {
+            "url": "https://www.uttyler.edu",
+            "name": "The University of Texas at Tyler | UT Tyler"
+        },
+        {
+            "url": "https://www.utulsa.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uu.edu",
+            "name": "Best Private Christian Universities in Tennessee | Baptist College | Union University"
+        },
+        {
+            "url": "https://www.uvu.edu",
+            "name": "Utah Valley University | Utah Valley University"
+        },
+        {
+            "url": "https://www.uwb.edu",
+            "name": "Homepage - The University of Washington Bothell"
+        },
+        {
+            "url": "https://www.uwec.edu",
+            "name": "UW-Eau Claire"
+        },
+        {
+            "url": "https://www.uwf.edu",
+            "name": "Home | University of West Florida"
+        },
+        {
+            "url": "https://www.uwgb.edu",
+            "name": "Home - UW-Green Bay"
+        },
+        {
+            "url": "https://www.uwm.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.uwosh.edu",
+            "name": "Home - University of Wisconsin Oshkosh University of Wisconsin Oshkosh"
+        },
+        {
+            "url": "https://www.uwplatt.edu",
+            "name": "University of Wisconsin-Platteville | College in Wisconsin"
+        },
+        {
+            "url": "https://www.uwrf.edu",
+            "name": "University of Wisconsin - River Falls | University of Wisconsin - River Falls"
+        },
+        {
+            "url": "https://www.uwsp.edu",
+            "name": "Homepage - University of Wisconsin-Stevens Point"
+        },
+        {
+            "url": "https://www.uwstout.edu",
+            "name": "Do More on Day One. | University of Wisconsin - Stout"
+        },
+        {
+            "url": "https://www.uwyo.edu",
+            "name": "University of Wyoming | UW | Laramie, Wyoming"
+        },
+        {
+            "url": "https://www.valpo.edu",
+            "name": "Valparaiso University"
+        },
+        {
+            "url": "https://www.vancouver.wsu.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.vanderbilt.edu",
+            "name": "Vanderbilt University"
+        },
+        {
+            "url": "https://www.vaughn.edu",
+            "name": "Vaughn College - Engineering, Technology, Management & Aviation"
+        },
+        {
+            "url": "https://www.vcu.edu",
+            "name": "Virginia Commonwealth University"
+        },
+        {
+            "url": "https://www.villanova.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.virginia.edu",
+            "name": "The University of Virginia"
+        },
+        {
+            "url": "https://www.vmi.edu",
+            "name": "Virginia Military Institute (VMI)"
+        },
+        {
+            "url": "https://www.vsu.edu",
+            "name": "Virginia State University"
+        },
+        {
+            "url": "https://www.vt.edu",
+            "name": "Home | Virginia Tech"
+        },
+        {
+            "url": "https://www.wallawalla.edu",
+            "name": "Walla Walla University"
+        },
+        {
+            "url": "https://www.wayne.edu",
+            "name": "Wayne State University - Wayne State University"
+        },
+        {
+            "url": "https://www.wctc.edu",
+            "name": "WCTC"
+        },
+        {
+            "url": "https://www.wcu.edu",
+            "name": "Western Carolina University - Western Carolina University | Home"
+        },
+        {
+            "url": "https://www.webb.edu",
+            "name": "Webb Institute | An Exceptional College of Engineering"
+        },
+        {
+            "url": "https://www.weber.edu",
+            "name": "Weber State University"
+        },
+        {
+            "url": "https://www.wfu.edu",
+            "name": "Wake Forest University"
+        },
+        {
+            "url": "https://www.wichita.edu",
+            "name": "Wichita State University - Kansas"
+        },
+        {
+            "url": "https://www.widener.edu",
+            "name": "Widener University | Leading Private Tri-State University"
+        },
+        {
+            "url": "https://www.wilkes.edu",
+            "name": "Wilkes University"
+        },
+        {
+            "url": "https://www.winona.edu",
+            "name": "Winona State University | A Community of Learners Improving Our World"
+        },
+        {
+            "url": "https://www.wisc.edu",
+            "name": "University of Wisconsin\u2013Madison"
+        },
+        {
+            "url": "https://www.wit.edu",
+            "name": "Wentworth: Technology-focused University in Boston, MA | Wentworth"
+        },
+        {
+            "url": "https://www.wiu.edu",
+            "name": "Western Illinois University - Your potential. Our purpose."
+        },
+        {
+            "url": "https://www.wku.edu/engineering",
+            "name": "The School of Engineering and Applied Sciences | Western Kentucky University"
+        },
+        {
+            "url": "https://www.wmich.edu",
+            "name": "WMU Home | Western Michigan University"
+        },
+        {
+            "url": "https://www.wne.edu",
+            "name": "Western New England University | Springfield, MA"
+        },
+        {
+            "url": "https://www.wpi.edu",
+            "name": "Worcester Polytechnic Institute (WPI)"
+        },
+        {
+            "url": "https://www.wright.edu",
+            "name": "Wright State University"
+        },
+        {
+            "url": "https://www.wsu.edu",
+            "name": "Washington State University |  Washington State University"
+        },
+        {
+            "url": "https://www.wtamu.edu",
+            "name": "West Texas A&M University | WTAMU"
+        },
+        {
+            "url": "https://www.wustl.edu",
+            "name": "Home | WashU"
+        },
+        {
+            "url": "https://www.wvc.edu",
+            "name": "Welcome to Wenatchee Valley College | Wenatchee Valley College"
+        },
+        {
+            "url": "https://www.wvu.edu",
+            "name": "West Virginia University"
+        },
+        {
+            "url": "https://www.wvutech.edu",
+            "name": "WVU Tech at West Virginia University"
+        },
+        {
+            "url": "https://www.wwu.edu",
+            "name": "Western Washington University"
+        },
+        {
+            "url": "https://www.xavier.edu",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.ycp.edu",
+            "name": "York College of PA | York College of Pennsylvania"
+        },
+        {
+            "url": "https://www.yorktech.com",
+            "name": "Unknown University"
+        },
+        {
+            "url": "https://www.ysu.edu",
+            "name": "YSU | Home"
+        },
+        {
+            "url": "https://www.zanestate.edu",
+            "name": "Zane State College - Zane State College"
+        }
+    ]
+}
