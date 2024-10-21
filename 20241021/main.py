@@ -1,5 +1,13 @@
 import subprocess
 import sys
+import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import nmap
+import ipaddress
+
+# Setup logging
+logging.basicConfig(filename='network_scan_results.log', level=logging.INFO, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Function to install packages
 def install_package(package):
@@ -20,70 +28,56 @@ except ImportError:
     install_package("ipaddress")
     import ipaddress  # Reimport after installation
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
-def scan_ip_range(ip_range):
-    # Create an instance of the PortScanner class
+def scan_ip(ip_address):
+    """Scan an individual IP address."""
     scanner = nmap.PortScanner()
+    logging.info(f"Scanning IP: {ip_address}")
 
-    # Perform a scan with OS detection, service version detection, and port scanning
-    print(f"Scanning IP range: {ip_range}")
-    scanner.scan(hosts=str(ip_range), arguments='-O -sV -p 1-1000')  # OS, service version detection, top 1000 ports
-
-    # Collect scan results
-    results = []
-    for host in scanner.all_hosts():
-        host_info = {}
-        host_info['ip'] = host
-        host_info['state'] = scanner[host].state()
-        host_info['mac'] = scanner[host]['addresses'].get('mac', 'No MAC address available')
-        host_info['hostnames'] = scanner[host]['hostnames'] if 'hostnames' in scanner[host] else 'No hostname'
-
-        # Get OS details if available
-        if 'osmatch' in scanner[host]:
-            host_info['os'] = scanner[host]['osmatch'][0]['name']  # Get the first matched OS
+    try:
+        scan_result = scanner.scan(hosts=str(ip_address), arguments='-O -sV -p 1-1000')
+        host_info = {'ip': ip_address}
+        
+        if ip_address in scan_result['scan']:
+            host = scan_result['scan'][ip_address]
+            host_info['state'] = host.get('status', {}).get('state', 'Unknown')
+            host_info['mac'] = host.get('addresses', {}).get('mac', 'No MAC address available')
+            host_info['hostnames'] = host.get('hostnames', 'No hostname available')
+            host_info['os'] = host.get('osmatch', [{'name': 'Unknown'}])[0]['name']
+            host_info['services'] = {port: host['tcp'][port] for port in host.get('tcp', {})}
         else:
-            host_info['os'] = 'OS detection not available'
+            host_info['state'] = 'Host unreachable'
 
-        # Get service details if available
-        if 'tcp' in scanner[host]:
-            host_info['services'] = {}
-            for port in scanner[host]['tcp']:
-                service_info = scanner[host]['tcp'][port]
-                host_info['services'][port] = {
-                    'service': service_info['name'],
-                    'product': service_info.get('product', 'Unknown'),
-                    'version': service_info.get('version', 'Unknown')
-                }
-        results.append(host_info)
-    return results
+        return host_info
+
+    except Exception as e:
+        logging.error(f"Error scanning {ip_address}: {e}")
+        return None
 
 def scan_network_parallel(network_range, num_threads=10):
-    # Convert the CIDR range into individual IP addresses
+    """Scan a network range in parallel."""
     network = ipaddress.ip_network(network_range, strict=False)
-    ip_blocks = list(network.hosts())  # List of all valid host IPs
+    ip_blocks = list(network.hosts())
     results = []
 
     # Use ThreadPoolExecutor to scan in parallel
     with ThreadPoolExecutor(max_workers=num_threads) as executor:
-        futures = [executor.submit(scan_ip_range, ip) for ip in ip_blocks]
+        futures = [executor.submit(scan_ip, ip) for ip in ip_blocks]
         for future in as_completed(futures):
-            try:
-                results.extend(future.result())
-            except Exception as e:
-                print(f"Error occurred during scan: {e}")
+            result = future.result()
+            if result:
+                results.append(result)
 
-    # Print the consolidated results
+    # Log results
     for result in results:
-        print(f"Host: {result['ip']}")
-        print(f"State: {result['state']}")
-        print(f"MAC Address: {result['mac']}")
-        print(f"Hostnames: {result['hostnames']}")
-        print(f"Operating System: {result['os']}")
+        logging.info(f"Host: {result['ip']}")
+        logging.info(f"State: {result['state']}")
+        logging.info(f"MAC Address: {result['mac']}")
+        logging.info(f"Hostnames: {result['hostnames']}")
+        logging.info(f"Operating System: {result['os']}")
         if 'services' in result:
             for port, service in result['services'].items():
-                print(f"Port {port}: {service['service']} - {service['product']} {service['version']}")
-        print("\n")
+                logging.info(f"Port {port}: {service['name']} - {service.get('product', 'Unknown')} {service.get('version', 'Unknown')}")
+        logging.info("\n")
 
 if __name__ == '__main__':
     # Define your network range (e.g., '192.168.1.0/24')
