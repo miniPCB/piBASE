@@ -5,6 +5,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import nmap
 import ipaddress
 import time
+from tqdm import tqdm  # Import tqdm for progress bar
+
+# Setup logging
+logging.basicConfig(filename='network_scan_results.log', level=logging.INFO, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Function to install packages
 def install_package(package):
@@ -36,6 +41,7 @@ def scan_ip(ip_address):
     """Scan an individual IP address."""
     scanner = nmap.PortScanner()
     logging.info(f"Scanning IP: {ip_address}")
+    print(f"Scanning IP: {ip_address}")  # Add a print statement to track progress in real time
 
     try:
         # Simplified scan: no OS detection, only the first 100 common ports.
@@ -72,13 +78,13 @@ def scan_network_parallel(network_range, num_threads=5, delay=0.5):
                 futures = []
                 for ip in ip_blocks:
                     futures.append(executor.submit(scan_ip, ip))
+                    pbar.update(1)  # Update the progress bar after submitting each task
                     time.sleep(delay)  # Introduce delay to reduce load on the system
                 
                 for future in as_completed(futures):
                     result = future.result()
                     if result:
                         results.append(result)
-                    pbar.update(1)  # Update progress bar after each completed IP scan
     
     except KeyboardInterrupt:
         logging.warning("Scan interrupted by user. Shutting down gracefully...")
